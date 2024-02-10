@@ -1,0 +1,4 @@
+<map id="MorphTimer" name="MorphTimer">
+<area shape="rect" id="node2" href="$d7/d1a/class_object_morph.htm" title="Classe abstrata usada como base para outros tipos de Morph. " alt="" coords="13,95,109,121"/>
+<area shape="rect" id="node3" href="$de/d2f/class_animator_object.htm" title="Classe abstrata que é base para os elementos da tela. " alt="" coords="5,5,117,32"/>
+</map>

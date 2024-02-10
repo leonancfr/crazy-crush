@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/main.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Polit�cnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletr�nica e Computa��o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programa��o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan Fran�a    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#if defined(_MSC_VER) || defined(_WIN32) || defined (_WIN64)</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;windows.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/irrlicht.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;SpriteAnimator.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;ScreenProgress.hpp&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;Screen.hpp&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;ScreenHoverList.hpp&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;TextureCache.hpp&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;AudioManager.hpp&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;Timer.hpp&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;ThreadProcessTime.hpp&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;CoreOpenGLVersion.hpp&quot;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;Score.hpp&quot;</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;CoreProcess.hpp&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;ThreadProcessMouse.hpp&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &quot;GameDefines.hpp&quot;</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &quot;MainDraw.hpp&quot;</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &quot;GameMainScreen.hpp&quot;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &quot;GameLevelFile.hpp&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#include &quot;GameControl.hpp&quot;</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#include &quot;ZOrder.hpp&quot;</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;Logger.hpp&quot;</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;Percentage.hpp&quot;</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc,<span class="keywordtype">char</span>** argv){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  std::fstream *fileCheck;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  fileCheck = <span class="keyword">new</span> std::fstream();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  fileCheck-&gt;open(<span class="stringliteral">&quot;resource.zip&quot;</span>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordflow">if</span>(!fileCheck-&gt;is_open()){</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: File resource.zip not found!&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    abort();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  fileCheck-&gt;close();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordtype">bool</span> fullscreen = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keywordtype">bool</span> vsyncFail = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">bool</span> debug = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keywordtype">bool</span> convertFile = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordtype">bool</span> openBin = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> timeWait = 15;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i=1;i&lt;(unsigned)argc;i++){</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">if</span>(strcmp(argv[i],<span class="stringliteral">&quot;--fullscreen&quot;</span>) == 0)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      fullscreen = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(argv[i],<span class="stringliteral">&quot;--debug&quot;</span>) == 0)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      debug = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(argv[i],<span class="stringliteral">&quot;--convert&quot;</span>) == 0){</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      convertFile = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      openBin = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(strcmp(argv[i],<span class="stringliteral">&quot;--openbin&quot;</span>) == 0){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      convertFile = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      openBin = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="comment">// Initialize and Pre-set IrrLicht Device and Driver</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a> = irr::createDevice(</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    irr::video::EDT_OPENGL,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    irr::core::dimension2d&lt;irr::u32&gt;(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ab7400fe6b32b12c8b579f5554bf1d9f0">CrazyCrush::Screen::screenWidth</a>, <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9c3a13c95608bd68fa945b37fa24dc09">CrazyCrush::Screen::screenHeight</a>),</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    16,fullscreen,<span class="keyword">false</span>,<span class="keyword">true</span>,&amp;<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  );</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a> == NULL){</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Unable to initialize Irrlicht device!&quot;</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to initialize IrrLicht device!&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    abort();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;setWindowCaption(L<span class="stringliteral">&quot;CrazyCrush&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;getFileSystem()-&gt;addFileArchive(<span class="stringliteral">&quot;resource.zip&quot;</span>,<span class="keyword">true</span>,<span class="keyword">true</span>,irr::io::EFAT_ZIP,<span class="stringliteral">&quot;iUJOv0PbuPhyu9b2wRKO67DbJlE4hE8Mw8yL8ePk&quot;</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a> = <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;getVideoDriver();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <a class="code" href="../../d5/d9c/namespace_crazy_crush_1_1_open_g_l.htm#a475351cd67a5183912a19312197d6363">CrazyCrush::OpenGL::getOpenGLVersion</a>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a>);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a>-&gt;getMaterial2D().TextureLayer[0].BilinearFilter = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a>-&gt;getMaterial2D().AntiAliasing = irr::video::EAAM_FULL_BASIC;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="comment">// Initialize Progress class and load textures</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <a class="code" href="../../d3/df8/class_screen_progress.htm">ScreenProgress</a> progress(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>,<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aef3b1afd910625aca0cca231af09443a">CrazyCrush::TextureCache::getTotalTexturesLoadNumber</a>()+<a class="code" href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#af6cf8de2fe598246cafedb14a1b173eb">CrazyCrush::AudioManager::getTotalProgress</a>()+1);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  progress.drawScene();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a4eb63db482ab6e0db5c9459ee99cadfb">CrazyCrush::AudioManager::initialize</a>() == <span class="keyword">false</span>){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Unable to initialize audio!&quot;</span>);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to initialize audio!&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    abort();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aead16588055f89b08e4b8fb91f0aab25">CrazyCrush::TextureCache::loadTextures</a>(progress) == <span class="keyword">false</span>){</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Unable to load textures!&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to load textures!&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    abort();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a25484f05e4d0ff602a65353c30254d19">CrazyCrush::AudioManager::preLoadAudio</a>(progress) == <span class="keyword">false</span>){</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Unable to load audio!&quot;</span>);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to pre load audio!&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    abort();</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="comment">// Initialize Screen system</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <a class="code" href="../../d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556">CrazyCrush::Game::initialize</a>();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ab17f6a0fcd11564e5ebf13bfd5524714">CrazyCrush::Screen::initializeScreen</a>() == <span class="keyword">false</span>){</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Unable to set up Screen objects.&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to set up Screen objects.&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    abort();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="../../d0/d55/namespace_crazy_crush_1_1_score.htm#a56d035cd90f598e0a2a417cb0c3f3ac9">CrazyCrush::Score::initialize</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#affa11c846e2b2fff6c703350f96bc407">CrazyCrush::Thread::startProcessTime</a>()){</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Unable to initialize time thread.&quot;</span>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to initialize time thread.&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    abort();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#aaa61ffd25c624f1af28f46539e621a89">CrazyCrush::Thread::startProcessMouse</a>()){</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Unable to initialize mouse thread.&quot;</span>);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to initialize mouse thread.&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    abort();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  pauseGameTimer();</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <a class="code" href="../../df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aafca9fdf2dea2d20e3ee644aafc33d7c">CrazyCrush::Game::MainScreen::screen</a>.<a class="code" href="../../da/d5e/class_screen_window.htm#a1654872ed8603b6323b7d01110166b1c">show</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  progress.incLoaded().drawScene();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordflow">if</span>(convertFile){</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a2a01280519a6c215c6b07cea05ac8918">CrazyCrush::Game::LevelFile::openLevelText</a>(<span class="stringliteral">&quot;in.txt&quot;</span>,<span class="keyword">false</span>)){</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="../../d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a64b976a709aab7465e570f61be4113e5">CrazyCrush::Game::LevelFile::saveLevel</a>(<span class="stringliteral">&quot;out.bin&quot;</span>)){</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        LOG_ERROR(<span class="stringliteral">&quot;Unable to save the output level&quot;</span>);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to save the output level.&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      }</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;       LOG_WARN(<span class="stringliteral">&quot;Unable to read input level as text&quot;</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to read input level as text.&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(openBin){</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a803c4654b4c11ede7ec295a42e7c295b">CrazyCrush::Game::LevelFile::openLevel</a>(<span class="stringliteral">&quot;in.bin&quot;</span>,<span class="keyword">false</span>)){</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      LOG_WARN(<span class="stringliteral">&quot;Unable to read input level as binary&quot;</span>);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;      std::cerr&lt;&lt;<span class="stringliteral">&quot;CrazyError: Unable to read input level as binary.&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <span class="keywordtype">int</span> lastFPS = -1;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">int</span> fps = -1;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <span class="keywordtype">bool</span> lastButtonState = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">while</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;run() &amp;&amp; <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a>){</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a7ffea452030c8ebd50a851af5abbb100">CrazyCrush::irrlicht_thread_read_file</a>();</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;isWindowActive()){</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5e8b8cf454b04403babe527660c88d09">CrazyCrush::core::resumeGame</a>();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      irr::u32 time = <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;getTimer()-&gt;getTime();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      <span class="keywordflow">if</span>(time != getUnprotectedTime())</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        setTime(time);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      fps = <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a>-&gt;getFPS();</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <span class="keywordflow">if</span>(fps!=lastFPS){</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="keywordflow">if</span>(fps &gt; 65){</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;          vsyncFail = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;          <span class="keywordflow">if</span>(lastFPS &gt; 65)</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            timeWait++;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }<span class="keywordflow">else</span> <span class="keywordflow">if</span>((fps &lt; 55)&amp;&amp;(lastFPS &lt; 55)){</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;          <span class="keywordflow">if</span>(timeWait == 0)</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            vsyncFail = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;          <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            timeWait--;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        }</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordflow">if</span>(debug){</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;          irr::core::stringw str = <span class="stringliteral">&quot;Crazy Crush - FPS: &quot;</span>;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;          str += fps;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;          <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;setWindowCaption(str.c_str());</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        lastFPS = fps;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;      }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;      <a class="code" href="../../df/d68/namespace_crazy_crush_1_1_thread_process_mouse.htm#ac57bd78b4cce16711694c499b107759c">CrazyCrush::ThreadProcessMouse::setCursor</a>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a>.getMouseX(),<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a>.getMouseY());</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a>.mouseLeftButtonPressed() != lastButtonState){</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        lastButtonState = <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a>.<a class="code" href="../../d6/d75/class_my_event_receiver.htm#a7c9d8f5ccce500958f42f8178a91989b">mouseLeftButtonPressed</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <span class="keywordflow">if</span>(lastButtonState)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;          <a class="code" href="../../df/d68/namespace_crazy_crush_1_1_thread_process_mouse.htm#a6307c2a3f9a7cd7a90130897983bef22">CrazyCrush::ThreadProcessMouse::setClick</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#afcd2db0eb3dc31d767b2f461db5962e0">CrazyCrush::draw</a>();</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a>.IsKeyDown(irr::KEY_ESCAPE))</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad">CrazyCrush::Game::Control::pauseGame</a>();</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a>.IsKeyDown(irr::KEY_KEY_A)){</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">        #ifdef DEBUG</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;<span class="preprocessor"></span>        CrazyCrush::ScreenHoverList::debug();</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="preprocessor"></span>      }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a>.IsKeyDown(irr::KEY_KEY_S)){</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;<span class="preprocessor">        #ifdef DEBUG</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor"></span>        <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a>.debug();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">        #endif</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="preprocessor"></span>      }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      <span class="keywordflow">if</span>(vsyncFail){</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        irr::u32 now = <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;getTimer()-&gt;getTime();</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span>(now-time &lt; timeWait)</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;          <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;sleep(timeWait-(now-time));</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4">CrazyCrush::core::pauseGame</a>();</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;yield();</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf58f7e471dcf4a3e35b4659eb21a3e6">CrazyCrush::shutdownGame</a>.<span class="keyword">get</span>()){</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;closeDevice();</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    }</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <a class="code" href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#a1f181f586399464cfe632039751fe956">CrazyCrush::Thread::stopProcessTime</a>();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <a class="code" href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#ac6e686bb34636febf4769c6c98588f3b">CrazyCrush::Thread::stopProcessMouse</a>();</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <a class="code" href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a1fbe06396135f25feb8f91cf79f7f9cb">CrazyCrush::AudioManager::destroy</a>();</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  LOG_INFO(<span class="stringliteral">&quot;Audio destroyed&quot;</span>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a>-&gt;drop();</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  LOG_INFO(<span class="stringliteral">&quot;Engine destroyed&quot;</span>);</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;}</div>
+<div class="ttc" id="namespace_crazy_crush_1_1_audio_manager_htm_a4eb63db482ab6e0db5c9459ee99cadfb"><div class="ttname"><a href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a4eb63db482ab6e0db5c9459ee99cadfb">CrazyCrush::AudioManager::initialize</a></div><div class="ttdeci">bool initialize()</div><div class="ttdoc">Inicializa o audio. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/_audio_manager_8cpp_source.htm#l00028">AudioManager.cpp:28</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_ad87927aa6650b80d82a440ac404c5449"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a></div><div class="ttdeci">irr::video::IVideoDriver * driver</div><div class="ttdoc">Driver usado pela engine gráfica. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00027">MainDraw.cpp:27</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_open_g_l_htm_a475351cd67a5183912a19312197d6363"><div class="ttname"><a href="../../d5/d9c/namespace_crazy_crush_1_1_open_g_l.htm#a475351cd67a5183912a19312197d6363">CrazyCrush::OpenGL::getOpenGLVersion</a></div><div class="ttdeci">void getOpenGLVersion(irr::video::IVideoDriver *driver)</div><div class="ttdoc">Obtém a versão do OpenGL. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dc7/_core_open_g_l_version_8cpp_source.htm#l00025">CoreOpenGLVersion.cpp:25</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_file_htm_a64b976a709aab7465e570f61be4113e5"><div class="ttname"><a href="../../d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a64b976a709aab7465e570f61be4113e5">CrazyCrush::Game::LevelFile::saveLevel</a></div><div class="ttdeci">bool saveLevel(std::string filename)</div><div class="ttdoc">Salva a fase atual num arquivo binário. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc3/_game_level_file_8cpp_source.htm#l00136">GameLevelFile.cpp:136</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_thread_process_mouse_htm_a6307c2a3f9a7cd7a90130897983bef22"><div class="ttname"><a href="../../df/d68/namespace_crazy_crush_1_1_thread_process_mouse.htm#a6307c2a3f9a7cd7a90130897983bef22">CrazyCrush::ThreadProcessMouse::setClick</a></div><div class="ttdeci">void setClick()</div><div class="ttdoc">Informa a thread do mouse que o botão direito foi pressionado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8d/_thread_process_mouse_8cpp_source.htm#l00052">ThreadProcessMouse.cpp:52</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_thread_htm_aaa61ffd25c624f1af28f46539e621a89"><div class="ttname"><a href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#aaa61ffd25c624f1af28f46539e621a89">CrazyCrush::Thread::startProcessMouse</a></div><div class="ttdeci">bool startProcessMouse()</div><div class="ttdoc">Inicia a thread que processa o mouse. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8d/_thread_process_mouse_8cpp_source.htm#l00058">ThreadProcessMouse.cpp:58</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_thread_htm_affa11c846e2b2fff6c703350f96bc407"><div class="ttname"><a href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#affa11c846e2b2fff6c703350f96bc407">CrazyCrush::Thread::startProcessTime</a></div><div class="ttdeci">bool startProcessTime()</div><div class="ttdoc">Inicia a thread que processa algumas coisas no tempo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2e/_thread_process_time_8cpp_source.htm#l00036">ThreadProcessTime.cpp:36</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a26fd9e4f552f58611f909d87802c2f19"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a></div><div class="ttdeci">ZOrder&lt; AnimatorObject * &gt; z_order</div><div class="ttdoc">Instancia global do ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/_z_order_8cpp_source.htm#l00015">ZOrder.cpp:15</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_score_htm_a56d035cd90f598e0a2a417cb0c3f3ac9"><div class="ttname"><a href="../../d0/d55/namespace_crazy_crush_1_1_score.htm#a56d035cd90f598e0a2a417cb0c3f3ac9">CrazyCrush::Score::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializa as dependências internas do espaço. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d89/_score_8cpp_source.htm#l00056">Score.cpp:56</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a9ad6a62d0e3449c0f0d5a7cb33b174d4"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4">CrazyCrush::core::pauseGame</a></div><div class="ttdeci">void pauseGame()</div><div class="ttdoc">Pausa o processamento do jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00251">CoreProcess.cpp:251</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_aead16588055f89b08e4b8fb91f0aab25"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aead16588055f89b08e4b8fb91f0aab25">CrazyCrush::TextureCache::loadTextures</a></div><div class="ttdeci">bool loadTextures(ScreenProgress &amp;progress)</div><div class="ttdoc">Carrega todas as texturas. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd2/_texture_cache_8cpp_source.htm#l00050">TextureCache.cpp:50</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_file_htm_a2a01280519a6c215c6b07cea05ac8918"><div class="ttname"><a href="../../d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a2a01280519a6c215c6b07cea05ac8918">CrazyCrush::Game::LevelFile::openLevelText</a></div><div class="ttdeci">bool openLevelText(std::string filename, bool inEngine)</div><div class="ttdoc">Abre um nível da forma texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc3/_game_level_file_8cpp_source.htm#l00035">GameLevelFile.cpp:35</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_aaf58f7e471dcf4a3e35b4659eb21a3e6"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#aaf58f7e471dcf4a3e35b4659eb21a3e6">CrazyCrush::shutdownGame</a></div><div class="ttdeci">Protected&lt; bool &gt; shutdownGame(false)</div><div class="ttdoc">Trigger para encerrar o jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_main_draw_8hpp_source.htm#l00031">MainDraw.hpp:31</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_aef3b1afd910625aca0cca231af09443a"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aef3b1afd910625aca0cca231af09443a">CrazyCrush::TextureCache::getTotalTexturesLoadNumber</a></div><div class="ttdeci">unsigned char getTotalTexturesLoadNumber()</div><div class="ttdoc">Obtém o total de texturas (e fontes) a carregar. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd2/_texture_cache_8cpp_source.htm#l00128">TextureCache.cpp:128</a></div></div>
+<div class="ttc" id="class_my_event_receiver_htm_a7c9d8f5ccce500958f42f8178a91989b"><div class="ttname"><a href="../../d6/d75/class_my_event_receiver.htm#a7c9d8f5ccce500958f42f8178a91989b">MyEventReceiver::mouseLeftButtonPressed</a></div><div class="ttdeci">bool mouseLeftButtonPressed()</div><div class="ttdoc">Retorna o estado do botão esquerdo do mouse. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/d70/_event_receiver_8cpp_source.htm#l00025">EventReceiver.cpp:25</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_ab17f6a0fcd11564e5ebf13bfd5524714"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ab17f6a0fcd11564e5ebf13bfd5524714">CrazyCrush::Screen::initializeScreen</a></div><div class="ttdeci">bool initializeScreen()</div><div class="ttdoc">Inicializa os objetos básicos da tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d6c/_screen_8cpp_source.htm#l00039">Screen.cpp:39</a></div></div>
+<div class="ttc" id="class_screen_progress_htm"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm">ScreenProgress</a></div><div class="ttdoc">Classe para criar e tratar uma tela de progresso. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd5/_screen_progress_8hpp_source.htm#l00025">ScreenProgress.hpp:25</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a0b65f6df4d820f226a757eef9c0390ad"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad">CrazyCrush::Game::Control::pauseGame</a></div><div class="ttdeci">void pauseGame()</div><div class="ttdoc">Pausa o jogo (apenas o jogo) </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00167">GameControl.cpp:167</a></div></div>
+<div class="ttc" id="class_screen_window_htm_a1654872ed8603b6323b7d01110166b1c"><div class="ttname"><a href="../../da/d5e/class_screen_window.htm#a1654872ed8603b6323b7d01110166b1c">ScreenWindow::show</a></div><div class="ttdeci">ScreenWindow &amp; show()</div><div class="ttdoc">Exibe a janela e seus conteúdos. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/d88/_screen_window_8cpp_source.htm#l00225">ScreenWindow.cpp:225</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a5e8b8cf454b04403babe527660c88d09"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5e8b8cf454b04403babe527660c88d09">CrazyCrush::core::resumeGame</a></div><div class="ttdeci">void resumeGame()</div><div class="ttdoc">Continua o processamento do jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00243">CoreProcess.cpp:243</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_ab7400fe6b32b12c8b579f5554bf1d9f0"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ab7400fe6b32b12c8b579f5554bf1d9f0">CrazyCrush::Screen::screenWidth</a></div><div class="ttdeci">const unsigned screenWidth</div><div class="ttdoc">Largura da tela/janela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00029">Screen.hpp:29</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_thread_htm_a1f181f586399464cfe632039751fe956"><div class="ttname"><a href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#a1f181f586399464cfe632039751fe956">CrazyCrush::Thread::stopProcessTime</a></div><div class="ttdeci">void stopProcessTime()</div><div class="ttdoc">Pára a thread de processamento no tempo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d2e/_thread_process_time_8cpp_source.htm#l00046">ThreadProcessTime.cpp:46</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_audio_manager_htm_af6cf8de2fe598246cafedb14a1b173eb"><div class="ttname"><a href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#af6cf8de2fe598246cafedb14a1b173eb">CrazyCrush::AudioManager::getTotalProgress</a></div><div class="ttdeci">unsigned char getTotalProgress()</div><div class="ttdoc">Quantidade de instruções que serão executadas. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/_audio_manager_8cpp_source.htm#l00035">AudioManager.cpp:35</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_audio_manager_htm_a1fbe06396135f25feb8f91cf79f7f9cb"><div class="ttname"><a href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a1fbe06396135f25feb8f91cf79f7f9cb">CrazyCrush::AudioManager::destroy</a></div><div class="ttdeci">void destroy()</div><div class="ttdoc">Destrói (desaloca) o controlador de áudio. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/_audio_manager_8cpp_source.htm#l00162">AudioManager.cpp:162</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a7ffea452030c8ebd50a851af5abbb100"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a7ffea452030c8ebd50a851af5abbb100">CrazyCrush::irrlicht_thread_read_file</a></div><div class="ttdeci">void irrlicht_thread_read_file()</div><div class="ttdoc">Função usada para processar as requisições de leitura de arquivo. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00136">MainDraw.cpp:136</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_thread_htm_ac6e686bb34636febf4769c6c98588f3b"><div class="ttname"><a href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#ac6e686bb34636febf4769c6c98588f3b">CrazyCrush::Thread::stopProcessMouse</a></div><div class="ttdeci">void stopProcessMouse()</div><div class="ttdoc">Pára a thread do mouse. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8d/_thread_process_mouse_8cpp_source.htm#l00066">ThreadProcessMouse.cpp:66</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_aaf9910f600723248ac22f724f6ee871f"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a></div><div class="ttdeci">irr::IrrlichtDevice * device</div><div class="ttdoc">Dispositivo usado pela engine gráfica. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00026">MainDraw.cpp:26</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_audio_manager_htm_a25484f05e4d0ff602a65353c30254d19"><div class="ttname"><a href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a25484f05e4d0ff602a65353c30254d19">CrazyCrush::AudioManager::preLoadAudio</a></div><div class="ttdeci">bool preLoadAudio(ScreenProgress &amp;progress)</div><div class="ttdoc">Carrega o áudio base da AudioCache. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/_audio_manager_8cpp_source.htm#l00039">AudioManager.cpp:39</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_file_htm_a803c4654b4c11ede7ec295a42e7c295b"><div class="ttname"><a href="../../d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a803c4654b4c11ede7ec295a42e7c295b">CrazyCrush::Game::LevelFile::openLevel</a></div><div class="ttdeci">bool openLevel(std::string filename, bool inEngine)</div><div class="ttdoc">Abre um nível de forma binária. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/dc3/_game_level_file_8cpp_source.htm#l00094">GameLevelFile.cpp:94</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_thread_process_mouse_htm_ac57bd78b4cce16711694c499b107759c"><div class="ttname"><a href="../../df/d68/namespace_crazy_crush_1_1_thread_process_mouse.htm#ac57bd78b4cce16711694c499b107759c">CrazyCrush::ThreadProcessMouse::setCursor</a></div><div class="ttdeci">void setCursor(int x, int y)</div><div class="ttdoc">Informa a thread do mouse que o mouse se encontra sobre essas coordenadas. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d8d/_thread_process_mouse_8cpp_source.htm#l00047">ThreadProcessMouse.cpp:47</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_htm_a10555bf139cdd6398578c9817ab8a556"><div class="ttname"><a href="../../d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556">CrazyCrush::Game::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializador das dependências. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/_game_defines_8cpp_source.htm#l00036">GameDefines.cpp:36</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a77c7c7c197578855f17a0c92df1fe72f"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a></div><div class="ttdeci">MyEventReceiver event</div><div class="ttdoc">Instância global para o gerenciador de eventos. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00028">MainDraw.cpp:28</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_afcd2db0eb3dc31d767b2f461db5962e0"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#afcd2db0eb3dc31d767b2f461db5962e0">CrazyCrush::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">Função principal que exibe todos elementos do ZOrder na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00033">MainDraw.cpp:33</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a9c3a13c95608bd68fa945b37fa24dc09"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9c3a13c95608bd68fa945b37fa24dc09">CrazyCrush::Screen::screenHeight</a></div><div class="ttdeci">const unsigned screenHeight</div><div class="ttdoc">Altura da tela/janela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00031">Screen.hpp:31</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_main_screen_htm_aafca9fdf2dea2d20e3ee644aafc33d7c"><div class="ttname"><a href="../../df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aafca9fdf2dea2d20e3ee644aafc33d7c">CrazyCrush::Game::MainScreen::screen</a></div><div class="ttdeci">ScreenWindow screen</div><div class="ttdoc">Objeto da tela inicial do jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d5e/_game_main_screen_8cpp_source.htm#l00070">GameMainScreen.cpp:70</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:09 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

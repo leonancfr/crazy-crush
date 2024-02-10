@@ -1,0 +1,29 @@
+<map id="CrazyCrush::core::checkFullMatrix" name="CrazyCrush::core::checkFullMatrix">
+<area shape="rect" id="node2" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="993,190,1097,217"/>
+<area shape="rect" id="node3" href="$d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455" title="Obtém o elemento dados os índices. " alt="" coords="539,22,617,49"/>
+<area shape="rect" id="node4" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1ac04e859d7d96e99a8952d7bdd77dde" title="Desseleciona quaisquer bloco que esteja selecionado. " alt="" coords="262,300,401,342"/>
+<area shape="rect" id="node6" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964" title="Decrementa, em um ponto, uma posição da matriz. " alt="" coords="242,52,421,94"/>
+<area shape="rect" id="node7" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#af979b646f2c5ccff485e40ae96bb9071" title="Reinicia a dica. " alt="" coords="240,249,423,276"/>
+<area shape="rect" id="node9" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="241,183,422,224"/>
+<area shape="rect" id="node12" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a811072afc23904c870aac3dca4cbdba2" title="Incrementa a pontuação. " alt="" coords="261,370,401,411"/>
+<area shape="rect" id="node15" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0" title="Verifica a matriz para saber se a fase está concluída. " alt="" coords="242,118,421,159"/>
+<area shape="rect" id="node16" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a469042ad27accf63fcfc342dfdf7d9e5" title="Se a matriz está completamente zerada. " alt="" coords="242,442,421,483"/>
+<area shape="rect" id="node17" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aefbe6096b6af82c744954b8924813bb4" title="Executa as tarefas relacionadas ao ganhar uma fase. " alt="" coords="240,655,423,696"/>
+<area shape="rect" id="node5" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="493,308,663,334"/>
+<area shape="rect" id="node8" href="$da/db9/class_screen_object.htm#ace8160e055a2acb107c6f8abe36ef712" title="Pára o SpriteAnimator e volta os valores de Resource para os valores antigos. " alt="" coords="492,242,664,283"/>
+<area shape="rect" id="node10" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="487,124,669,166"/>
+<area shape="rect" id="node11" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="751,136,928,162"/>
+<area shape="rect" id="node13" href="$de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917" title="Obtém o valor da variável. " alt="" coords="526,460,630,486"/>
+<area shape="rect" id="node14" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="504,409,652,436"/>
+<area shape="rect" id="node18" href="$da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464" title="Define o tamanho que o sprite usa da textura. " alt="" coords="474,662,682,689"/>
+<area shape="rect" id="node19" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="487,714,669,755"/>
+<area shape="rect" id="node20" href="$da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79" title="Define o tamanho que o sprite ocupará na tela. " alt="" coords="481,780,675,806"/>
+<area shape="rect" id="node21" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="471,830,685,857"/>
+<area shape="rect" id="node22" href="$da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa" title="Adiciona o Callback passado por argumento no AnimatorQueue interno. " alt="" coords="477,881,679,908"/>
+<area shape="rect" id="node24" href="$da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef" title="Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. " alt="" coords="485,561,671,588"/>
+<area shape="rect" id="node27" href="$da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac" title="Inicia o AnimatorQueue no tempo informado. " alt="" coords="485,612,671,638"/>
+<area shape="rect" id="node23" href="$d1/d91/class_animator_queue.htm#a89e2d21a6e06b5f2347c3d585ab4ed98" title="Adiciona um Callback à lista. " alt="" coords="733,881,945,908"/>
+<area shape="rect" id="node25" href="$d7/d1a/class_object_morph.htm#a23a4b595aea37762fd8eaed6a3655585" title="Associa um objeto a este ObjectMorph. " alt="" coords="759,612,919,638"/>
+<area shape="rect" id="node26" href="$d1/d91/class_animator_queue.htm#ae6f8830d3b53ae853e1ec75ef135292f" title="Adiciona um ObjectMorph à lista. " alt="" coords="740,561,939,588"/>
+<area shape="rect" id="node28" href="$d1/d91/class_animator_queue.htm#a1c4583b178f798ec3535b90b35302e33" title="Inicia a animação no tempo. " alt="" coords="737,662,941,689"/>
+</map>

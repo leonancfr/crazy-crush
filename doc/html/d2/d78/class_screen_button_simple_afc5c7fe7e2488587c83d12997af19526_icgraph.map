@@ -1,0 +1,7 @@
+<map id="ScreenButtonSimple::setLabel" name="ScreenButtonSimple::setLabel">
+<area shape="rect" id="node2" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426" title="Inicializa as dependências do espaço. " alt="" coords="214,5,385,47"/>
+<area shape="rect" id="node4" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#aedd926d405bc52327ff21aa212beff1c" title="Inicializa as dependências internas do espaço. " alt="" coords="195,71,404,112"/>
+<area shape="rect" id="node5" href="$d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="196,136,403,177"/>
+<area shape="rect" id="node3" href="$d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="464,46,652,73"/>
+<area shape="rect" id="node6" href="$d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="452,129,664,185"/>
+</map>

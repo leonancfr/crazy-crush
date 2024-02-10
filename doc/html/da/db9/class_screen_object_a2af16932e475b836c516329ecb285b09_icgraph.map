@@ -1,0 +1,7 @@
+<map id="ScreenObject::setTexture" name="ScreenObject::setTexture">
+<area shape="rect" id="node2" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a70e122b9d152fd4789f9b64b6d7f1017" title="Posiciona a dica na tela. " alt="" coords="224,5,396,47"/>
+<area shape="rect" id="node5" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a56d035cd90f598e0a2a417cb0c3f3ac9" title="Inicializa as dependências internas do espaço. " alt="" coords="240,71,380,112"/>
+<area shape="rect" id="node6" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#ab17f6a0fcd11564e5ebf13bfd5524714" title="Inicializa os objetos básicos da tela. " alt="" coords="241,136,379,177"/>
+<area shape="rect" id="node3" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce" title="Verifica se há algum movimento possível. " alt="" coords="444,5,616,47"/>
+<area shape="rect" id="node4" href="$d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3" title="Função a ser implementada pelas classes herdadas. " alt="" coords="664,5,792,47"/>
+</map>

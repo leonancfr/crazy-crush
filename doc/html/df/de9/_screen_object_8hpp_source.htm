@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/ScreenObject.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScreenObject.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _SCREEN_OBJECT_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _SCREEN_OBJECT_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/ITexture.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/irrTypes.h&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/rect.h&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/SColor.h&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;AnimatorQueue.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;SpriteAnimator.hpp&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;ObjectMorph.hpp&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;Callback.hpp&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;RGBA.hpp&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;AnimatorObject.hpp&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;SharedPointer.hpp&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../da/db9/class_screen_object.htm">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> : <span class="keyword">public</span> <a class="code" href="../../de/d2f/class_animator_object.htm">AnimatorObject</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a>* spriteAnimator;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a>* animatorQueue;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::video::ITexture&gt;</a> mTexture;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../dd/d77/class_r_g_b_a.htm">RGBA</a> mColor;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../dd/d77/class_r_g_b_a.htm">RGBA</a> oMColor;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    irr::u32 spriteAnimatorTime;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">unsigned</span> screenWidth,screenHeight;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> screenPositionX,screenPositionY;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">unsigned</span> resourceWidth,resourceHeight;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">int</span> resourcePositionX,resourcePositionY;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">unsigned</span> oScreenWidth,oScreenHeight;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> oScreenPositionX,oScreenPositionY;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">unsigned</span> oResourceWidth,oResourceHeight;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> oResourcePositionX,oResourcePositionY;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> mDisplay;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    pthread_mutex_t mutexTexture;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    pthread_mutex_t mutexScreenPosition;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    pthread_mutex_t mutexScreenSize;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    pthread_mutex_t mutexResourcePosition;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    pthread_mutex_t mutexResourceSize;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    pthread_mutex_t mutexDisplay;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    pthread_mutex_t mutexColor;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    pthread_mutex_t mutexOutScreenPosition;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    pthread_mutex_t mutexOutScreenSize;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    pthread_mutex_t mutexOutResourcePosition;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    pthread_mutex_t mutexOutResourceSize;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    pthread_mutex_t mutexOutColor;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm#a97d23f67bb7dfa83fa39289645e47d4a">ScreenObject</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::video::ITexture&gt;</a>* texture);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm#a97d23f67bb7dfa83fa39289645e47d4a">ScreenObject</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::video::ITexture&gt;</a>&amp; texture);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm#a97d23f67bb7dfa83fa39289645e47d4a">ScreenObject</a>(<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    ~<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09">setTexture</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::video::ITexture&gt;</a>* texture);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09">setTexture</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::video::ITexture&gt;</a>&amp; texture);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#af31cd0131c42fcac9a5133b7c2c7759b">setSpriteAnimator</a>(<a class="code" href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a>* animator);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a185ced37b469831115a380f32f5f5fa9">setAnimatorQueue</a>(<a class="code" href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a>&amp; animator);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef">appendMorph</a>(<a class="code" href="../../d7/d1a/class_object_morph.htm">ObjectMorph</a>* morph);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa">appendCallback</a>(<a class="code" href="../../d1/dd4/class_callback.htm">Callback</a>* callback);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">setScreenSize</a>(<span class="keywordtype">unsigned</span> width,<span class="keywordtype">unsigned</span> height);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535">setScreenPosition</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">setResourceSize</a>(<span class="keywordtype">unsigned</span> width,<span class="keywordtype">unsigned</span> height);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    </div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c">setResourcePosition</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#af9be9d3730f538c7087f61e20e505524">setImageColor</a>(irr::video::SColor* color);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#ab31513dacb98cdb918a94e4382ed1fc7">setImageAlpha</a>(irr::u8 alpha);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a4090a3913947fe9eab75f88090ebb673">startSpriteAnimation</a>(irr::u32 time);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a64cf4236043cdca2ad306056d319b5a6">stopSpriteAnimation</a>();</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#ace8160e055a2acb107c6f8abe36ef712">resetSpriteAnimation</a>();</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac">startAnimator</a>(irr::u32 time);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    </div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span>          <a class="code" href="../../da/db9/class_screen_object.htm#af1580ea5cd4cc5bce70657c8a7d8734e">processTime</a>(irr::u32);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    irr::video::SColor* <a class="code" href="../../da/db9/class_screen_object.htm#a1a2327597357fc11a965932efe9a01ce">getColor</a>();</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../da/db9/class_screen_object.htm#a6b8b50106548e49cdc73b7e62716f053">getScreenWidth</a>();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../da/db9/class_screen_object.htm#af0b1b67abfa502cef486d77bc36e8af5">getScreenHeight</a>();</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../da/db9/class_screen_object.htm#a84bbe23d021616fe062806802570113e">getScreenPositionX</a>();</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../da/db9/class_screen_object.htm#aa1de66b181ed1b318936af50c458e5cc">getScreenPositionY</a>();</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/db9/class_screen_object.htm#aa0a65b34f7d73ef6e06a64fe27f299c7">getDisplay</a>();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    irr::video::ITexture*       <a class="code" href="../../da/db9/class_screen_object.htm#ab25ba25ea99120a5bc94b9dd3e34461a">getTexture</a>();</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a>*             <a class="code" href="../../da/db9/class_screen_object.htm#ae2a6e4a0a57a523959c8ebf2239237f1">getSpriteAnimator</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a>&amp;              <a class="code" href="../../da/db9/class_screen_object.htm#aa6557663d0db321c904c4143086d830d">getAnimatorQueue</a>();</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    irr::core::rect&lt;irr::s32&gt;   <a class="code" href="../../da/db9/class_screen_object.htm#a8fd01b7eb1cf9161a9fde78034947971">getScreenRect</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    irr::core::rect&lt;irr::s32&gt;   <a class="code" href="../../da/db9/class_screen_object.htm#a1657a19d2eb03d9d3ea6a196c65f65e7">getResourceRect</a>();</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    irr::video::SColor*         <a class="code" href="../../da/db9/class_screen_object.htm#a1a6ffc5c81109d0ae15b8c8fd35dccec">getImageColor</a>();</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; <a class="code" href="../../da/db9/class_screen_object.htm#a2e4ad2beb414b8fb2dfa8d734392b934">operator=</a>(<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>&amp; other);</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../da/db9/class_screen_object.htm#acb1928b7499e681cc15728ca19b6ecdc">aSetDisplay</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db9/class_screen_object.htm#a9608733c2aba221d60c7816c6fab6afb">aSetScreenSize</a>(<span class="keywordtype">unsigned</span>,<span class="keywordtype">unsigned</span>);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../da/db9/class_screen_object.htm#a459d9b98ad70b2c6e1fffa191b75b185">aSetScreenPosition</a>(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db9/class_screen_object.htm#aa3528528d0a444f0e2d64acf0977f19c">aSetImageColor</a>(irr::video::SColor*);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../da/db9/class_screen_object.htm#ac680880da757b6eb1a062671e49faa77">getType</a>();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;};</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_screen_object_htm_a43e8e1299bb8451d6ef83f120cdb8eaa"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa">ScreenObject::appendCallback</a></div><div class="ttdeci">ScreenObject &amp; appendCallback(Callback *callback)</div><div class="ttdoc">Adiciona o Callback passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00447">ScreenObject.cpp:447</a></div></div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a2e4ad2beb414b8fb2dfa8d734392b934"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a2e4ad2beb414b8fb2dfa8d734392b934">ScreenObject::operator=</a></div><div class="ttdeci">ScreenObject &amp; operator=(ScreenObject &amp;other)</div><div class="ttdoc">Clona os atributos de um ScreenObjeto no objeto atual. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00164">ScreenObject.cpp:164</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a86ad7d80123873c44e37562189996ab8"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">ScreenObject::setDisplay</a></div><div class="ttdeci">ScreenObject &amp; setDisplay(bool value)</div><div class="ttdoc">Define se o objeto será exibido na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00304">ScreenObject.cpp:304</a></div></div>
+<div class="ttc" id="class_screen_object_htm_af0b1b67abfa502cef486d77bc36e8af5"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#af0b1b67abfa502cef486d77bc36e8af5">ScreenObject::getScreenHeight</a></div><div class="ttdeci">unsigned getScreenHeight()</div><div class="ttdoc">Função assíncrona para obter a altura do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00404">ScreenObject.cpp:404</a></div></div>
+<div class="ttc" id="class_animator_object_htm"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm">AnimatorObject</a></div><div class="ttdoc">Classe abstrata que é base para os elementos da tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8c/_animator_object_8hpp_source.htm#l00026">AnimatorObject.hpp:26</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a459d9b98ad70b2c6e1fffa191b75b185"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a459d9b98ad70b2c6e1fffa191b75b185">ScreenObject::aSetScreenPosition</a></div><div class="ttdeci">virtual void aSetScreenPosition(int, int)</div><div class="ttdoc">Função assíncrona para atribuição da posição do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00498">ScreenObject.cpp:498</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa6557663d0db321c904c4143086d830d"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa6557663d0db321c904c4143086d830d">ScreenObject::getAnimatorQueue</a></div><div class="ttdeci">AnimatorQueue &amp; getAnimatorQueue()</div><div class="ttdoc">Retorna o AnimatorQueue do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00351">ScreenObject.cpp:351</a></div></div>
+<div class="ttc" id="class_r_g_b_a_htm"><div class="ttname"><a href="../../dd/d77/class_r_g_b_a.htm">RGBA</a></div><div class="ttdoc">Classe para manipular de forma fácil e rápida os 4 ponteiros necessários na hora de exibir um sprite ...</div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d07/_r_g_b_a_8hpp_source.htm#l00019">RGBA.hpp:19</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa0eca7801f10de1fbda4676410159b0c"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c">ScreenObject::setResourcePosition</a></div><div class="ttdeci">ScreenObject &amp; setResourcePosition(int x, int y)</div><div class="ttdoc">Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00265">ScreenObject.cpp:265</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a1657a19d2eb03d9d3ea6a196c65f65e7"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a1657a19d2eb03d9d3ea6a196c65f65e7">ScreenObject::getResourceRect</a></div><div class="ttdeci">irr::core::rect&lt; irr::s32 &gt; getResourceRect()</div><div class="ttdoc">Obtém o retângulo(posição e tamanho) que o sprite usará da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00367">ScreenObject.cpp:367</a></div></div>
+<div class="ttc" id="class_sprite_animator_htm"><div class="ttname"><a href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a></div><div class="ttdoc">Simples animador de Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/_sprite_animator_8hpp_source.htm#l00022">SpriteAnimator.hpp:22</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a1a2327597357fc11a965932efe9a01ce"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a1a2327597357fc11a965932efe9a01ce">ScreenObject::getColor</a></div><div class="ttdeci">irr::video::SColor * getColor()</div><div class="ttdoc">Função assíncrona para obter a cor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00428">ScreenObject.cpp:428</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a6b8b50106548e49cdc73b7e62716f053"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a6b8b50106548e49cdc73b7e62716f053">ScreenObject::getScreenWidth</a></div><div class="ttdeci">unsigned getScreenWidth()</div><div class="ttdoc">Função assíncrona para obter a largura do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00396">ScreenObject.cpp:396</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a97d23f67bb7dfa83fa39289645e47d4a"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a97d23f67bb7dfa83fa39289645e47d4a">ScreenObject::ScreenObject</a></div><div class="ttdeci">ScreenObject(SharedPointer&lt; irr::video::ITexture &gt; *texture)</div><div class="ttdoc">Instancia a classe associando a textura passada pelo ponteiro. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00030">ScreenObject.cpp:30</a></div></div>
+<div class="ttc" id="class_shared_pointer_htm"><div class="ttname"><a href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt; irr::video::ITexture &gt;</a></div></div>
+<div class="ttc" id="class_screen_object_htm_af9be9d3730f538c7087f61e20e505524"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#af9be9d3730f538c7087f61e20e505524">ScreenObject::setImageColor</a></div><div class="ttdeci">ScreenObject &amp; setImageColor(irr::video::SColor *color)</div><div class="ttdoc">Define a cor que é usada pela engine para sobrepor o sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00284">ScreenObject.cpp:284</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a73996917ccd1c5927857eb22f079d535"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535">ScreenObject::setScreenPosition</a></div><div class="ttdeci">ScreenObject &amp; setScreenPosition(int x, int y)</div><div class="ttdoc">Define a coordenada (x,y) do topo esquerdo do sprite na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00234">ScreenObject.cpp:234</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a7e31c6cdcb5c65008eead1cc24b5b464"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">ScreenObject::setResourceSize</a></div><div class="ttdeci">ScreenObject &amp; setResourceSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho que o sprite usa da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00246">ScreenObject.cpp:246</a></div></div>
+<div class="ttc" id="class_screen_object_htm_ae2a6e4a0a57a523959c8ebf2239237f1"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#ae2a6e4a0a57a523959c8ebf2239237f1">ScreenObject::getSpriteAnimator</a></div><div class="ttdeci">SpriteAnimator * getSpriteAnimator()</div><div class="ttdoc">Retorna o SpriteAnimator do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00348">ScreenObject.cpp:348</a></div></div>
+<div class="ttc" id="class_screen_object_htm_acb1928b7499e681cc15728ca19b6ecdc"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#acb1928b7499e681cc15728ca19b6ecdc">ScreenObject::aSetDisplay</a></div><div class="ttdeci">virtual void aSetDisplay(bool)</div><div class="ttdoc">Função assíncrona para atribuição do display (exibir o objeto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00490">ScreenObject.cpp:490</a></div></div>
+<div class="ttc" id="class_screen_object_htm_af31cd0131c42fcac9a5133b7c2c7759b"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#af31cd0131c42fcac9a5133b7c2c7759b">ScreenObject::setSpriteAnimator</a></div><div class="ttdeci">ScreenObject &amp; setSpriteAnimator(SpriteAnimator *animator)</div><div class="ttdoc">Define o SpriteAnimator interno do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00204">ScreenObject.cpp:204</a></div></div>
+<div class="ttc" id="class_object_morph_htm"><div class="ttname"><a href="../../d7/d1a/class_object_morph.htm">ObjectMorph</a></div><div class="ttdoc">Classe abstrata usada como base para outros tipos de Morph. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d82/_object_morph_8hpp_source.htm#l00022">ObjectMorph.hpp:22</a></div></div>
+<div class="ttc" id="class_animator_queue_htm"><div class="ttname"><a href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a></div><div class="ttdoc">Classe que implementa uma fila de animações(no tempo) e callbacks para algum AnimatorObject. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfa/_animator_queue_8hpp_source.htm#l00029">AnimatorQueue.hpp:29</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa0a65b34f7d73ef6e06a64fe27f299c7"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa0a65b34f7d73ef6e06a64fe27f299c7">ScreenObject::getDisplay</a></div><div class="ttdeci">bool getDisplay()</div><div class="ttdoc">Função assíncrona para saber se o elemento está visível na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00388">ScreenObject.cpp:388</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a185ced37b469831115a380f32f5f5fa9"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a185ced37b469831115a380f32f5f5fa9">ScreenObject::setAnimatorQueue</a></div><div class="ttdeci">ScreenObject &amp; setAnimatorQueue(AnimatorQueue &amp;animator)</div><div class="ttdoc">Clona o AnimatorQueue passado por argumento para o AnimatorQueue interno do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00209">ScreenObject.cpp:209</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa3528528d0a444f0e2d64acf0977f19c"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa3528528d0a444f0e2d64acf0977f19c">ScreenObject::aSetImageColor</a></div><div class="ttdeci">void aSetImageColor(irr::video::SColor *)</div><div class="ttdoc">Função assíncrona para definir a cor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00502">ScreenObject.cpp:502</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a4090a3913947fe9eab75f88090ebb673"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a4090a3913947fe9eab75f88090ebb673">ScreenObject::startSpriteAnimation</a></div><div class="ttdeci">ScreenObject &amp; startSpriteAnimation(irr::u32 time)</div><div class="ttdoc">Inicia o SpriteAnimator no tempo informado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00311">ScreenObject.cpp:311</a></div></div>
+<div class="ttc" id="class_screen_object_htm_ac680880da757b6eb1a062671e49faa77"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#ac680880da757b6eb1a062671e49faa77">ScreenObject::getType</a></div><div class="ttdeci">unsigned char getType()</div><div class="ttdoc">Retorna o tipo da classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00506">ScreenObject.cpp:506</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a64cf4236043cdca2ad306056d319b5a6"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a64cf4236043cdca2ad306056d319b5a6">ScreenObject::stopSpriteAnimation</a></div><div class="ttdeci">ScreenObject &amp; stopSpriteAnimation()</div><div class="ttdoc">Pára o SpriteAnimator. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00316">ScreenObject.cpp:316</a></div></div>
+<div class="ttc" id="class_callback_htm"><div class="ttname"><a href="../../d1/dd4/class_callback.htm">Callback</a></div><div class="ttdoc">Classe abstrata para evitar o uso de ponteiros de função. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4c/_callback_8hpp_source.htm#l00018">Callback.hpp:18</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a8ae2dec91ac5c6d65340cf4dfab17a79"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">ScreenObject::setScreenSize</a></div><div class="ttdeci">ScreenObject &amp; setScreenSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho que o sprite ocupará na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00215">ScreenObject.cpp:215</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a8fd01b7eb1cf9161a9fde78034947971"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a8fd01b7eb1cf9161a9fde78034947971">ScreenObject::getScreenRect</a></div><div class="ttdeci">irr::core::rect&lt; irr::s32 &gt; getScreenRect()</div><div class="ttdoc">Obtém o retângulo(posição e tamanho) que o sprite ocupará na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00355">ScreenObject.cpp:355</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a84bbe23d021616fe062806802570113e"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a84bbe23d021616fe062806802570113e">ScreenObject::getScreenPositionX</a></div><div class="ttdeci">int getScreenPositionX()</div><div class="ttdoc">Função assíncrona para obter a coordenada X do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00412">ScreenObject.cpp:412</a></div></div>
+<div class="ttc" id="class_screen_object_htm_ab31513dacb98cdb918a94e4382ed1fc7"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#ab31513dacb98cdb918a94e4382ed1fc7">ScreenObject::setImageAlpha</a></div><div class="ttdeci">ScreenObject &amp; setImageAlpha(irr::u8 alpha)</div><div class="ttdoc">Define a transparência da imagem. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00294">ScreenObject.cpp:294</a></div></div>
+<div class="ttc" id="class_screen_object_htm_ab25ba25ea99120a5bc94b9dd3e34461a"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#ab25ba25ea99120a5bc94b9dd3e34461a">ScreenObject::getTexture</a></div><div class="ttdeci">irr::video::ITexture * getTexture()</div><div class="ttdoc">Retorna a textura usada pelo sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00340">ScreenObject.cpp:340</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a2af16932e475b836c516329ecb285b09"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09">ScreenObject::setTexture</a></div><div class="ttdeci">ScreenObject &amp; setTexture(SharedPointer&lt; irr::video::ITexture &gt; *texture)</div><div class="ttdoc">Associa uma textura ao objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00193">ScreenObject.cpp:193</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a546c3bd466ae367a01fff36b116f41ac"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac">ScreenObject::startAnimator</a></div><div class="ttdeci">ScreenObject &amp; startAnimator(irr::u32 time)</div><div class="ttdoc">Inicia o AnimatorQueue no tempo informado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00436">ScreenObject.cpp:436</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a9608733c2aba221d60c7816c6fab6afb"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a9608733c2aba221d60c7816c6fab6afb">ScreenObject::aSetScreenSize</a></div><div class="ttdeci">void aSetScreenSize(unsigned, unsigned)</div><div class="ttdoc">Função assíncrona para atribuição do tamanho que o objeto irá ocupar na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00494">ScreenObject.cpp:494</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa1de66b181ed1b318936af50c458e5cc"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa1de66b181ed1b318936af50c458e5cc">ScreenObject::getScreenPositionY</a></div><div class="ttdeci">int getScreenPositionY()</div><div class="ttdoc">Função assíncrona para obter a coordenada Y do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00420">ScreenObject.cpp:420</a></div></div>
+<div class="ttc" id="class_screen_object_htm_ace8160e055a2acb107c6f8abe36ef712"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#ace8160e055a2acb107c6f8abe36ef712">ScreenObject::resetSpriteAnimation</a></div><div class="ttdeci">ScreenObject &amp; resetSpriteAnimation()</div><div class="ttdoc">Pára o SpriteAnimator e volta os valores de Resource para os valores antigos. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00321">ScreenObject.cpp:321</a></div></div>
+<div class="ttc" id="class_screen_object_htm_af1580ea5cd4cc5bce70657c8a7d8734e"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#af1580ea5cd4cc5bce70657c8a7d8734e">ScreenObject::processTime</a></div><div class="ttdeci">void processTime(irr::u32)</div><div class="ttdoc">Função para processamento no tempo para a classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00452">ScreenObject.cpp:452</a></div></div>
+<div class="ttc" id="class_screen_object_htm_acfefc3d518865997039a779d887f83ef"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef">ScreenObject::appendMorph</a></div><div class="ttdeci">ScreenObject &amp; appendMorph(ObjectMorph *morph)</div><div class="ttdoc">Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00441">ScreenObject.cpp:441</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a1a6ffc5c81109d0ae15b8c8fd35dccec"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a1a6ffc5c81109d0ae15b8c8fd35dccec">ScreenObject::getImageColor</a></div><div class="ttdeci">irr::video::SColor * getImageColor()</div><div class="ttdoc">Obtém a cor que irá sobrepor a imagem. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00380">ScreenObject.cpp:380</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:11 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

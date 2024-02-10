@@ -1,0 +1,4 @@
+<map id="CrazyCrush::Game::Save::setTimeAttackRecord" name="CrazyCrush::Game::Save::setTimeAttackRecord">
+<area shape="rect" id="node2" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#a3f5bf8f295f90faa07d331371a2e0d79" title="Inicializa as dependências internas do espaço. " alt="" coords="445,5,615,47"/>
+<area shape="rect" id="node3" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#a022ed721199b2af2e1a7a0c894068281" title="Obtém o record do modo TimeAttack da posição informada. " alt="" coords="223,35,397,76"/>
+</map>

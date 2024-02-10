@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/SpriteAnimator.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">SpriteAnimator.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _SPRITE_ANIMATOR_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _SPRITE_ANIMATOR_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/irrTypes.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/rect.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../dc/d7a/class_sprite_animator.htm">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> resourceWidthMultiplier;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> resourceHeightMultiplier;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> resourcePositionXMultiplier;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> resourcePositionYMultiplier;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">unsigned</span> resourceLoopRatio;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> resourceLoopPlus;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d7a/class_sprite_animator.htm#a6a17511d124bd824edd745888522730f">setResourceSize</a>(<span class="keywordtype">float</span> width,<span class="keywordtype">float</span> height);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d7a/class_sprite_animator.htm#acef30fd6b859349e91d603dfb92e5d4e">setResourcePosition</a>(<span class="keywordtype">float</span> x,<span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dc/d7a/class_sprite_animator.htm#a4b5f75403c2925a2f11cdb665e07e726">setResourceLoop</a>(<span class="keywordtype">unsigned</span> loop,<span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    irr::core::rect&lt;irr::s32&gt; <a class="code" href="../../dc/d7a/class_sprite_animator.htm#ae2c3a0242d3558b6c80d97cf4e2c6862">getResourceRect</a>(irr::u32 time,<span class="keywordtype">int</span> x_up,<span class="keywordtype">int</span> y_up,<span class="keywordtype">int</span> x_down,<span class="keywordtype">int</span> y_down);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_sprite_animator_htm_a4b5f75403c2925a2f11cdb665e07e726"><div class="ttname"><a href="../../dc/d7a/class_sprite_animator.htm#a4b5f75403c2925a2f11cdb665e07e726">SpriteAnimator::setResourceLoop</a></div><div class="ttdeci">void setResourceLoop(unsigned loop, int size)</div><div class="ttdoc">Define valores de loop da animação. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db5/_sprite_animator_8cpp_source.htm#l00035">SpriteAnimator.cpp:35</a></div></div>
+<div class="ttc" id="class_sprite_animator_htm"><div class="ttname"><a href="../../dc/d7a/class_sprite_animator.htm">SpriteAnimator</a></div><div class="ttdoc">Simples animador de Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d62/_sprite_animator_8hpp_source.htm#l00022">SpriteAnimator.hpp:22</a></div></div>
+<div class="ttc" id="class_sprite_animator_htm_acef30fd6b859349e91d603dfb92e5d4e"><div class="ttname"><a href="../../dc/d7a/class_sprite_animator.htm#acef30fd6b859349e91d603dfb92e5d4e">SpriteAnimator::setResourcePosition</a></div><div class="ttdeci">void setResourcePosition(float x, float y)</div><div class="ttdoc">Define o fator de multiplicação da posição da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db5/_sprite_animator_8cpp_source.htm#l00030">SpriteAnimator.cpp:30</a></div></div>
+<div class="ttc" id="class_sprite_animator_htm_a6a17511d124bd824edd745888522730f"><div class="ttname"><a href="../../dc/d7a/class_sprite_animator.htm#a6a17511d124bd824edd745888522730f">SpriteAnimator::setResourceSize</a></div><div class="ttdeci">void setResourceSize(float width, float height)</div><div class="ttdoc">Define o fator de multiplicação do tamanho da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db5/_sprite_animator_8cpp_source.htm#l00025">SpriteAnimator.cpp:25</a></div></div>
+<div class="ttc" id="class_sprite_animator_htm_ae2c3a0242d3558b6c80d97cf4e2c6862"><div class="ttname"><a href="../../dc/d7a/class_sprite_animator.htm#ae2c3a0242d3558b6c80d97cf4e2c6862">SpriteAnimator::getResourceRect</a></div><div class="ttdeci">irr::core::rect&lt; irr::s32 &gt; getResourceRect(irr::u32 time, int x_up, int y_up, int x_down, int y_down)</div><div class="ttdoc">Obtém o retângulo (posição e tamanho) que o sprite ocupará da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/db5/_sprite_animator_8cpp_source.htm#l00040">SpriteAnimator.cpp:40</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:12 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

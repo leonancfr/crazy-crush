@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/ScreenButtonSprite.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScreenButtonSprite.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _SCREEN_BUTTON_SPRITE_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _SCREEN_BUTTON_SPRITE_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;ScreenButton.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;ScreenObject.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../df/d52/class_screen_button_sprite.htm">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a> : <span class="keyword">public</span> <a class="code" href="../../d6/d58/class_screen_button.htm">ScreenButton</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> button;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> oZOrder;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> normalX,normalY,hoverX,hoverY;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">unsigned</span> normalW,normalH,hoverW,hoverH;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">enum</span> { button_refresh, button_no, button_trash, button_edit, button_close, button_yes, button_right, button_left, button_up, button_down, button_right_white, button_left_white, button_up_white, button_down_white,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;           button_refresh_gray, button_no_gray, button_trash_gray, button_edit_gray, button_close_gray, button_yes_gray, button_right_gray, button_left_gray, button_up_gray, button_down_gray };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    ~<a class="code" href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a>&amp; <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a9b6cb8c65d2024c546f7cb49f659ea3d">setNormalOffset</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a>&amp; <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a9a940e71438a9055c09236c3a636f41d">setNormalSize</a>(<span class="keywordtype">unsigned</span> width,<span class="keywordtype">unsigned</span> height);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a>&amp; <a class="code" href="../../df/d52/class_screen_button_sprite.htm#ad6978c1c97b80d162cfb4372427bb99b">setHoverOffset</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a>&amp; <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a49cca185831de30da3d7d5e5b9439343">setHoverSize</a>(<span class="keywordtype">unsigned</span> width,<span class="keywordtype">unsigned</span> height);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a1084581b79279d4b7214117ae6d0799c">getNormalOffsetX</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a3b68002e30e009cb03840b473146bbac">getNormalOffsetY</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a92079451beced76f377198e0fb38d604">getNormalWidth</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a6b724a9b3320d88c1dad7f6b3e57808f">getNormalHeight</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a594816038bc398b6048c894d4ce77749">getHoverOffsetX</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#ac565846a2bad734e966795d990468482">getHoverOffsetY</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#accce90ddee4abeef76b006d9856ff1c2">getHoverWidth</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a0bfb14bc2d31392c881e1e7534f77926">getHoverHeight</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a39eb2f69bdbc90d969dfc4f052509498">getOffsetX</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> type);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#acf7f2edc8372cd55be6482592b5df105">getOffsetY</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> type);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a797683d8c9a4321f3800756a5656b9ac">getWidth</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> type);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#ae7e1fd49be3a733161b4a802b43603da">getHeight</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> type);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#aab4c07eba8de998f0e37a30e12060694">onHover</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a641666f703dab32c586a564ab9442fb1">onOut</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#ab63daef3836f98f80f25dd0879f986e8">propagateScreenSize</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a4672975205a7e493b8b603b39a5bb427">propagateScreenPosition</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a6a84e76f9730265621294936073a4e5a">propagateDisplay</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d52/class_screen_button_sprite.htm#a4d7fa0eeb23038e25ee6d026d55a601b">setZIndex</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="class_screen_button_htm"><div class="ttname"><a href="../../d6/d58/class_screen_button.htm">ScreenButton</a></div><div class="ttdoc">Classe abstrata que é modelo para os demais tipos de botões. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_screen_button_8hpp_source.htm#l00020">ScreenButton.hpp:20</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_acf7f2edc8372cd55be6482592b5df105"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#acf7f2edc8372cd55be6482592b5df105">ScreenButtonSprite::getOffsetY</a></div><div class="ttdeci">static int getOffsetY(unsigned char type)</div><div class="ttdoc">Obtém o offset Y do sprite do ícone de um dos tipos enumerados. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00147">ScreenButtonSprite.cpp:147</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a49cca185831de30da3d7d5e5b9439343"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a49cca185831de30da3d7d5e5b9439343">ScreenButtonSprite::setHoverSize</a></div><div class="ttdeci">ScreenButtonSprite &amp; setHoverSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho do sprite do botão no modo hover. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00058">ScreenButtonSprite.cpp:58</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a1084581b79279d4b7214117ae6d0799c"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a1084581b79279d4b7214117ae6d0799c">ScreenButtonSprite::getNormalOffsetX</a></div><div class="ttdeci">int getNormalOffsetX()</div><div class="ttdoc">Obtém o offset X do sprite do botão. </div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a4672975205a7e493b8b603b39a5bb427"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a4672975205a7e493b8b603b39a5bb427">ScreenButtonSprite::propagateScreenPosition</a></div><div class="ttdeci">void propagateScreenPosition()</div><div class="ttdoc">Função executada sempre que a posição do botão for alterado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00087">ScreenButtonSprite.cpp:87</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_accce90ddee4abeef76b006d9856ff1c2"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#accce90ddee4abeef76b006d9856ff1c2">ScreenButtonSprite::getHoverWidth</a></div><div class="ttdeci">unsigned getHoverWidth()</div><div class="ttdoc">Obtém a largura do sprite do botão no modo hover. </div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_ad6978c1c97b80d162cfb4372427bb99b"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#ad6978c1c97b80d162cfb4372427bb99b">ScreenButtonSprite::setHoverOffset</a></div><div class="ttdeci">ScreenButtonSprite &amp; setHoverOffset(int x, int y)</div><div class="ttdoc">Define o offset do sprite do botão no modo hover. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00049">ScreenButtonSprite.cpp:49</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a641666f703dab32c586a564ab9442fb1"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a641666f703dab32c586a564ab9442fb1">ScreenButtonSprite::onOut</a></div><div class="ttdeci">void onOut()</div><div class="ttdoc">Função automaticamente executada quando o mouse sair de cima do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00075">ScreenButtonSprite.cpp:75</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm">ScreenButtonSprite</a></div><div class="ttdoc">Implementação de um botão formado apenas por sprites. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d77/_screen_button_sprite_8hpp_source.htm#l00019">ScreenButtonSprite.hpp:19</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a0bfb14bc2d31392c881e1e7534f77926"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a0bfb14bc2d31392c881e1e7534f77926">ScreenButtonSprite::getHoverHeight</a></div><div class="ttdeci">unsigned getHoverHeight()</div><div class="ttdoc">Obtém a altura do sprite do botão no modo hover. </div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a6a84e76f9730265621294936073a4e5a"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a6a84e76f9730265621294936073a4e5a">ScreenButtonSprite::propagateDisplay</a></div><div class="ttdeci">void propagateDisplay()</div><div class="ttdoc">Função executada sempre que o display do botão for alterado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00092">ScreenButtonSprite.cpp:92</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_ab63daef3836f98f80f25dd0879f986e8"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#ab63daef3836f98f80f25dd0879f986e8">ScreenButtonSprite::propagateScreenSize</a></div><div class="ttdeci">void propagateScreenSize()</div><div class="ttdoc">Função executada sempre que o tamanho do botão for alterado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00082">ScreenButtonSprite.cpp:82</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a92079451beced76f377198e0fb38d604"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a92079451beced76f377198e0fb38d604">ScreenButtonSprite::getNormalWidth</a></div><div class="ttdeci">unsigned getNormalWidth()</div><div class="ttdoc">Obtém a largura do sprite do botão. </div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a39eb2f69bdbc90d969dfc4f052509498"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a39eb2f69bdbc90d969dfc4f052509498">ScreenButtonSprite::getOffsetX</a></div><div class="ttdeci">static int getOffsetX(unsigned char type)</div><div class="ttdoc">Obtém o offset X do sprite do ícone de um dos tipos enumerados. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00108">ScreenButtonSprite.cpp:108</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a4d7fa0eeb23038e25ee6d026d55a601b"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a4d7fa0eeb23038e25ee6d026d55a601b">ScreenButtonSprite::setZIndex</a></div><div class="ttdeci">void setZIndex(int)</div><div class="ttdoc">Altera o index dos elementos do botão no ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00102">ScreenButtonSprite.cpp:102</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a594816038bc398b6048c894d4ce77749"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a594816038bc398b6048c894d4ce77749">ScreenButtonSprite::getHoverOffsetX</a></div><div class="ttdeci">int getHoverOffsetX()</div><div class="ttdoc">Obtém o offset X do sprite do botão no modo hover. </div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_ae7e1fd49be3a733161b4a802b43603da"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#ae7e1fd49be3a733161b4a802b43603da">ScreenButtonSprite::getHeight</a></div><div class="ttdeci">static unsigned getHeight(unsigned char type)</div><div class="ttdoc">Obtém a altura do sprite do ícone de um dos tipos enumerados. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00185">ScreenButtonSprite.cpp:185</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_ac565846a2bad734e966795d990468482"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#ac565846a2bad734e966795d990468482">ScreenButtonSprite::getHoverOffsetY</a></div><div class="ttdeci">int getHoverOffsetY()</div><div class="ttdoc">Obtém o offset Y do sprite do botão no modo hover. </div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a9a940e71438a9055c09236c3a636f41d"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a9a940e71438a9055c09236c3a636f41d">ScreenButtonSprite::setNormalSize</a></div><div class="ttdeci">ScreenButtonSprite &amp; setNormalSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho do sprite do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00040">ScreenButtonSprite.cpp:40</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a9b6cb8c65d2024c546f7cb49f659ea3d"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a9b6cb8c65d2024c546f7cb49f659ea3d">ScreenButtonSprite::setNormalOffset</a></div><div class="ttdeci">ScreenButtonSprite &amp; setNormalOffset(int x, int y)</div><div class="ttdoc">Define o offset do sprite do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00031">ScreenButtonSprite.cpp:31</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_aab4c07eba8de998f0e37a30e12060694"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#aab4c07eba8de998f0e37a30e12060694">ScreenButtonSprite::onHover</a></div><div class="ttdeci">void onHover()</div><div class="ttdoc">Função automaticamente executada quando o mouse estiver sobre a região do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00068">ScreenButtonSprite.cpp:68</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a797683d8c9a4321f3800756a5656b9ac"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a797683d8c9a4321f3800756a5656b9ac">ScreenButtonSprite::getWidth</a></div><div class="ttdeci">static unsigned getWidth(unsigned char type)</div><div class="ttdoc">Obtém a largura do sprite do ícone de um dos tipos enumerados. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d95/_screen_button_sprite_8cpp_source.htm#l00181">ScreenButtonSprite.cpp:181</a></div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a6b724a9b3320d88c1dad7f6b3e57808f"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a6b724a9b3320d88c1dad7f6b3e57808f">ScreenButtonSprite::getNormalHeight</a></div><div class="ttdeci">unsigned getNormalHeight()</div><div class="ttdoc">Obtém altura do sprite do botão. </div></div>
+<div class="ttc" id="class_screen_button_sprite_htm_a3b68002e30e009cb03840b473146bbac"><div class="ttname"><a href="../../df/d52/class_screen_button_sprite.htm#a3b68002e30e009cb03840b473146bbac">ScreenButtonSprite::getNormalOffsetY</a></div><div class="ttdeci">int getNormalOffsetY()</div><div class="ttdoc">Obtém o offset Y do sprite do botão. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:11 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

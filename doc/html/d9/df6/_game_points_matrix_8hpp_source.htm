@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/GamePointsMatrix.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GamePointsMatrix.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _GAME_POINTS_MATRIX_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _GAME_POINTS_MATRIX_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">namespace </span>Game {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">namespace </span>Points {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a3c28216346210ec51f67065d14444372">initialize</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0">checkMatrix</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964">decreasePoint</a>(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2">setPoint</a>(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> value);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a058257c07ef1a9550778a64f9cf3e868">getPoint</a>(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a469042ad27accf63fcfc342dfdf7d9e5">isComplete</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8">erase</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_ac66764905f9ed26a88f90fa09b9acdd8"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8">CrazyCrush::Game::Points::erase</a></div><div class="ttdeci">void erase()</div><div class="ttdoc">Zera a matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00099">GamePointsMatrix.cpp:99</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_adfb0440e4d8470e43810120d51596fe0"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0">CrazyCrush::Game::Points::checkMatrix</a></div><div class="ttdeci">void checkMatrix()</div><div class="ttdoc">Verifica a matriz para saber se a fase está concluída. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00062">GamePointsMatrix.cpp:62</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a3c28216346210ec51f67065d14444372"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a3c28216346210ec51f67065d14444372">CrazyCrush::Game::Points::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializa as dependências internas do espaço. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00033">GamePointsMatrix.cpp:33</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a469042ad27accf63fcfc342dfdf7d9e5"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a469042ad27accf63fcfc342dfdf7d9e5">CrazyCrush::Game::Points::isComplete</a></div><div class="ttdeci">bool isComplete()</div><div class="ttdoc">Se a matriz está completamente zerada. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00095">GamePointsMatrix.cpp:95</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a353803a76768de1d4d23b3119fc43964"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964">CrazyCrush::Game::Points::decreasePoint</a></div><div class="ttdeci">void decreasePoint(unsigned i, unsigned j)</div><div class="ttdoc">Decrementa, em um ponto, uma posição da matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00074">GamePointsMatrix.cpp:74</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a05edf6265bb21d6100c016d4978a47f2"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2">CrazyCrush::Game::Points::setPoint</a></div><div class="ttdeci">void setPoint(unsigned i, unsigned j, unsigned char v)</div><div class="ttdoc">Define um valor para um ponto na matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00083">GamePointsMatrix.cpp:83</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a058257c07ef1a9550778a64f9cf3e868"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a058257c07ef1a9550778a64f9cf3e868">CrazyCrush::Game::Points::getPoint</a></div><div class="ttdeci">unsigned char getPoint(unsigned i, unsigned j)</div><div class="ttdoc">Obtém a pontuação nos índices desejado. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00091">GamePointsMatrix.cpp:91</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:08 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,10 @@
+<map id="CrazyCrush::Game::LevelFile::openLevel" name="CrazyCrush::Game::LevelFile::openLevel">
+<area shape="rect" id="node2" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="247,5,424,32"/>
+<area shape="rect" id="node4" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#ae50dfd1145e5a20a3bafb5b97d66a0d7" title="Define o tempo máximo da fase atual. " alt="" coords="244,57,427,98"/>
+<area shape="rect" id="node5" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8" title="Zera a matriz. " alt="" coords="246,187,425,229"/>
+<area shape="rect" id="node7" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#ac7e38faf272306e7a0e0b42bedd02c81" title="Atualize a posição de um objeto na tela com base nas suas coordenadas matricial. " alt="" coords="257,253,414,294"/>
+<area shape="rect" id="node9" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2" title="Define um valor para um ponto na matriz. " alt="" coords="246,122,425,163"/>
+<area shape="rect" id="node3" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="530,68,634,95"/>
+<area shape="rect" id="node6" href="$d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455" title="Obtém o elemento dados os índices. " alt="" coords="543,163,621,189"/>
+<area shape="rect" id="node8" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="475,260,689,287"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CallbackButtonOnHover::aProcess" name="CallbackButtonOnHover::aProcess">
+<area shape="rect" id="node2" href="$d6/d58/class_screen_button.htm#ab9081adab3fb391a6ecd7304829255e8" title="Função automaticamente executada quando o mouse estiver sobre a região do botão. " alt="" coords="212,5,367,32"/>
+<area shape="rect" id="node3" href="$d1/dd4/class_callback.htm#af1051d87929e76c60a04cf81e7458b3a" title="Função &quot;única&quot; da classe. " alt="" coords="226,56,353,83"/>
+<area shape="rect" id="node4" href="$d1/dd4/class_callback.htm#a3a8c0c16517e1467bf973928b2d9356b" title="Função a ser implementada pelas classes herdadas. " alt="" coords="415,56,549,83"/>
+</map>

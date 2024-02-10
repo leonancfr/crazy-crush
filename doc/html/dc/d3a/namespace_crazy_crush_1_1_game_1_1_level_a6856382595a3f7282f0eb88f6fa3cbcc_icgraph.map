@@ -1,0 +1,6 @@
+<map id="CrazyCrush::Game::Level::playLevel" name="CrazyCrush::Game::Level::playLevel">
+<area shape="rect" id="node2" href="$dc/de9/class_crazy_crush_1_1_game_1_1_level_1_1_callback_game_play_level_button_click.htm#a1a4e6987e7f4f49be40f0f3e1ed059a6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="243,5,451,61"/>
+<area shape="rect" id="node3" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a568ddc72ab15ab0f6085ce81c1034cb7" title="Instruções rápidas para ir para o próximo nível. " alt="" coords="261,86,432,127"/>
+<area shape="rect" id="node5" href="$d4/d58/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_re_try_button_click.htm#a070fff4a388f50c7d2cfbf853cf79e18" title="Função a ser implementada pelas classes herdadas. " alt="" coords="224,152,469,208"/>
+<area shape="rect" id="node4" href="$de/de7/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_next_button_click.htm#af24b8526179752cd90d77014503c2c9a" title="Função a ser implementada pelas classes herdadas. " alt="" coords="517,79,756,135"/>
+</map>

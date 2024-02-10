@@ -1,0 +1,5 @@
+<map id="CrazyCrush::Game::LevelFile::saveLevel" name="CrazyCrush::Game::LevelFile::saveLevel">
+<area shape="rect" id="node2" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a32823659bbd6c599a5a31b043db4f33a" title="Obtém o tempo máximo da fase atual. " alt="" coords="244,5,427,47"/>
+<area shape="rect" id="node3" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a058257c07ef1a9550778a64f9cf3e868" title="Obtém a pontuação nos índices desejado. " alt="" coords="246,71,425,112"/>
+<area shape="rect" id="node4" href="$d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455" title="Obtém o elemento dados os índices. " alt="" coords="475,78,552,105"/>
+</map>

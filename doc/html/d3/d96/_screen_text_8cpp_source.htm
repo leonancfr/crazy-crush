@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/ScreenText.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScreenText.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Polit�cnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletr�nica e Computa��o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programa��o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan Fran�a    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;ScreenText.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a2a3e1b77c7e2beac0aa6874f62a7f2db">   14</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm#ae62b9f3aea4f177c20b10388ba603338">ScreenText::ScreenText</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::gui::IGUIFont&gt;</a>* f){</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  mutexFont = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  mutexString = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  mutexColor = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  mutexScreenPosition = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  mutexOutScreenPosition = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  mutexDisplay = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordflow">if</span>(f != NULL)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  font = *f;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  align = left;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  animatorQueue = <span class="keyword">new</span> <a class="code" href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  animatorQueue-&gt;<a class="code" href="../../d1/d91/class_animator_queue.htm#a7cfe3a91fab5ea1b863b20c058f28017">setObject</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ae62b9f3aea4f177c20b10388ba603338">   29</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm#ae62b9f3aea4f177c20b10388ba603338">ScreenText::ScreenText</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::gui::IGUIFont&gt;</a>&amp; f){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  mutexFont = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  mutexString = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  mutexColor = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  mutexScreenPosition = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  mutexOutScreenPosition = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  mutexDisplay = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  font = f;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  align = left;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  animatorQueue = <span class="keyword">new</span> <a class="code" href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  animatorQueue-&gt;<a class="code" href="../../d1/d91/class_animator_queue.htm#a7cfe3a91fab5ea1b863b20c058f28017">setObject</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a77c481e291928ae6c3d0a23eef028f8b">   43</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm#ae62b9f3aea4f177c20b10388ba603338">ScreenText::ScreenText</a>(<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; other){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  mutexFont = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  mutexString = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  mutexColor = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  mutexScreenPosition = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  mutexOutScreenPosition = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  mutexDisplay = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  pthread_mutex_lock(&amp;other.mutexFont);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  pthread_mutex_lock(&amp;other.mutexString);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  pthread_mutex_lock(&amp;other.mutexColor);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  pthread_mutex_lock(&amp;other.mutexScreenPosition);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  pthread_mutex_lock(&amp;other.mutexOutScreenPosition);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  pthread_mutex_lock(&amp;other.mutexDisplay);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  font = other.font;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  str = other.str;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  wstr = other.wstr;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  color = other.color;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  align = other.align;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  screenPositionX = other.screenPositionX;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  screenPositionY = other.screenPositionY;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  oScreenPositionX = other.oScreenPositionX;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  oScreenPositionY = other.oScreenPositionY;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  display = other.display;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  animatorQueue = <span class="keyword">new</span> <a class="code" href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  animatorQueue-&gt;<a class="code" href="../../d1/d91/class_animator_queue.htm#a7cfe3a91fab5ea1b863b20c058f28017">setObject</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  (*animatorQueue) = *(other.animatorQueue);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  pthread_mutex_unlock(&amp;other.mutexFont);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  pthread_mutex_unlock(&amp;other.mutexString);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  pthread_mutex_unlock(&amp;other.mutexColor);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  pthread_mutex_unlock(&amp;other.mutexScreenPosition);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  pthread_mutex_unlock(&amp;other.mutexOutScreenPosition);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  pthread_mutex_unlock(&amp;other.mutexDisplay);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;ScreenText::~ScreenText(){}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a2bbd217387984b7540d0cc5602753b62">   82</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1">ScreenText::setFont</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::gui::IGUIFont&gt;</a>* f){</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  pthread_mutex_lock(&amp;mutexFont);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">if</span>(f == NULL)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    font.<a class="code" href="../../da/dac/class_shared_pointer.htm#ab39ff3eeaa60d180b63acf5bb3cebef6">set</a>(NULL);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    font = *f;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  pthread_mutex_unlock(&amp;mutexFont);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1">   92</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1">ScreenText::setFont</a>(<a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::gui::IGUIFont&gt;</a>&amp; f){</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  pthread_mutex_lock(&amp;mutexFont);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  font = f;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  pthread_mutex_unlock(&amp;mutexFont);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d">   99</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d">ScreenText::setString</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* s){</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  pthread_mutex_lock(&amp;mutexString);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  str = s;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  wstr = std::wstring(str.begin(),str.end());</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  pthread_mutex_unlock(&amp;mutexString);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ab4c845f59b5ba230431c731ffd7b3978">  107</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d">ScreenText::setString</a>(std::string&amp; s){</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  pthread_mutex_lock(&amp;mutexString);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  str = s;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  wstr = std::wstring(str.begin(),str.end());</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  pthread_mutex_unlock(&amp;mutexString);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a1543ea8cddacb9b5c8036fd8fa9e016f">  115</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a1543ea8cddacb9b5c8036fd8fa9e016f">ScreenText::setColor</a>(irr::video::SColor&amp; c){</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  pthread_mutex_lock(&amp;mutexColor);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  color = c;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  pthread_mutex_unlock(&amp;mutexColor);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a797409922a028b134888bcb1a372bc83">  122</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a1543ea8cddacb9b5c8036fd8fa9e016f">ScreenText::setColor</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> r,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> g,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> b){</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  pthread_mutex_lock(&amp;mutexColor);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  color = irr::video::SColor(a,r,g,b);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  pthread_mutex_unlock(&amp;mutexColor);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a0e4490db05e91ecabf88248a51cba60f">  129</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a0e4490db05e91ecabf88248a51cba60f">ScreenText::setAlpha</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a){</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  pthread_mutex_lock(&amp;mutexColor);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  color.setAlpha(a);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  pthread_mutex_unlock(&amp;mutexColor);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ab4a583a1b1a85d6942ef5c227b274568">  136</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#ab4a583a1b1a85d6942ef5c227b274568">ScreenText::setScreenPosition</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y){</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  pthread_mutex_lock(&amp;mutexScreenPosition);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;  pthread_mutex_lock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  screenPositionX = oScreenPositionX = x;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  screenPositionY = oScreenPositionY = y;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  pthread_mutex_unlock(&amp;mutexScreenPosition);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  pthread_mutex_unlock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a59ed25809aa6ea9b4a0976fa39ad64aa">  146</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a59ed25809aa6ea9b4a0976fa39ad64aa">ScreenText::setScreenAlign</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a){</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  pthread_mutex_lock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  align = a;</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="keywordflow">if</span>((align != left)&amp;&amp;(align!=center)&amp;&amp;(align!=right))</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    align = left;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  pthread_mutex_unlock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a7129e43667e850f9f5fb568848ada511">  155</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a7129e43667e850f9f5fb568848ada511">ScreenText::setScreenVAlign</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a){</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  pthread_mutex_lock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  valign = a;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <span class="keywordflow">if</span>((valign != top)&amp;&amp;(valign!=middle)&amp;&amp;(valign!=center)&amp;&amp;(align!=bottom))</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    valign = top;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  pthread_mutex_unlock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;}</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a2e782926094d317cb916eb219ebc7941">  164</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#a2e782926094d317cb916eb219ebc7941">ScreenText::setDisplay</a>(<span class="keywordtype">bool</span> d){</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  pthread_mutex_lock(&amp;mutexDisplay);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  display = d;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  pthread_mutex_unlock(&amp;mutexDisplay);</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ab9ec7f5296ab1928c7e4ce763240f103">  171</a></span>&#160;irr::gui::IGUIFont* <a class="code" href="../../d0/d94/class_screen_text.htm#ab9ec7f5296ab1928c7e4ce763240f103">ScreenText::getFont</a>(){</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  irr::gui::IGUIFont* t;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  pthread_mutex_lock(&amp;mutexFont);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  t = font.<a class="code" href="../../da/dac/class_shared_pointer.htm#a544838840bafb2854f5d6775fb34eccf">get</a>();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  pthread_mutex_unlock(&amp;mutexFont);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a8bb31d0a5ce74d76109862164f551000">  179</a></span>&#160;std::string <a class="code" href="../../d0/d94/class_screen_text.htm#a8bb31d0a5ce74d76109862164f551000">ScreenText::getString</a>(){</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  std::string t;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  pthread_mutex_lock(&amp;mutexString);</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  t = str;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  pthread_mutex_unlock(&amp;mutexString);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;}</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#aa6a0420b15cfe50a8d76a0b1b5cf8408">  187</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d0/d94/class_screen_text.htm#aa6a0420b15cfe50a8d76a0b1b5cf8408">ScreenText::getDisplay</a>(){</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordtype">bool</span> r = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  pthread_mutex_lock(&amp;mutexFont);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  pthread_mutex_lock(&amp;mutexDisplay);</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordflow">if</span>(font.<a class="code" href="../../da/dac/class_shared_pointer.htm#a544838840bafb2854f5d6775fb34eccf">get</a>() != NULL)</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    r = display;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  pthread_mutex_unlock(&amp;mutexFont);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  pthread_mutex_unlock(&amp;mutexDisplay);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a524368d60a9722217c33f624b5e5b2e2">  198</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a524368d60a9722217c33f624b5e5b2e2">ScreenText::getScreenAlign</a>(){</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  pthread_mutex_lock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;  a = align;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  pthread_mutex_unlock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ae822620ecaeb83ace5e1d29eda8bffb4">  206</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d0/d94/class_screen_text.htm#ae822620ecaeb83ace5e1d29eda8bffb4">ScreenText::getScreenVAlign</a>(){</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  pthread_mutex_lock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  a = valign;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  pthread_mutex_unlock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  <span class="keywordflow">return</span> a;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;</div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a4c126bf84182687ed49ede62e90bb9ef">  214</a></span>&#160;irr::core::rect&lt;irr::s32&gt; <a class="code" href="../../d0/d94/class_screen_text.htm#a4c126bf84182687ed49ede62e90bb9ef">ScreenText::getScreenRect</a>(){</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  irr::core::rect&lt;irr::s32&gt; t;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  pthread_mutex_lock(&amp;mutexFont);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  pthread_mutex_lock(&amp;mutexString);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  pthread_mutex_lock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  irr::s32 Y = oScreenPositionY;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  irr::core::dimension2d&lt;irr::u32&gt; tx = font-&gt;getDimension(wstr.c_str());</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">if</span>((valign == middle)||(valign == center)){</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    Y -= tx.Height/2;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(valign == bottom){</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    Y -= tx.Height;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  }</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  <span class="keywordflow">if</span>((font.<a class="code" href="../../da/dac/class_shared_pointer.htm#a544838840bafb2854f5d6775fb34eccf">get</a>() == NULL)||(align == left)){</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    t = irr::core::rect&lt;irr::s32&gt;(oScreenPositionX,Y,oScreenPositionX,Y);</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span>(align == right){</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      t = irr::core::rect&lt;irr::s32&gt;(</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        oScreenPositionX-tx.Width,</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        Y,</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        oScreenPositionX-tx.Width,</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        Y</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;      );</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;      t = irr::core::rect&lt;irr::s32&gt;(</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        oScreenPositionX-(tx.Width/2),</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        Y,</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        oScreenPositionX-(tx.Width/2),</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        Y</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      );</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  }</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  pthread_mutex_unlock(&amp;mutexFont);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  pthread_mutex_unlock(&amp;mutexString);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  pthread_mutex_unlock(&amp;mutexOutScreenPosition);</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a4cc3a007301c7292bc59bdfbeff8876a">  251</a></span>&#160;irr::video::SColor <a class="code" href="../../d0/d94/class_screen_text.htm#a4cc3a007301c7292bc59bdfbeff8876a">ScreenText::getSColor</a>(){</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  irr::video::SColor t;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  pthread_mutex_lock(&amp;mutexColor);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  t = color;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  pthread_mutex_unlock(&amp;mutexColor);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;}</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
+<div class="line"><a name="l00259"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ae4b578f6533b60dbb5f879b9f0bbee97">  259</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d94/class_screen_text.htm#ae4b578f6533b60dbb5f879b9f0bbee97">ScreenText::aSetDisplay</a>(<span class="keywordtype">bool</span> b){</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  this-&gt;<a class="code" href="../../d0/d94/class_screen_text.htm#a2e782926094d317cb916eb219ebc7941">setDisplay</a>(b);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a43a0c7119b1a6a7f13b9ff2efde6c5f6">  263</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a43a0c7119b1a6a7f13b9ff2efde6c5f6">ScreenText::aSetScreenSize</a>(<span class="keywordtype">unsigned</span> w,<span class="keywordtype">unsigned</span> h){}</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a33c7439f20dda14c78b612df10f414b2">  265</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a33c7439f20dda14c78b612df10f414b2">ScreenText::aSetScreenPosition</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y){</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  this-&gt;<a class="code" href="../../d0/d94/class_screen_text.htm#ab4a583a1b1a85d6942ef5c227b274568">setScreenPosition</a>(x,y);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
+<div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a0b5a8ad5ac1f636feeef4831c40d3e60">  269</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a0b5a8ad5ac1f636feeef4831c40d3e60">ScreenText::aSetImageColor</a>(irr::video::SColor* a){}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a9fb0345c1db17c4d0271cec7d1883894">  271</a></span>&#160;irr::video::SColor* <a class="code" href="../../d0/d94/class_screen_text.htm#a9fb0345c1db17c4d0271cec7d1883894">ScreenText::getColor</a>(){</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a54c0488243d4a220cc119fba888beb95">  275</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a54c0488243d4a220cc119fba888beb95">ScreenText::getScreenWidth</a>(){</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">unsigned</span> v=0;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  pthread_mutex_lock(&amp;mutexFont);</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  pthread_mutex_lock(&amp;mutexString);</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  irr::core::dimension2d&lt;irr::u32&gt; tx = font-&gt;getDimension(wstr.c_str());</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  v = tx.Width;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  pthread_mutex_unlock(&amp;mutexFont);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  pthread_mutex_unlock(&amp;mutexString);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a3975ec4c9fb0304f8a71133236742499">  286</a></span>&#160;<span class="keywordtype">unsigned</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a3975ec4c9fb0304f8a71133236742499">ScreenText::getScreenHeight</a>(){</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;  <span class="keywordtype">unsigned</span> v=0;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  pthread_mutex_lock(&amp;mutexFont);</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  pthread_mutex_lock(&amp;mutexString);</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  irr::core::dimension2d&lt;irr::u32&gt; tx = font-&gt;getDimension(wstr.c_str());</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  v = tx.Height;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  pthread_mutex_unlock(&amp;mutexFont);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  pthread_mutex_unlock(&amp;mutexString);</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordflow">return</span> v;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;</div>
+<div class="line"><a name="l00297"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ac9aa3f49d1bb6cf711a18962f9b0936f">  297</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d0/d94/class_screen_text.htm#ac9aa3f49d1bb6cf711a18962f9b0936f">ScreenText::getScreenPositionX</a>(){</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="keywordflow">return</span> screenPositionX;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;</div>
+<div class="line"><a name="l00301"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#aa53cd9cc510c3b4223254d476637aa2a">  301</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../d0/d94/class_screen_text.htm#aa53cd9cc510c3b4223254d476637aa2a">ScreenText::getScreenPositionY</a>(){</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keywordflow">return</span> screenPositionY;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;}</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;</div>
+<div class="line"><a name="l00305"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ac7616cc5bdc741cba0f314bad0574ce7">  305</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#ac7616cc5bdc741cba0f314bad0574ce7">ScreenText::setAnimatorQueue</a>(<a class="code" href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a>&amp; o){</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  (*animatorQueue) = o;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div>
+<div class="line"><a name="l00310"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#af490e823f93b065263aeab152d228223">  310</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#af490e823f93b065263aeab152d228223">ScreenText::appendMorph</a>(<a class="code" href="../../d7/d1a/class_object_morph.htm">ObjectMorph</a>* o){</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  animatorQueue-&gt;<a class="code" href="../../d1/d91/class_animator_queue.htm#ae6f8830d3b53ae853e1ec75ef135292f">appendMorph</a>(o);</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;}</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div>
+<div class="line"><a name="l00315"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#ad103955ff0100b7189c3857d1d2e1226">  315</a></span>&#160;<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; <a class="code" href="../../d0/d94/class_screen_text.htm#ad103955ff0100b7189c3857d1d2e1226">ScreenText::appendCallback</a>(<a class="code" href="../../d1/dd4/class_callback.htm">Callback</a>* c){</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  animatorQueue-&gt;<a class="code" href="../../d1/d91/class_animator_queue.htm#a89e2d21a6e06b5f2347c3d585ab4ed98">appendCallback</a>(c);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;  <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a1a013c01403e2064a49f0e833438b230">  320</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a1a013c01403e2064a49f0e833438b230">ScreenText::getType</a>(){</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  <span class="keywordflow">return</span> AnimatorObject::typeScreenText;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00324"></a><span class="lineno"><a class="line" href="../../d0/d94/class_screen_text.htm#a5f004392bce05453538d81a214847b74">  324</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d0/d94/class_screen_text.htm#a5f004392bce05453538d81a214847b74">ScreenText::processTime</a>(irr::u32 time){</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
+<div class="ttc" id="class_screen_text_htm_a7129e43667e850f9f5fb568848ada511"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a7129e43667e850f9f5fb568848ada511">ScreenText::setScreenVAlign</a></div><div class="ttdeci">ScreenText &amp; setScreenVAlign(unsigned char type)</div><div class="ttdoc">Define a orientação vertical do texto em relação à posição informada. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00155">ScreenText.cpp:155</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ab4a583a1b1a85d6942ef5c227b274568"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ab4a583a1b1a85d6942ef5c227b274568">ScreenText::setScreenPosition</a></div><div class="ttdeci">ScreenText &amp; setScreenPosition(int x, int y)</div><div class="ttdoc">Define a posição do texto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00136">ScreenText.cpp:136</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ac9aa3f49d1bb6cf711a18962f9b0936f"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ac9aa3f49d1bb6cf711a18962f9b0936f">ScreenText::getScreenPositionX</a></div><div class="ttdeci">int getScreenPositionX()</div><div class="ttdoc">Função assíncrona para obter a coordenada X do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00297">ScreenText.cpp:297</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ac7616cc5bdc741cba0f314bad0574ce7"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ac7616cc5bdc741cba0f314bad0574ce7">ScreenText::setAnimatorQueue</a></div><div class="ttdeci">ScreenText &amp; setAnimatorQueue(AnimatorQueue &amp;animator)</div><div class="ttdoc">Clona o AnimatorQueue passado por argumento para o AnimatorQueue interno do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00305">ScreenText.cpp:305</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a54c0488243d4a220cc119fba888beb95"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a54c0488243d4a220cc119fba888beb95">ScreenText::getScreenWidth</a></div><div class="ttdeci">unsigned getScreenWidth()</div><div class="ttdoc">Função assíncrona para obter a largura do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00275">ScreenText.cpp:275</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a43a0c7119b1a6a7f13b9ff2efde6c5f6"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a43a0c7119b1a6a7f13b9ff2efde6c5f6">ScreenText::aSetScreenSize</a></div><div class="ttdeci">void aSetScreenSize(unsigned, unsigned)</div><div class="ttdoc">Função assíncrona para atribuição do tamanho que o objeto irá ocupar na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00263">ScreenText.cpp:263</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a4f3b90e2b894be7b97201d93899b56d1"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1">ScreenText::setFont</a></div><div class="ttdeci">ScreenText &amp; setFont(SharedPointer&lt; irr::gui::IGUIFont &gt; &amp;font)</div><div class="ttdoc">Associa uma fonte ao objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00092">ScreenText.cpp:92</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a4cc3a007301c7292bc59bdfbeff8876a"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a4cc3a007301c7292bc59bdfbeff8876a">ScreenText::getSColor</a></div><div class="ttdeci">irr::video::SColor getSColor()</div><div class="ttdoc">Obtém a cor do texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00251">ScreenText.cpp:251</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a2e782926094d317cb916eb219ebc7941"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a2e782926094d317cb916eb219ebc7941">ScreenText::setDisplay</a></div><div class="ttdeci">ScreenText &amp; setDisplay(bool value)</div><div class="ttdoc">Define se o texto será exibido na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00164">ScreenText.cpp:164</a></div></div>
+<div class="ttc" id="class_shared_pointer_htm_ab39ff3eeaa60d180b63acf5bb3cebef6"><div class="ttname"><a href="../../da/dac/class_shared_pointer.htm#ab39ff3eeaa60d180b63acf5bb3cebef6">SharedPointer::set</a></div><div class="ttdeci">void set(T *value)</div><div class="ttdoc">Define o valor do ponteiro. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2d/_shared_pointer_8hpp_source.htm#l00115">SharedPointer.hpp:115</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a557f315ea4d927f96b963406e27f518d"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d">ScreenText::setString</a></div><div class="ttdeci">ScreenText &amp; setString(const char *string)</div><div class="ttdoc">Define o texto do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00099">ScreenText.cpp:99</a></div></div>
+<div class="ttc" id="class_shared_pointer_htm"><div class="ttname"><a href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt; irr::gui::IGUIFont &gt;</a></div></div>
+<div class="ttc" id="class_screen_text_htm"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm">ScreenText</a></div><div class="ttdoc">Objeto primitivo para um texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/_screen_text_8hpp_source.htm#l00027">ScreenText.hpp:27</a></div></div>
+<div class="ttc" id="class_screen_text_htm_af490e823f93b065263aeab152d228223"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#af490e823f93b065263aeab152d228223">ScreenText::appendMorph</a></div><div class="ttdeci">ScreenText &amp; appendMorph(ObjectMorph *morph)</div><div class="ttdoc">Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00310">ScreenText.cpp:310</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a4c126bf84182687ed49ede62e90bb9ef"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a4c126bf84182687ed49ede62e90bb9ef">ScreenText::getScreenRect</a></div><div class="ttdeci">irr::core::rect&lt; irr::s32 &gt; getScreenRect()</div><div class="ttdoc">Obtém a posição do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00214">ScreenText.cpp:214</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ae822620ecaeb83ace5e1d29eda8bffb4"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ae822620ecaeb83ace5e1d29eda8bffb4">ScreenText::getScreenVAlign</a></div><div class="ttdeci">unsigned char getScreenVAlign()</div><div class="ttdoc">Obtém o alinhamento vertical usado no objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00206">ScreenText.cpp:206</a></div></div>
+<div class="ttc" id="class_object_morph_htm"><div class="ttname"><a href="../../d7/d1a/class_object_morph.htm">ObjectMorph</a></div><div class="ttdoc">Classe abstrata usada como base para outros tipos de Morph. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/d82/_object_morph_8hpp_source.htm#l00022">ObjectMorph.hpp:22</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a33c7439f20dda14c78b612df10f414b2"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a33c7439f20dda14c78b612df10f414b2">ScreenText::aSetScreenPosition</a></div><div class="ttdeci">void aSetScreenPosition(int, int)</div><div class="ttdoc">Função assíncrona para atribuição da posição do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00265">ScreenText.cpp:265</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a5f004392bce05453538d81a214847b74"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a5f004392bce05453538d81a214847b74">ScreenText::processTime</a></div><div class="ttdeci">void processTime(irr::u32)</div><div class="ttdoc">Função para processamento no tempo para a classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00324">ScreenText.cpp:324</a></div></div>
+<div class="ttc" id="class_animator_queue_htm"><div class="ttname"><a href="../../d1/d91/class_animator_queue.htm">AnimatorQueue</a></div><div class="ttdoc">Classe que implementa uma fila de animações(no tempo) e callbacks para algum AnimatorObject. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dfa/_animator_queue_8hpp_source.htm#l00029">AnimatorQueue.hpp:29</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ad103955ff0100b7189c3857d1d2e1226"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ad103955ff0100b7189c3857d1d2e1226">ScreenText::appendCallback</a></div><div class="ttdeci">ScreenText &amp; appendCallback(Callback *callback)</div><div class="ttdoc">Adiciona o Callback passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00315">ScreenText.cpp:315</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ae62b9f3aea4f177c20b10388ba603338"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ae62b9f3aea4f177c20b10388ba603338">ScreenText::ScreenText</a></div><div class="ttdeci">ScreenText(SharedPointer&lt; irr::gui::IGUIFont &gt; &amp;font)</div><div class="ttdoc">Inicializa o objeto associando uma fonte. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00029">ScreenText.cpp:29</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a8bb31d0a5ce74d76109862164f551000"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a8bb31d0a5ce74d76109862164f551000">ScreenText::getString</a></div><div class="ttdeci">std::string getString()</div><div class="ttdoc">Retorna o texto do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00179">ScreenText.cpp:179</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a9fb0345c1db17c4d0271cec7d1883894"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a9fb0345c1db17c4d0271cec7d1883894">ScreenText::getColor</a></div><div class="ttdeci">irr::video::SColor * getColor()</div><div class="ttdoc">Função assíncrona para obter a cor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00271">ScreenText.cpp:271</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a3975ec4c9fb0304f8a71133236742499"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a3975ec4c9fb0304f8a71133236742499">ScreenText::getScreenHeight</a></div><div class="ttdeci">unsigned getScreenHeight()</div><div class="ttdoc">Função assíncrona para obter a altura do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00286">ScreenText.cpp:286</a></div></div>
+<div class="ttc" id="class_callback_htm"><div class="ttname"><a href="../../d1/dd4/class_callback.htm">Callback</a></div><div class="ttdoc">Classe abstrata para evitar o uso de ponteiros de função. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4c/_callback_8hpp_source.htm#l00018">Callback.hpp:18</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a0b5a8ad5ac1f636feeef4831c40d3e60"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a0b5a8ad5ac1f636feeef4831c40d3e60">ScreenText::aSetImageColor</a></div><div class="ttdeci">void aSetImageColor(irr::video::SColor *)</div><div class="ttdoc">Função assíncrona para definir a cor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00269">ScreenText.cpp:269</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a524368d60a9722217c33f624b5e5b2e2"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a524368d60a9722217c33f624b5e5b2e2">ScreenText::getScreenAlign</a></div><div class="ttdeci">unsigned char getScreenAlign()</div><div class="ttdoc">Obtém o alinhamento horizontal usado no objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00198">ScreenText.cpp:198</a></div></div>
+<div class="ttc" id="class_animator_queue_htm_a89e2d21a6e06b5f2347c3d585ab4ed98"><div class="ttname"><a href="../../d1/d91/class_animator_queue.htm#a89e2d21a6e06b5f2347c3d585ab4ed98">AnimatorQueue::appendCallback</a></div><div class="ttdeci">AnimatorQueue &amp; appendCallback(Callback *callback)</div><div class="ttdoc">Adiciona um Callback à lista. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d5f/_animator_queue_8cpp_source.htm#l00159">AnimatorQueue.cpp:159</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a1543ea8cddacb9b5c8036fd8fa9e016f"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a1543ea8cddacb9b5c8036fd8fa9e016f">ScreenText::setColor</a></div><div class="ttdeci">ScreenText &amp; setColor(irr::video::SColor &amp;color)</div><div class="ttdoc">Define a cor do texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00115">ScreenText.cpp:115</a></div></div>
+<div class="ttc" id="class_animator_queue_htm_ae6f8830d3b53ae853e1ec75ef135292f"><div class="ttname"><a href="../../d1/d91/class_animator_queue.htm#ae6f8830d3b53ae853e1ec75ef135292f">AnimatorQueue::appendMorph</a></div><div class="ttdeci">AnimatorQueue &amp; appendMorph(ObjectMorph *morph)</div><div class="ttdoc">Adiciona um ObjectMorph à lista. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d5f/_animator_queue_8cpp_source.htm#l00154">AnimatorQueue.cpp:154</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a0e4490db05e91ecabf88248a51cba60f"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a0e4490db05e91ecabf88248a51cba60f">ScreenText::setAlpha</a></div><div class="ttdeci">ScreenText &amp; setAlpha(unsigned char alpha)</div><div class="ttdoc">Define a transparência do texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00129">ScreenText.cpp:129</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ae4b578f6533b60dbb5f879b9f0bbee97"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ae4b578f6533b60dbb5f879b9f0bbee97">ScreenText::aSetDisplay</a></div><div class="ttdeci">void aSetDisplay(bool)</div><div class="ttdoc">Função assíncrona para atribuição do display (exibir o objeto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00259">ScreenText.cpp:259</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a1a013c01403e2064a49f0e833438b230"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a1a013c01403e2064a49f0e833438b230">ScreenText::getType</a></div><div class="ttdeci">unsigned char getType()</div><div class="ttdoc">Retorna o tipo da classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00320">ScreenText.cpp:320</a></div></div>
+<div class="ttc" id="class_screen_text_htm_aa6a0420b15cfe50a8d76a0b1b5cf8408"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#aa6a0420b15cfe50a8d76a0b1b5cf8408">ScreenText::getDisplay</a></div><div class="ttdeci">bool getDisplay()</div><div class="ttdoc">Função assíncrona para saber se o elemento está visível na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00187">ScreenText.cpp:187</a></div></div>
+<div class="ttc" id="class_animator_queue_htm_a7cfe3a91fab5ea1b863b20c058f28017"><div class="ttname"><a href="../../d1/d91/class_animator_queue.htm#a7cfe3a91fab5ea1b863b20c058f28017">AnimatorQueue::setObject</a></div><div class="ttdeci">bool setObject(AnimatorObject *object)</div><div class="ttdoc">Atribui o AnimatorQueue a um AnimatorObject. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d5f/_animator_queue_8cpp_source.htm#l00034">AnimatorQueue.cpp:34</a></div></div>
+<div class="ttc" id="class_shared_pointer_htm_a544838840bafb2854f5d6775fb34eccf"><div class="ttname"><a href="../../da/dac/class_shared_pointer.htm#a544838840bafb2854f5d6775fb34eccf">SharedPointer::get</a></div><div class="ttdeci">T * get()</div><div class="ttdoc">Retorna o ponteiro interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d2d/_shared_pointer_8hpp_source.htm#l00139">SharedPointer.hpp:139</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a59ed25809aa6ea9b4a0976fa39ad64aa"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a59ed25809aa6ea9b4a0976fa39ad64aa">ScreenText::setScreenAlign</a></div><div class="ttdeci">ScreenText &amp; setScreenAlign(unsigned char type)</div><div class="ttdoc">Define a orientação horizontal do texto em relação à posição informada. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00146">ScreenText.cpp:146</a></div></div>
+<div class="ttc" id="class_screen_text_htm_ab9ec7f5296ab1928c7e4ce763240f103"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#ab9ec7f5296ab1928c7e4ce763240f103">ScreenText::getFont</a></div><div class="ttdeci">irr::gui::IGUIFont * getFont()</div><div class="ttdoc">Retorna a fonte usada pelo texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00171">ScreenText.cpp:171</a></div></div>
+<div class="ttc" id="class_screen_text_htm_aa53cd9cc510c3b4223254d476637aa2a"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#aa53cd9cc510c3b4223254d476637aa2a">ScreenText::getScreenPositionY</a></div><div class="ttdeci">int getScreenPositionY()</div><div class="ttdoc">Função assíncrona para obter a coordenada Y do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00301">ScreenText.cpp:301</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:11 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="ScreenButton::aSetScreenSize" name="ScreenButton::aSetScreenSize">
+<area shape="rect" id="node2" href="$d6/d58/class_screen_button.htm#a5cd09eac12b9371124bd94ba5c62be61" title="Define o tamanho que o botão ocupará na tela. " alt="" coords="256,5,451,32"/>
+<area shape="rect" id="node3" href="$d6/d58/class_screen_button.htm#a76c59814cb78fecf7353d5990edf5663" title="Função executada sempre que o tamanho do botão for alterado. " alt="" coords="499,5,732,32"/>
+</map>

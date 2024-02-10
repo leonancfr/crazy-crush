@@ -1,0 +1,6 @@
+<map id="CallbackGameExitButtonClick::aProcess" name="CallbackGameExitButtonClick::aProcess">
+<area shape="rect" id="node2" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="251,5,432,47"/>
+<area shape="rect" id="node5" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="935,45,1039,71"/>
+<area shape="rect" id="node3" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="480,5,661,47"/>
+<area shape="rect" id="node4" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="709,17,887,43"/>
+</map>

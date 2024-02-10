@@ -1,0 +1,10 @@
+<map id="CrazyCrush::Game::TimeAttack::Rank::CallbackCloseRankMenu::aProcess" name="CrazyCrush::Game::TimeAttack::Rank::CallbackCloseRankMenu::aProcess">
+<area shape="rect" id="node2" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="279,5,461,47"/>
+<area shape="rect" id="node6" href="$d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#ad365aa29543bcb4ffc0c3934c02f9278" title="Fecha o menu de rank. " alt="" coords="267,71,473,112"/>
+<area shape="rect" id="node3" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="521,5,703,47"/>
+<area shape="rect" id="node4" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="758,13,935,39"/>
+<area shape="rect" id="node5" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="991,13,1095,39"/>
+<area shape="rect" id="node7" href="$da/d5e/class_screen_window.htm#addba8c5fed15afdb5c30a2b7364ab651" title="Fecha a janela e seus conteúdos. " alt="" coords="538,78,686,105"/>
+<area shape="rect" id="node8" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="761,70,932,97"/>
+<area shape="rect" id="node9" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#a6e700f347751921b7228a59239777715" title="Executa a função resume() de todos os ScreenHover da lista. " alt="" coords="751,121,943,163"/>
+</map>

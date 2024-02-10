@@ -1,0 +1,6 @@
+<map id="AnimatorQueue::setObject" name="AnimatorQueue::setObject">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#a97d23f67bb7dfa83fa39289645e47d4a" title="Instancia a classe associando a textura passada pelo ponteiro. " alt="" coords="229,5,417,32"/>
+<area shape="rect" id="node3" href="$da/db9/class_screen_object.htm#a2e4ad2beb414b8fb2dfa8d734392b934" title="Clona os atributos de um ScreenObjeto no objeto atual. " alt="" coords="241,56,405,83"/>
+<area shape="rect" id="node4" href="$da/db9/class_screen_object.htm#a185ced37b469831115a380f32f5f5fa9" title="Clona o AnimatorQueue passado por argumento para o AnimatorQueue interno do objeto. " alt="" coords="234,107,413,149"/>
+<area shape="rect" id="node5" href="$d0/d94/class_screen_text.htm#a2a3e1b77c7e2beac0aa6874f62a7f2db" title="Inicializa o objeto associando uma fonte. " alt="" coords="242,173,405,200"/>
+</map>

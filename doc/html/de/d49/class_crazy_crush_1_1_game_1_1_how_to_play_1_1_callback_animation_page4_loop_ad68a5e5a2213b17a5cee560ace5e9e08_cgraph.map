@@ -1,0 +1,4 @@
+<map id="CrazyCrush::Game::HowToPlay::CallbackAnimationPage4Loop::aProcess" name="CrazyCrush::Game::HowToPlay::CallbackAnimationPage4Loop::aProcess">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#ace8160e055a2acb107c6f8abe36ef712" title="Pára o SpriteAnimator e volta os valores de Resource para os valores antigos. " alt="" coords="281,5,453,47"/>
+<area shape="rect" id="node3" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="260,71,475,98"/>
+</map>

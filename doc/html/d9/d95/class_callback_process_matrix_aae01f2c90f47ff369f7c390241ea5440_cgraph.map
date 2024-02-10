@@ -1,0 +1,8 @@
+<map id="CallbackProcessMatrix::aProcess" name="CallbackProcessMatrix::aProcess">
+<area shape="rect" id="node2" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a96c85777f3fd1b40611a1fb21817734d" title="Verifica se a peça nas coordenadas passadas irá &quot;quebrar&quot;. " alt="" coords="222,5,391,47"/>
+<area shape="rect" id="node3" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a75e60f4cb966c3144b72de2d3767dac0" title="Zera o multiplicador interno. " alt="" coords="237,71,377,112"/>
+<area shape="rect" id="node4" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="452,107,556,134"/>
+<area shape="rect" id="node5" href="$dd/d83/class_morph_linear.htm#a96a3bf2c3f0fddd0466c86c7c97924ab" title="Define a duração da transição. " alt="" coords="223,187,390,214"/>
+<area shape="rect" id="node6" href="$dd/d83/class_morph_linear.htm#ad706f1ac190e905f7654bece686ab478" title="Define a posição final da transição do objeto. " alt="" coords="209,238,404,265"/>
+<area shape="rect" id="node7" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9a61539a8ccba621da69ce548cd82691" title="Converte um índice da matriz para uma posição na tela. " alt="" coords="229,289,384,331"/>
+</map>

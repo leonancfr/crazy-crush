@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/GamePauseButton.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GamePauseButton.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Polit�cnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletr�nica e Computa��o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programa��o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan Fran�a    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;GamePauseButton.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;ScreenButtonCircle.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;ZOrder.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Screen.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Callback.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;GameControl.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;TextureCache.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;AudioManager.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>Game {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>Pause {</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm">   24</a></span>&#160;<span class="keyword">namespace </span>Button {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm">CallbackGamePauseButtonClick</a> : <span class="keyword">public</span> <a class="code" href="../../d1/dd4/class_callback.htm">Callback</a> {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033">   29</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033">aProcess</a>(){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <a class="code" href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927">CrazyCrush::AudioManager::play</a>(<span class="stringliteral">&quot;sfx_hit&quot;</span>,<span class="keyword">false</span>,<span class="stringliteral">&quot;sfx_hit.ogg&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad">CrazyCrush::Game::Control::pauseGame</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="../../d3/d20/class_screen_button_circle.htm">ScreenButtonCircle</a> button;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a8f0ec116317b15344276f6d1b5fd8d2d">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a8f0ec116317b15344276f6d1b5fd8d2d">initialize</a>(){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  button.<a class="code" href="../../d6/d58/class_screen_button.htm#a3e1c03b489f6dbe6f6d6ce5cf4aacbcf">setDisplay</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  button.<a class="code" href="../../d3/d20/class_screen_button_circle.htm#ad18080fb216525dde5af10d0ea08292e">setLabel</a>(<span class="stringliteral">&quot;Pause&quot;</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  button.<a class="code" href="../../d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f">setScreenPosition</a>(10,<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9c3a13c95608bd68fa945b37fa24dc09">Screen::screenHeight</a>-160);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  button.<a class="code" href="../../d6/d58/class_screen_button.htm#a5cd09eac12b9371124bd94ba5c62be61">setScreenSize</a>(150,150);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  button.<a class="code" href="../../d3/d20/class_screen_button_circle.htm#a6a9332392d1ebbbc5eb76235303538d5">setZIndex</a>(<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">z_order</a>.index_gems);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  button.<a class="code" href="../../d3/d20/class_screen_button_circle.htm#a28e8d14bc621afcf384a14089f034ce2">setLabelOffset</a>(-3,-20);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  button.<a class="code" href="../../d3/d20/class_screen_button_circle.htm#a2c2124f23c8b9879d98f9de502d4dd4f">getLabelObject</a>().<a class="code" href="../../d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1">setFont</a>(<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a0a3ceedf782a1a1fd86789fa6391463b">TextureCache::fontSFComic</a>);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  button.<a class="code" href="../../d6/d58/class_screen_button.htm#a64d86cdbacb13a5c03b4a0afc4842c71">setOnClick</a>(<span class="keyword">new</span> <a class="code" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm">CallbackGamePauseButtonClick</a>());</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#afff8d9772d513d2e7f33fb0c7f8cc861">   48</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#afff8d9772d513d2e7f33fb0c7f8cc861">show</a>(){</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  button.<a class="code" href="../../d6/d58/class_screen_button.htm#a3e1c03b489f6dbe6f6d6ce5cf4aacbcf">setDisplay</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a1129ffc1259f75585f328478cfd73513">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a1129ffc1259f75585f328478cfd73513">hide</a>(){</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  button.<a class="code" href="../../d6/d58/class_screen_button.htm#a3e1c03b489f6dbe6f6d6ce5cf4aacbcf">setDisplay</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a88d8af11679ee6b63d8a2070f71421f9">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a88d8af11679ee6b63d8a2070f71421f9">suspend</a>(){</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  button.<a class="code" href="../../d6/d58/class_screen_button.htm#a961a3e67dbf733fd14ea5361cc24f167">suspendHover</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}}}}</div>
+<div class="ttc" id="class_screen_button_htm_a64d86cdbacb13a5c03b4a0afc4842c71"><div class="ttname"><a href="../../d6/d58/class_screen_button.htm#a64d86cdbacb13a5c03b4a0afc4842c71">ScreenButton::setOnClick</a></div><div class="ttdeci">ScreenButton &amp; setOnClick(Callback *callback)</div><div class="ttdoc">Associa um Callback que será executado quando o botão for clicado. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d16/_screen_button_8cpp_source.htm#l00106">ScreenButton.cpp:106</a></div></div>
+<div class="ttc" id="class_screen_button_circle_htm_ad18080fb216525dde5af10d0ea08292e"><div class="ttname"><a href="../../d3/d20/class_screen_button_circle.htm#ad18080fb216525dde5af10d0ea08292e">ScreenButtonCircle::setLabel</a></div><div class="ttdeci">ScreenButtonCircle &amp; setLabel(std::string string)</div><div class="ttdoc">Define o texto que será exibido no botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db1/_screen_button_circle_8cpp_source.htm#l00072">ScreenButtonCircle.cpp:72</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a26fd9e4f552f58611f909d87802c2f19"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a></div><div class="ttdeci">ZOrder&lt; AnimatorObject * &gt; z_order</div><div class="ttdoc">Instancia global do ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/_z_order_8cpp_source.htm#l00015">ZOrder.cpp:15</a></div></div>
+<div class="ttc" id="class_screen_button_htm_a3e1c03b489f6dbe6f6d6ce5cf4aacbcf"><div class="ttname"><a href="../../d6/d58/class_screen_button.htm#a3e1c03b489f6dbe6f6d6ce5cf4aacbcf">ScreenButton::setDisplay</a></div><div class="ttdeci">ScreenButton &amp; setDisplay(bool display)</div><div class="ttdoc">Define se o botão será exibido ou não. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d16/_screen_button_8cpp_source.htm#l00100">ScreenButton.cpp:100</a></div></div>
+<div class="ttc" id="class_screen_button_circle_htm_a28e8d14bc621afcf384a14089f034ce2"><div class="ttname"><a href="../../d3/d20/class_screen_button_circle.htm#a28e8d14bc621afcf384a14089f034ce2">ScreenButtonCircle::setLabelOffset</a></div><div class="ttdeci">ScreenButtonCircle &amp; setLabelOffset(int x, int y)</div><div class="ttdoc">Offset do texto do botão em relação ao centro do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db1/_screen_button_circle_8cpp_source.htm#l00077">ScreenButtonCircle.cpp:77</a></div></div>
+<div class="ttc" id="class_screen_text_htm_a4f3b90e2b894be7b97201d93899b56d1"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1">ScreenText::setFont</a></div><div class="ttdeci">ScreenText &amp; setFont(SharedPointer&lt; irr::gui::IGUIFont &gt; &amp;font)</div><div class="ttdoc">Associa uma fonte ao objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d96/_screen_text_8cpp_source.htm#l00092">ScreenText.cpp:92</a></div></div>
+<div class="ttc" id="class_screen_button_circle_htm"><div class="ttname"><a href="../../d3/d20/class_screen_button_circle.htm">ScreenButtonCircle</a></div><div class="ttdoc">Implementação de um botão circular. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/d9a/_screen_button_circle_8hpp_source.htm#l00033">ScreenButtonCircle.hpp:33</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_pause_1_1_button_htm_a88d8af11679ee6b63d8a2070f71421f9"><div class="ttname"><a href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a88d8af11679ee6b63d8a2070f71421f9">CrazyCrush::Game::Pause::Button::suspend</a></div><div class="ttdeci">void suspend()</div><div class="ttdoc">Suspende o evento do botão (ver mais em ScreenHoverList) </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db0/_game_pause_button_8cpp_source.htm#l00056">GamePauseButton.cpp:56</a></div></div>
+<div class="ttc" id="class_screen_button_htm_a5b83db2bcbf5bf8a3874bcd564b54a1f"><div class="ttname"><a href="../../d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f">ScreenButton::setScreenPosition</a></div><div class="ttdeci">ScreenButton &amp; setScreenPosition(int x, int y)</div><div class="ttdoc">Define a posição que o botão ocupará na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d16/_screen_button_8cpp_source.htm#l00093">ScreenButton.cpp:93</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_pause_1_1_button_htm_afff8d9772d513d2e7f33fb0c7f8cc861"><div class="ttname"><a href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#afff8d9772d513d2e7f33fb0c7f8cc861">CrazyCrush::Game::Pause::Button::show</a></div><div class="ttdeci">void show()</div><div class="ttdoc">Exibe o botão na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db0/_game_pause_button_8cpp_source.htm#l00048">GamePauseButton.cpp:48</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a0b65f6df4d820f226a757eef9c0390ad"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad">CrazyCrush::Game::Control::pauseGame</a></div><div class="ttdeci">void pauseGame()</div><div class="ttdoc">Pausa o jogo (apenas o jogo) </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00167">GameControl.cpp:167</a></div></div>
+<div class="ttc" id="class_screen_button_circle_htm_a2c2124f23c8b9879d98f9de502d4dd4f"><div class="ttname"><a href="../../d3/d20/class_screen_button_circle.htm#a2c2124f23c8b9879d98f9de502d4dd4f">ScreenButtonCircle::getLabelObject</a></div><div class="ttdeci">ScreenText &amp; getLabelObject()</div><div class="ttdoc">Obtém o ScreenText do texto do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db1/_screen_button_circle_8cpp_source.htm#l00160">ScreenButtonCircle.cpp:160</a></div></div>
+<div class="ttc" id="class_callback_htm"><div class="ttname"><a href="../../d1/dd4/class_callback.htm">Callback</a></div><div class="ttdoc">Classe abstrata para evitar o uso de ponteiros de função. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4c/_callback_8hpp_source.htm#l00018">Callback.hpp:18</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_audio_manager_htm_a00076df556f060afc544ed41e835d927"><div class="ttname"><a href="../../d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927">CrazyCrush::AudioManager::play</a></div><div class="ttdeci">bool play(const char *name, bool loop, const char *filename)</div><div class="ttdoc">Dá play num stream de áudio, se não existir, abre o filename. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/d69/_audio_manager_8cpp_source.htm#l00043">AudioManager.cpp:43</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_pause_1_1_button_htm_a1129ffc1259f75585f328478cfd73513"><div class="ttname"><a href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a1129ffc1259f75585f328478cfd73513">CrazyCrush::Game::Pause::Button::hide</a></div><div class="ttdeci">void hide()</div><div class="ttdoc">Oculta o botão da tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db0/_game_pause_button_8cpp_source.htm#l00052">GamePauseButton.cpp:52</a></div></div>
+<div class="ttc" id="class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click_htm_ab76c3502e471b3ec1c1218986f3c8033"><div class="ttname"><a href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033">CrazyCrush::Game::Pause::Button::CallbackGamePauseButtonClick::aProcess</a></div><div class="ttdeci">void aProcess()</div><div class="ttdoc">Função a ser implementada pelas classes herdadas. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db0/_game_pause_button_8cpp_source.htm#l00029">GamePauseButton.cpp:29</a></div></div>
+<div class="ttc" id="class_screen_button_htm_a5cd09eac12b9371124bd94ba5c62be61"><div class="ttname"><a href="../../d6/d58/class_screen_button.htm#a5cd09eac12b9371124bd94ba5c62be61">ScreenButton::setScreenSize</a></div><div class="ttdeci">ScreenButton &amp; setScreenSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho que o botão ocupará na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d16/_screen_button_8cpp_source.htm#l00086">ScreenButton.cpp:86</a></div></div>
+<div class="ttc" id="class_screen_button_circle_htm_a6a9332392d1ebbbc5eb76235303538d5"><div class="ttname"><a href="../../d3/d20/class_screen_button_circle.htm#a6a9332392d1ebbbc5eb76235303538d5">ScreenButtonCircle::setZIndex</a></div><div class="ttdeci">void setZIndex(int)</div><div class="ttdoc">Altera o index dos elementos do botão no ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/db1/_screen_button_circle_8cpp_source.htm#l00154">ScreenButtonCircle.cpp:154</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_pause_1_1_button_htm_a8f0ec116317b15344276f6d1b5fd8d2d"><div class="ttname"><a href="../../dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a8f0ec116317b15344276f6d1b5fd8d2d">CrazyCrush::Game::Pause::Button::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializa as dependências internas do espaço. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db0/_game_pause_button_8cpp_source.htm#l00037">GamePauseButton.cpp:37</a></div></div>
+<div class="ttc" id="class_screen_button_htm_a961a3e67dbf733fd14ea5361cc24f167"><div class="ttname"><a href="../../d6/d58/class_screen_button.htm#a961a3e67dbf733fd14ea5361cc24f167">ScreenButton::suspendHover</a></div><div class="ttdeci">ScreenButton &amp; suspendHover()</div><div class="ttdoc">Suspende o efeito Hover (ver mais em ScreenHover::suspend()) </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d16/_screen_button_8cpp_source.htm#l00121">ScreenButton.cpp:121</a></div></div>
+<div class="ttc" id="class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click_htm"><div class="ttname"><a href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm">CrazyCrush::Game::Pause::Button::CallbackGamePauseButtonClick</a></div><div class="ttdoc">Callback para exibir o menu de pausa. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/db0/_game_pause_button_8cpp_source.htm#l00027">GamePauseButton.cpp:27</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a9c3a13c95608bd68fa945b37fa24dc09"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9c3a13c95608bd68fa945b37fa24dc09">CrazyCrush::Screen::screenHeight</a></div><div class="ttdeci">const unsigned screenHeight</div><div class="ttdoc">Altura da tela/janela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00031">Screen.hpp:31</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_a0a3ceedf782a1a1fd86789fa6391463b"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a0a3ceedf782a1a1fd86789fa6391463b">CrazyCrush::TextureCache::fontSFComic</a></div><div class="ttdeci">SharedPointer&lt; irr::gui::IGUIFont &gt; fontSFComic</div><div class="ttdoc">Uma das fontes. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd2/_texture_cache_8cpp_source.htm#l00036">TextureCache.cpp:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:08 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<map id="CallbackAfterFall::aProcess" name="CallbackAfterFall::aProcess">
+<area shape="rect" id="node2" href="$db/d6f/namespace_crazy_crush_1_1_screen_1_1_animation_count.htm#a2a1736e822b12f52c47785731ec9111c" title="Decrementa a contagem em uma unidade. " alt="" coords="189,257,372,298"/>
+<area shape="rect" id="node3" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#af6d83baa5d9c01f235a51721caf85bf4" title="Função para definir que todas as pedras já cairam. " alt="" coords="189,322,372,363"/>
+<area shape="rect" id="node4" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a" title="Verifica toda a matriz para saber se alguma peça irá &quot;quebrar&quot;. " alt="" coords="187,387,374,429"/>
+<area shape="rect" id="node8" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="693,721,863,748"/>
+<area shape="rect" id="node25" href="$da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa" title="Adiciona o Callback passado por argumento no AnimatorQueue interno. " alt="" coords="677,384,879,411"/>
+<area shape="rect" id="node27" href="$da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef" title="Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. " alt="" coords="685,603,871,629"/>
+<area shape="rect" id="node30" href="$da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac" title="Inicia o AnimatorQueue no tempo informado. " alt="" coords="685,653,871,680"/>
+<area shape="rect" id="node32" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554" title="Útil para saber se o jogo está rodando (pausado ou ainda não iniciado) " alt="" coords="189,786,372,827"/>
+<area shape="rect" id="node33" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#ab4c1d339e570f0f9b4aa8e37a6431bd5" title="Se houve colisão, processa o caimento das pedras. " alt="" coords="181,852,380,879"/>
+<area shape="rect" id="node38" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce" title="Verifica se há algum movimento possível. " alt="" coords="195,929,367,970"/>
+<area shape="rect" id="node42" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a8ff8296cc190b13601407d5e8b6584bb" title="Função para definir que não há mais nenhum movimento possível. " alt="" coords="189,994,372,1035"/>
+<area shape="rect" id="node5" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="1193,212,1297,239"/>
+<area shape="rect" id="node6" href="$d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455" title="Obtém o elemento dados os índices. " alt="" coords="739,267,817,293"/>
+<area shape="rect" id="node7" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1ac04e859d7d96e99a8952d7bdd77dde" title="Desseleciona quaisquer bloco que esteja selecionado. " alt="" coords="456,673,595,714"/>
+<area shape="rect" id="node9" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964" title="Decrementa, em um ponto, uma posição da matriz. " alt="" coords="436,322,615,363"/>
+<area shape="rect" id="node10" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#af979b646f2c5ccff485e40ae96bb9071" title="Reinicia a dica. " alt="" coords="434,957,617,984"/>
+<area shape="rect" id="node12" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="435,387,616,429"/>
+<area shape="rect" id="node15" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a811072afc23904c870aac3dca4cbdba2" title="Incrementa a pontuação. " alt="" coords="455,78,595,119"/>
+<area shape="rect" id="node18" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0" title="Verifica a matriz para saber se a fase está concluída. " alt="" coords="436,205,615,246"/>
+<area shape="rect" id="node19" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a469042ad27accf63fcfc342dfdf7d9e5" title="Se a matriz está completamente zerada. " alt="" coords="436,7,615,49"/>
+<area shape="rect" id="node20" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aefbe6096b6af82c744954b8924813bb4" title="Executa as tarefas relacionadas ao ganhar uma fase. " alt="" coords="434,505,617,546"/>
+<area shape="rect" id="node11" href="$da/db9/class_screen_object.htm#ace8160e055a2acb107c6f8abe36ef712" title="Pára o SpriteAnimator e volta os valores de Resource para os valores antigos. " alt="" coords="692,841,864,882"/>
+<area shape="rect" id="node13" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="687,318,869,359"/>
+<area shape="rect" id="node14" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="951,293,1128,320"/>
+<area shape="rect" id="node16" href="$de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917" title="Obtém o valor da variável. " alt="" coords="726,5,830,32"/>
+<area shape="rect" id="node17" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="704,56,852,83"/>
+<area shape="rect" id="node21" href="$da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464" title="Define o tamanho que o sprite usa da textura. " alt="" coords="674,435,882,461"/>
+<area shape="rect" id="node22" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="687,486,869,527"/>
+<area shape="rect" id="node23" href="$da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79" title="Define o tamanho que o sprite ocupará na tela. " alt="" coords="681,552,875,579"/>
+<area shape="rect" id="node24" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="671,907,885,933"/>
+<area shape="rect" id="node26" href="$d1/d91/class_animator_queue.htm#a89e2d21a6e06b5f2347c3d585ab4ed98" title="Adiciona um Callback à lista. " alt="" coords="933,384,1145,411"/>
+<area shape="rect" id="node28" href="$d7/d1a/class_object_morph.htm#a23a4b595aea37762fd8eaed6a3655585" title="Associa um objeto a este ObjectMorph. " alt="" coords="959,552,1119,579"/>
+<area shape="rect" id="node29" href="$d1/d91/class_animator_queue.htm#ae6f8830d3b53ae853e1ec75ef135292f" title="Adiciona um ObjectMorph à lista. " alt="" coords="940,603,1139,629"/>
+<area shape="rect" id="node31" href="$d1/d91/class_animator_queue.htm#a1c4583b178f798ec3535b90b35302e33" title="Inicia a animação no tempo. " alt="" coords="937,653,1141,680"/>
+<area shape="rect" id="node34" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9a61539a8ccba621da69ce548cd82691" title="Converte um índice da matriz para uma posição na tela. " alt="" coords="448,1009,603,1050"/>
+<area shape="rect" id="node35" href="$dd/d83/class_morph_linear.htm#ad706f1ac190e905f7654bece686ab478" title="Define a posição final da transição do objeto. " alt="" coords="428,907,623,933"/>
+<area shape="rect" id="node36" href="$dd/d83/class_morph_linear.htm#adafd7ca7f4bd2c942950c2f893d1d007" title="Define a velocidade do movimento do objeto. " alt="" coords="442,789,609,816"/>
+<area shape="rect" id="node37" href="$db/d6f/namespace_crazy_crush_1_1_screen_1_1_animation_count.htm#aca0578c1914acff3715bb3587574d939" title="Incrementa a contagem em uma unidade. " alt="" coords="436,841,615,882"/>
+<area shape="rect" id="node39" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a70e122b9d152fd4789f9b64b6d7f1017" title="Posiciona a dica na tela. " alt="" coords="439,1074,611,1115"/>
+<area shape="rect" id="node40" href="$da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09" title="Associa uma textura ao objeto. " alt="" coords="693,1081,863,1108"/>
+<area shape="rect" id="node41" href="$da/dac/class_shared_pointer.htm#ab39ff3eeaa60d180b63acf5bb3cebef6" title="Define o valor do ponteiro. " alt="" coords="974,1081,1105,1108"/>
+</map>

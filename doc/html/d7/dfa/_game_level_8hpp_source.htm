@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/GameLevel.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameLevel.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _GAME_LEVEL_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _GAME_LEVEL_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  <span class="keyword">namespace </span>Game {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">namespace </span>Level {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609df555dd73bdac20e038f9d840027d">totalLevel</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keywordtype">void</span>      <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426">initialize</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keywordtype">unsigned</span>  <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a095bbcbfb43bad855e2251c5b35b5cd2">getActualLevelNumber</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordtype">bool</span>      <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a6856382595a3f7282f0eb88f6fa3cbcc">playLevel</a>(<span class="keywordtype">unsigned</span> level);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordtype">bool</span>      <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#aa8eb8b4a86c9e43f1a8abb64c4b3a7a3">hasNextLevel</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordtype">void</span>      <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a568ddc72ab15ab0f6085ce81c1034cb7">gotoNextLevel</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordtype">void</span>      <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a79265432645ea0e98552f05dabf6e2f3">showLevelMenu</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordtype">void</span>      <a class="code" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a3e9cb1b81edc08b88ed4cbe7b27a7189">closeLevelMenu</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_a609df555dd73bdac20e038f9d840027d"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609df555dd73bdac20e038f9d840027d">CrazyCrush::Game::Level::totalLevel</a></div><div class="ttdeci">const unsigned totalLevel</div><div class="ttdoc">Total de níveis que o jogo possui. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00031">GameLevel.cpp:31</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_a095bbcbfb43bad855e2251c5b35b5cd2"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a095bbcbfb43bad855e2251c5b35b5cd2">CrazyCrush::Game::Level::getActualLevelNumber</a></div><div class="ttdeci">unsigned getActualLevelNumber()</div><div class="ttdoc">Obtém o número do nível atual. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00222">GameLevel.cpp:222</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_a568ddc72ab15ab0f6085ce81c1034cb7"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a568ddc72ab15ab0f6085ce81c1034cb7">CrazyCrush::Game::Level::gotoNextLevel</a></div><div class="ttdeci">void gotoNextLevel()</div><div class="ttdoc">Instruções rápidas para ir para o próximo nível. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00259">GameLevel.cpp:259</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_a6856382595a3f7282f0eb88f6fa3cbcc"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a6856382595a3f7282f0eb88f6fa3cbcc">CrazyCrush::Game::Level::playLevel</a></div><div class="ttdeci">bool playLevel(unsigned l)</div><div class="ttdoc">Prepara e inicia o jogo na fase informada. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00226">GameLevel.cpp:226</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_aa8eb8b4a86c9e43f1a8abb64c4b3a7a3"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#aa8eb8b4a86c9e43f1a8abb64c4b3a7a3">CrazyCrush::Game::Level::hasNextLevel</a></div><div class="ttdeci">bool hasNextLevel()</div><div class="ttdoc">Verifica se o nível atual é o último nível. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00253">GameLevel.cpp:253</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_a79265432645ea0e98552f05dabf6e2f3"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a79265432645ea0e98552f05dabf6e2f3">CrazyCrush::Game::Level::showLevelMenu</a></div><div class="ttdeci">void showLevelMenu()</div><div class="ttdoc">Exibe o menu para selecionar o nível. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00244">GameLevel.cpp:244</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_a3e9cb1b81edc08b88ed4cbe7b27a7189"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a3e9cb1b81edc08b88ed4cbe7b27a7189">CrazyCrush::Game::Level::closeLevelMenu</a></div><div class="ttdeci">void closeLevelMenu()</div><div class="ttdoc">Fecha o menu de seleção de nível. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00249">GameLevel.cpp:249</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_level_htm_a609a0da4b24de69ba3181fa3207fd426"><div class="ttname"><a href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426">CrazyCrush::Game::Level::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializa as dependências do espaço. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/df5/_game_level_8cpp_source.htm#l00149">GameLevel.cpp:149</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:07 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

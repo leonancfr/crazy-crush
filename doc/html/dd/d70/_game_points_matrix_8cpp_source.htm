@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/GamePointsMatrix.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GamePointsMatrix.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Polit�cnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletr�nica e Computa��o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programa��o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan Fran�a    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;GamePointsMatrix.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Matrix.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;GameDefines.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;ScreenObject.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;TextureCache.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;Screen.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;ZOrder.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span>Game {</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm">   23</a></span>&#160;<span class="keyword">namespace </span>Points {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<a class="code" href="../../d6/d3f/class_matrix.htm">Matrix&lt;unsigned char&gt;</a> pointsMatrix(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">Screen::num_rows</a>,<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ac3afe66a526779944cb842912356ddc1">Screen::num_columns</a>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<a class="code" href="../../d6/d3f/class_matrix.htm">Matrix&lt;ScreenObject*&gt;</a> objPointsMatrix(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">Screen::num_rows</a>,<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ac3afe66a526779944cb842912356ddc1">Screen::num_columns</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;bool&gt;</a> IsComplete(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> offset_green = 86;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> offset_blue = 172;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> offset_red = 258;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a3c28216346210ec51f67065d14444372">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a3c28216346210ec51f67065d14444372">initialize</a>(){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>* t;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i=0;i&lt;<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">Screen::num_rows</a>;i++){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> j=0;j&lt;<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ac3afe66a526779944cb842912356ddc1">Screen::num_columns</a>;j++){</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      t = <span class="keyword">new</span> <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>(<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a8ef823625dd607b0c68b2ef3f1303b43">TextureCache::rock</a>);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      t-&gt;<a class="code" href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">setResourceSize</a>(84,84)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        .<a class="code" href="../../da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c">setResourcePosition</a>(offset_red,0)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        .<a class="code" href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">setScreenSize</a>(<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a213f48e7f9850e7d9e79bf8c5f8d142e">TextureCache::gemWidth</a>,<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aa441f243cf1709e4eaf829f06076f257">TextureCache::gemHeight</a>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        .<a class="code" href="../../da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535">setScreenPosition</a>(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ae32e74c3b9d539c526183a4fcf41fd14">Screen::stageBackgroundLeft</a>+j*<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a213f48e7f9850e7d9e79bf8c5f8d142e">TextureCache::gemWidth</a>,(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1285bddff9fb2fc81115aa329106174f">Screen::stageBackgroundTop</a>+Screen::num_rows*<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aa441f243cf1709e4eaf829f06076f257">TextureCache::gemHeight</a>)-((i+1)*TextureCache::gemHeight))</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        .<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      pointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j) = 0;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      objPointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j) = t;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">z_order</a>.addObject(t,<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">z_order</a>.index_gems-1);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> formatPosition(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j, <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> v){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">if</span>(v == 3){</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    objPointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j)-&gt;setResourcePosition(offset_red,0).setDisplay(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(v==2){</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    objPointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j)-&gt;setResourcePosition(offset_blue,0).setDisplay(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(v==1){</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    objPointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j)-&gt;setResourcePosition(offset_green,0).setDisplay(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(v==0){</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    objPointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j)-&gt;setDisplay(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0">   62</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0">checkMatrix</a>(){</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i=0;i&lt;<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">Screen::num_rows</a>;i++){</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> j=0;j&lt;<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ac3afe66a526779944cb842912356ddc1">Screen::num_columns</a>;j++){</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">if</span>(pointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j)!=0){</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        IsComplete.<a class="code" href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">set</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  IsComplete.<a class="code" href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">set</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964">   74</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964">decreasePoint</a>(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j){</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> v = pointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordflow">if</span>(v == 0)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  v--;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  pointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j) = v;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  formatPosition(i,j,v);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2">setPoint</a>(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> v){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  pointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j) = v;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  formatPosition(i,j,v);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">if</span>(v!=0){</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    IsComplete.<a class="code" href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">set</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a058257c07ef1a9550778a64f9cf3e868">   91</a></span>&#160;<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a058257c07ef1a9550778a64f9cf3e868">getPoint</a>(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> pointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a469042ad27accf63fcfc342dfdf7d9e5">   95</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a469042ad27accf63fcfc342dfdf7d9e5">isComplete</a>(){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">return</span> IsComplete.<a class="code" href="../../de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917">get</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8">   99</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8">erase</a>(){</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> i=0;i&lt;<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">Screen::num_rows</a>;i++){</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> j=0;j&lt;<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ac3afe66a526779944cb842912356ddc1">Screen::num_columns</a>;j++){</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      pointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j) = 0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      objPointsMatrix.<a class="code" href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">at</a>(i,j)-&gt;setDisplay(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}}}</div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_a8ef823625dd607b0c68b2ef3f1303b43"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a8ef823625dd607b0c68b2ef3f1303b43">CrazyCrush::TextureCache::rock</a></div><div class="ttdeci">SharedPointer&lt; irr::video::ITexture &gt; rock</div><div class="ttdoc">Textura das pedras e do fundo das pontuações. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd2/_texture_cache_8cpp_source.htm#l00026">TextureCache.cpp:26</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_a213f48e7f9850e7d9e79bf8c5f8d142e"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a213f48e7f9850e7d9e79bf8c5f8d142e">CrazyCrush::TextureCache::gemWidth</a></div><div class="ttdeci">const unsigned char gemWidth</div><div class="ttdoc">Largura básica na tela da pedra. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d44/_texture_cache_8hpp_source.htm#l00026">TextureCache.hpp:26</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_ac66764905f9ed26a88f90fa09b9acdd8"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8">CrazyCrush::Game::Points::erase</a></div><div class="ttdeci">void erase()</div><div class="ttdoc">Zera a matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00099">GamePointsMatrix.cpp:99</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a26fd9e4f552f58611f909d87802c2f19"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a></div><div class="ttdeci">ZOrder&lt; AnimatorObject * &gt; z_order</div><div class="ttdoc">Instancia global do ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/_z_order_8cpp_source.htm#l00015">ZOrder.cpp:15</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a86ad7d80123873c44e37562189996ab8"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">ScreenObject::setDisplay</a></div><div class="ttdeci">ScreenObject &amp; setDisplay(bool value)</div><div class="ttdoc">Define se o objeto será exibido na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00304">ScreenObject.cpp:304</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_adfb0440e4d8470e43810120d51596fe0"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0">CrazyCrush::Game::Points::checkMatrix</a></div><div class="ttdeci">void checkMatrix()</div><div class="ttdoc">Verifica a matriz para saber se a fase está concluída. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00062">GamePointsMatrix.cpp:62</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_aa441f243cf1709e4eaf829f06076f257"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aa441f243cf1709e4eaf829f06076f257">CrazyCrush::TextureCache::gemHeight</a></div><div class="ttdeci">const unsigned char gemHeight</div><div class="ttdoc">Altura básica na tela da pedra. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d44/_texture_cache_8hpp_source.htm#l00029">TextureCache.hpp:29</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa0eca7801f10de1fbda4676410159b0c"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c">ScreenObject::setResourcePosition</a></div><div class="ttdeci">ScreenObject &amp; setResourcePosition(int x, int y)</div><div class="ttdoc">Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00265">ScreenObject.cpp:265</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a3c28216346210ec51f67065d14444372"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a3c28216346210ec51f67065d14444372">CrazyCrush::Game::Points::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializa as dependências internas do espaço. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00033">GamePointsMatrix.cpp:33</a></div></div>
+<div class="ttc" id="class_matrix_htm"><div class="ttname"><a href="../../d6/d3f/class_matrix.htm">Matrix</a></div><div class="ttdoc">Classe que implementa uma matriz usando o std::vector. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d49/_matrix_8hpp_source.htm#l00041">Matrix.hpp:41</a></div></div>
+<div class="ttc" id="class_protected_htm_a9d7dbfb640d9701481c55a107a445354"><div class="ttname"><a href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">Protected::set</a></div><div class="ttdeci">void set(T value)</div><div class="ttdoc">Atribui um valor a variável. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dcd/_protected_8hpp_source.htm#l00059">Protected.hpp:59</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a2de678f4bc18774a9f85035e46062e87"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">CrazyCrush::Screen::num_rows</a></div><div class="ttdeci">const unsigned char num_rows</div><div class="ttdoc">Número de linhas na matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd1/_game_defines_8hpp_source.htm#l00045">GameDefines.hpp:45</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_ae32e74c3b9d539c526183a4fcf41fd14"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ae32e74c3b9d539c526183a4fcf41fd14">CrazyCrush::Screen::stageBackgroundLeft</a></div><div class="ttdeci">const unsigned stageBackgroundLeft</div><div class="ttdoc">Coordenada X do &amp;quot;tabuleiro&amp;quot; do jogo em relação à lateral esquerda. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00026">Screen.hpp:26</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a469042ad27accf63fcfc342dfdf7d9e5"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a469042ad27accf63fcfc342dfdf7d9e5">CrazyCrush::Game::Points::isComplete</a></div><div class="ttdeci">bool isComplete()</div><div class="ttdoc">Se a matriz está completamente zerada. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00095">GamePointsMatrix.cpp:95</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a73996917ccd1c5927857eb22f079d535"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535">ScreenObject::setScreenPosition</a></div><div class="ttdeci">ScreenObject &amp; setScreenPosition(int x, int y)</div><div class="ttdoc">Define a coordenada (x,y) do topo esquerdo do sprite na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00234">ScreenObject.cpp:234</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a7e31c6cdcb5c65008eead1cc24b5b464"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">ScreenObject::setResourceSize</a></div><div class="ttdeci">ScreenObject &amp; setResourceSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho que o sprite usa da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00246">ScreenObject.cpp:246</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a353803a76768de1d4d23b3119fc43964"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964">CrazyCrush::Game::Points::decreasePoint</a></div><div class="ttdeci">void decreasePoint(unsigned i, unsigned j)</div><div class="ttdoc">Decrementa, em um ponto, uma posição da matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00074">GamePointsMatrix.cpp:74</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a1285bddff9fb2fc81115aa329106174f"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1285bddff9fb2fc81115aa329106174f">CrazyCrush::Screen::stageBackgroundTop</a></div><div class="ttdeci">const unsigned stageBackgroundTop</div><div class="ttdoc">Coordenada Y do &amp;quot;tabuleiro&amp;quot; do jogo em relação ao topo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00023">Screen.hpp:23</a></div></div>
+<div class="ttc" id="class_protected_htm_a7d589984ca87b788e496288b556b5917"><div class="ttname"><a href="../../de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917">Protected::get</a></div><div class="ttdeci">T get()</div><div class="ttdoc">Obtém o valor da variável. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dcd/_protected_8hpp_source.htm#l00050">Protected.hpp:50</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a05edf6265bb21d6100c016d4978a47f2"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2">CrazyCrush::Game::Points::setPoint</a></div><div class="ttdeci">void setPoint(unsigned i, unsigned j, unsigned char v)</div><div class="ttdoc">Define um valor para um ponto na matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00083">GamePointsMatrix.cpp:83</a></div></div>
+<div class="ttc" id="class_protected_htm"><div class="ttname"><a href="../../de/d7f/class_protected.htm">Protected&lt; bool &gt;</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a8ae2dec91ac5c6d65340cf4dfab17a79"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">ScreenObject::setScreenSize</a></div><div class="ttdeci">ScreenObject &amp; setScreenSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho que o sprite ocupará na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00215">ScreenObject.cpp:215</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_ac3afe66a526779944cb842912356ddc1"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ac3afe66a526779944cb842912356ddc1">CrazyCrush::Screen::num_columns</a></div><div class="ttdeci">const unsigned char num_columns</div><div class="ttdoc">Número de colunas da matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd1/_game_defines_8hpp_source.htm#l00051">GameDefines.hpp:51</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_points_htm_a058257c07ef1a9550778a64f9cf3e868"><div class="ttname"><a href="../../d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a058257c07ef1a9550778a64f9cf3e868">CrazyCrush::Game::Points::getPoint</a></div><div class="ttdeci">unsigned char getPoint(unsigned i, unsigned j)</div><div class="ttdoc">Obtém a pontuação nos índices desejado. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d70/_game_points_matrix_8cpp_source.htm#l00091">GamePointsMatrix.cpp:91</a></div></div>
+<div class="ttc" id="class_matrix_htm_abaa9af9b23ee648fabba8834ca58c455"><div class="ttname"><a href="../../d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455">Matrix::at</a></div><div class="ttdeci">std::vector&lt; T &gt;::reference at(unsigned const i, unsigned const j)</div><div class="ttdoc">Obtém o elemento dados os índices. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d49/_matrix_8hpp_source.htm#l00274">Matrix.hpp:274</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:08 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

@@ -1,0 +1,4 @@
+<map id="CrazyCrush::Game::HowToPlay::CallbackAnimationPage4Loop2::aProcess" name="CrazyCrush::Game::HowToPlay::CallbackAnimationPage4Loop2::aProcess">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="280,5,463,47"/>
+<area shape="rect" id="node3" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="264,71,479,98"/>
+</map>

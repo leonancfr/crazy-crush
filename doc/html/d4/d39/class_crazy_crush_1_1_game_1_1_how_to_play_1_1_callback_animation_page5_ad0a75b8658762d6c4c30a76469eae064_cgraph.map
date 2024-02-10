@@ -1,0 +1,11 @@
+<map id="CrazyCrush::Game::HowToPlay::CallbackAnimationPage5::aProcess" name="CrazyCrush::Game::HowToPlay::CallbackAnimationPage5::aProcess">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#aa6557663d0db321c904c4143086d830d" title="Retorna o AnimatorQueue do objeto. " alt="" coords="278,5,457,47"/>
+<area shape="rect" id="node3" href="$d1/d91/class_animator_queue.htm#a7aa3cebd6ece7bc803f65ea12b5fd9f5" title="Pára a classe e remove todos os ObjectMorph e Callback. " alt="" coords="266,71,469,98"/>
+<area shape="rect" id="node4" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="276,123,459,164"/>
+<area shape="rect" id="node5" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="260,189,475,215"/>
+<area shape="rect" id="node6" href="$df/d2e/class_gem.htm#a28faccd27f3eef6c6443c6e7d3d8f226" title="Define que a peça atual será uma pedra aleatória. " alt="" coords="312,239,423,266"/>
+<area shape="rect" id="node9" href="$df/d2e/class_gem.htm#acd7b9eb76db09f28e02aa2554369236a" title="Obtém o tipo atual da pedra. " alt="" coords="315,290,419,317"/>
+<area shape="rect" id="node10" href="$da/db9/class_screen_object.htm#ace8160e055a2acb107c6f8abe36ef712" title="Pára o SpriteAnimator e volta os valores de Resource para os valores antigos. " alt="" coords="281,341,453,383"/>
+<area shape="rect" id="node7" href="$dc/d71/namespace_crazy_crush_1_1_random.htm#af358f9b9dc21baa5b201b86360cdbbea" title="Obtém um valor aleatório entre 0 e max. " alt="" coords="761,239,933,266"/>
+<area shape="rect" id="node8" href="$d1/d5c/namespace_crazy_crush_1_1_percentage.htm#adc169b174794fe9820ab704472c376cc" title="Retorna true com uma chance definida pela porcentagem. " alt="" coords="523,265,713,291"/>
+</map>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/CallbackMouseClickMatrix.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CallbackMouseClickMatrix.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Polit�cnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletr�nica e Computa��o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programa��o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan Fran�a    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;CallbackMouseClickMatrix.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;GameDefines.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;MorphLinear.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;CallbackProcessMatrix.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Timer.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../db/d2c/class_callback_mouse_click_matrix.htm#a34c1c1a34dcb7170abb7cdcbe0d9023c">   18</a></span>&#160;<a class="code" href="../../db/d2c/class_callback_mouse_click_matrix.htm#a34c1c1a34dcb7170abb7cdcbe0d9023c">CallbackMouseClickMatrix::CallbackMouseClickMatrix</a>(<span class="keywordtype">int</span> I,<span class="keywordtype">int</span> J){</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  i = I;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  j = J;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../db/d2c/class_callback_mouse_click_matrix.htm#a2e83200f7de9356265f053f9a324d238">   23</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../db/d2c/class_callback_mouse_click_matrix.htm#a2e83200f7de9356265f053f9a324d238">CallbackMouseClickMatrix::aProcess</a>(){</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="../../dd/d8b/struct_matrix_position.htm">MatrixPosition</a> lPos = <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7470a835a44a45edf06e63fb560c8a6a">CrazyCrush::Screen::getLastBlock</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">if</span>((!<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j)-&gt;getEnabled())||</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;     (!<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j)-&gt;getDisplay()))</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordflow">if</span>((i==lPos.i)&amp;&amp;(j==lPos.j)){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1ac04e859d7d96e99a8952d7bdd77dde">CrazyCrush::Screen::unselectBlock</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">if</span>((lPos.i!=-1)&amp;&amp;(lPos.j!=-1)){</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(lPos.i,lPos.j)-&gt;resetSpriteAnimation();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordflow">if</span>(</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    ((lPos.i == i)&amp;&amp;((lPos.j == j-1)||(lPos.j == j+1)))||</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    ((lPos.j == j)&amp;&amp;((lPos.i == i-1)||(lPos.i == i+1)))</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  ){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(lPos.i,lPos.j)-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j)-&gt;setEnabled(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="../../dd/d83/class_morph_linear.htm">MorphLinear</a>* morphObj1 = <span class="keyword">new</span> <a class="code" href="../../dd/d83/class_morph_linear.htm">MorphLinear</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../dd/d83/class_morph_linear.htm">MorphLinear</a>* morphObj2 = <span class="keyword">new</span> <a class="code" href="../../dd/d83/class_morph_linear.htm">MorphLinear</a>();</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d9/d95/class_callback_process_matrix.htm">CallbackProcessMatrix</a>* callObj1 = <span class="keyword">new</span> <a class="code" href="../../d9/d95/class_callback_process_matrix.htm">CallbackProcessMatrix</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d9/d95/class_callback_process_matrix.htm">CallbackProcessMatrix</a>* callObj2 = <span class="keyword">new</span> <a class="code" href="../../d9/d95/class_callback_process_matrix.htm">CallbackProcessMatrix</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    callObj1-&gt;<a class="code" href="../../d9/d95/class_callback_process_matrix.htm#a176704b43ff876389646e825878c0280">setMatrixPositionObj1</a>(i,j).<a class="code" href="../../d9/d95/class_callback_process_matrix.htm#a6b36cea6bc11ae4b7902e0a69479dafd">setMatrixPositionObj2</a>(lPos.i,lPos.j);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    callObj2-&gt;<a class="code" href="../../d9/d95/class_callback_process_matrix.htm#a6b36cea6bc11ae4b7902e0a69479dafd">setMatrixPositionObj2</a>(i,j).<a class="code" href="../../d9/d95/class_callback_process_matrix.htm#a176704b43ff876389646e825878c0280">setMatrixPositionObj1</a>(lPos.i,lPos.j);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    morphObj1-&gt;<a class="code" href="../../dd/d83/class_morph_linear.htm#a96a3bf2c3f0fddd0466c86c7c97924ab">setDuration</a>(200).<a class="code" href="../../dd/d83/class_morph_linear.htm#ad706f1ac190e905f7654bece686ab478">setFinalPosition</a>(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9a61539a8ccba621da69ce548cd82691">CrazyCrush::Screen::convertMatrix2Screen</a>(i,j));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    morphObj2-&gt;<a class="code" href="../../dd/d83/class_morph_linear.htm#a96a3bf2c3f0fddd0466c86c7c97924ab">setDuration</a>(200).<a class="code" href="../../dd/d83/class_morph_linear.htm#ad706f1ac190e905f7654bece686ab478">setFinalPosition</a>(<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9a61539a8ccba621da69ce548cd82691">CrazyCrush::Screen::convertMatrix2Screen</a>(lPos.i,lPos.j));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../df/d2e/class_gem.htm">Gem</a>* tObject = <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(lPos.i,lPos.j);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    tObject-&gt;<a class="code" href="../../da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef">appendMorph</a>(morphObj1).<a class="code" href="../../da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac">startAnimator</a>(getGameTime());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    tObject-&gt;<a class="code" href="../../da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa">appendCallback</a>(callObj1);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j)-&gt;appendMorph(morphObj2).startAnimator(getGameTime());</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j)-&gt;appendCallback((<a class="code" href="../../d1/dd4/class_callback.htm">Callback</a>*)callObj2);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(lPos.i,lPos.j) = <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j) = tObject;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1ac04e859d7d96e99a8952d7bdd77dde">CrazyCrush::Screen::unselectBlock</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ad87109e852c0e96cf77f21d5b607b476">CrazyCrush::Screen::selectBlock</a>(i,j);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="ttc" id="class_screen_object_htm_a43e8e1299bb8451d6ef83f120cdb8eaa"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa">ScreenObject::appendCallback</a></div><div class="ttdeci">ScreenObject &amp; appendCallback(Callback *callback)</div><div class="ttdoc">Adiciona o Callback passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00447">ScreenObject.cpp:447</a></div></div>
+<div class="ttc" id="class_gem_htm"><div class="ttname"><a href="../../df/d2e/class_gem.htm">Gem</a></div><div class="ttdoc">Extensão do ScreenObject para manipular mais fácil as pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/_gem_8hpp_source.htm#l00019">Gem.hpp:19</a></div></div>
+<div class="ttc" id="class_morph_linear_htm_ad706f1ac190e905f7654bece686ab478"><div class="ttname"><a href="../../dd/d83/class_morph_linear.htm#ad706f1ac190e905f7654bece686ab478">MorphLinear::setFinalPosition</a></div><div class="ttdeci">MorphLinear &amp; setFinalPosition(int x, int y)</div><div class="ttdoc">Define a posição final da transição do objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d05/_morph_linear_8cpp_source.htm#l00033">MorphLinear.cpp:33</a></div></div>
+<div class="ttc" id="class_callback_mouse_click_matrix_htm_a2e83200f7de9356265f053f9a324d238"><div class="ttname"><a href="../../db/d2c/class_callback_mouse_click_matrix.htm#a2e83200f7de9356265f053f9a324d238">CallbackMouseClickMatrix::aProcess</a></div><div class="ttdeci">void aProcess()</div><div class="ttdoc">Função a ser implementada pelas classes herdadas. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dda/_callback_mouse_click_matrix_8cpp_source.htm#l00023">CallbackMouseClickMatrix.cpp:23</a></div></div>
+<div class="ttc" id="class_morph_linear_htm_a96a3bf2c3f0fddd0466c86c7c97924ab"><div class="ttname"><a href="../../dd/d83/class_morph_linear.htm#a96a3bf2c3f0fddd0466c86c7c97924ab">MorphLinear::setDuration</a></div><div class="ttdeci">MorphLinear &amp; setDuration(unsigned duration)</div><div class="ttdoc">Define a duração da transição. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d05/_morph_linear_8cpp_source.htm#l00022">MorphLinear.cpp:22</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a7470a835a44a45edf06e63fb560c8a6a"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7470a835a44a45edf06e63fb560c8a6a">CrazyCrush::Screen::getLastBlock</a></div><div class="ttdeci">MatrixPosition getLastBlock()</div><div class="ttdoc">Obtém os índices referente ao último bloco selecionado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/_game_defines_8cpp_source.htm#l00089">GameDefines.cpp:89</a></div></div>
+<div class="ttc" id="class_callback_process_matrix_htm_a176704b43ff876389646e825878c0280"><div class="ttname"><a href="../../d9/d95/class_callback_process_matrix.htm#a176704b43ff876389646e825878c0280">CallbackProcessMatrix::setMatrixPositionObj1</a></div><div class="ttdeci">CallbackProcessMatrix &amp; setMatrixPositionObj1(unsigned i, unsigned j)</div><div class="ttdoc">Define as coordenadas de uma das pedras envolvidas no movimento. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df1/_callback_process_matrix_8cpp_source.htm#l00022">CallbackProcessMatrix.cpp:22</a></div></div>
+<div class="ttc" id="struct_matrix_position_htm"><div class="ttname"><a href="../../dd/d8b/struct_matrix_position.htm">MatrixPosition</a></div><div class="ttdoc">Estrutura que possui os dois índices de uma matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../d8/d49/_matrix_8hpp_source.htm#l00028">Matrix.hpp:28</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a1ac04e859d7d96e99a8952d7bdd77dde"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1ac04e859d7d96e99a8952d7bdd77dde">CrazyCrush::Screen::unselectBlock</a></div><div class="ttdeci">void unselectBlock()</div><div class="ttdoc">Desseleciona quaisquer bloco que esteja selecionado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/_game_defines_8cpp_source.htm#l00093">GameDefines.cpp:93</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_ad87109e852c0e96cf77f21d5b607b476"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ad87109e852c0e96cf77f21d5b607b476">CrazyCrush::Screen::selectBlock</a></div><div class="ttdeci">void selectBlock(unsigned i, unsigned j)</div><div class="ttdoc">Seleciona o bloco da coordenada passada. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/_game_defines_8cpp_source.htm#l00115">GameDefines.cpp:115</a></div></div>
+<div class="ttc" id="class_callback_htm"><div class="ttname"><a href="../../d1/dd4/class_callback.htm">Callback</a></div><div class="ttdoc">Classe abstrata para evitar o uso de ponteiros de função. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d4c/_callback_8hpp_source.htm#l00018">Callback.hpp:18</a></div></div>
+<div class="ttc" id="class_morph_linear_htm"><div class="ttname"><a href="../../dd/d83/class_morph_linear.htm">MorphLinear</a></div><div class="ttdoc">Classe para movimentar um objeto na tela de forma linear. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d8a/_morph_linear_8hpp_source.htm#l00021">MorphLinear.hpp:21</a></div></div>
+<div class="ttc" id="class_callback_process_matrix_htm"><div class="ttname"><a href="../../d9/d95/class_callback_process_matrix.htm">CallbackProcessMatrix</a></div><div class="ttdoc">Callback executado após o movimento das pedras executado pelo usuário. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d71/_callback_process_matrix_8hpp_source.htm#l00018">CallbackProcessMatrix.hpp:18</a></div></div>
+<div class="ttc" id="class_callback_process_matrix_htm_a6b36cea6bc11ae4b7902e0a69479dafd"><div class="ttname"><a href="../../d9/d95/class_callback_process_matrix.htm#a6b36cea6bc11ae4b7902e0a69479dafd">CallbackProcessMatrix::setMatrixPositionObj2</a></div><div class="ttdeci">CallbackProcessMatrix &amp; setMatrixPositionObj2(unsigned i, unsigned j)</div><div class="ttdoc">Define as coordenadas da outra pedra envolvida no movimento. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df1/_callback_process_matrix_8cpp_source.htm#l00028">CallbackProcessMatrix.cpp:28</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a546c3bd466ae367a01fff36b116f41ac"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac">ScreenObject::startAnimator</a></div><div class="ttdeci">ScreenObject &amp; startAnimator(irr::u32 time)</div><div class="ttdoc">Inicia o AnimatorQueue no tempo informado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00436">ScreenObject.cpp:436</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a9a61539a8ccba621da69ce548cd82691"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9a61539a8ccba621da69ce548cd82691">CrazyCrush::Screen::convertMatrix2Screen</a></div><div class="ttdeci">irr::core::position2d&lt; irr::s32 &gt; convertMatrix2Screen(unsigned i, unsigned j)</div><div class="ttdoc">Converte um índice da matriz para uma posição na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de5/_game_defines_8cpp_source.htm#l00082">GameDefines.cpp:82</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a7a93f052fe580f13bd2003f486e7fc10"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a></div><div class="ttdeci">Matrix&lt; Gem * &gt; matrix(num_rows, num_columns)</div><div class="ttdoc">Matriz de pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd1/_game_defines_8hpp_source.htm#l00057">GameDefines.hpp:57</a></div></div>
+<div class="ttc" id="class_callback_mouse_click_matrix_htm_a34c1c1a34dcb7170abb7cdcbe0d9023c"><div class="ttname"><a href="../../db/d2c/class_callback_mouse_click_matrix.htm#a34c1c1a34dcb7170abb7cdcbe0d9023c">CallbackMouseClickMatrix::CallbackMouseClickMatrix</a></div><div class="ttdeci">CallbackMouseClickMatrix(int i, int j)</div><div class="ttdoc">Construtuor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/dda/_callback_mouse_click_matrix_8cpp_source.htm#l00018">CallbackMouseClickMatrix.cpp:18</a></div></div>
+<div class="ttc" id="class_screen_object_htm_acfefc3d518865997039a779d887f83ef"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef">ScreenObject::appendMorph</a></div><div class="ttdeci">ScreenObject &amp; appendMorph(ObjectMorph *morph)</div><div class="ttdoc">Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00441">ScreenObject.cpp:441</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:05 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

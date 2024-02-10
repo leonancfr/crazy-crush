@@ -1,0 +1,4 @@
+<map id="CrazyCrush::AudioManager::setVolume" name="CrazyCrush::AudioManager::setVolume">
+<area shape="rect" id="node2" href="$d6/ddc/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_on_show.htm#aeae39f7e0c1852589bb1a5a55d7a1d92" title="Função a ser implementada pelas classes herdadas. " alt="" coords="235,5,437,61"/>
+<area shape="rect" id="node3" href="$dd/dac/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_on_close.htm#a0fb96b38cfd2fa8a9426ce2c79cd0695" title="Função a ser implementada pelas classes herdadas. " alt="" coords="235,85,437,141"/>
+</map>

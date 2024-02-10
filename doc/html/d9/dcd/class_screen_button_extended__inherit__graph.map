@@ -1,0 +1,4 @@
+<map id="ScreenButtonExtended" name="ScreenButtonExtended">
+<area shape="rect" id="node2" href="$d6/d58/class_screen_button.htm" title="Classe abstrata que é modelo para os demais tipos de botões. " alt="" coords="33,80,134,107"/>
+<area shape="rect" id="node3" href="$de/d2f/class_animator_object.htm" title="Classe abstrata que é base para os elementos da tela. " alt="" coords="27,5,139,32"/>
+</map>

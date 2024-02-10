@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/GameTimeBar.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameTimeBar.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;GameTimeBar.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;ScreenObject.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;TextureCache.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;ZOrder.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;GameDefines.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;Screen.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;AnimatorObjectList.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;Timer.hpp&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;GameControl.hpp&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;CoreProcess.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/daa/class_update_time_bar.htm">UpdateTimeBar</a> : <span class="keyword">public</span> <a class="code" href="../../de/d2f/class_animator_object.htm">AnimatorObject</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#ab3334e41b261e84fbe66ad7727016c18">   27</a></span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../d1/daa/class_update_time_bar.htm#ab3334e41b261e84fbe66ad7727016c18">getType</a>(){</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keywordflow">return</span> 255;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#ac18b0c8e7e4ab4f516f31d5aafbdbcce">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/daa/class_update_time_bar.htm#ac18b0c8e7e4ab4f516f31d5aafbdbcce">processTime</a>(irr::u32 t){</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <a class="code" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a2a0de1fe7e2b2d30d081e4e043b1b4d2">CrazyCrush::Game::TimeBar::updateLength</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d1/daa/class_update_time_bar.htm">UpdateTimeBar</a>(){};</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~<a class="code" href="../../d1/daa/class_update_time_bar.htm">UpdateTimeBar</a>(){};</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#a3e7216197946dfb86e28d059a314ef3a">   35</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/daa/class_update_time_bar.htm#a3e7216197946dfb86e28d059a314ef3a">aSetDisplay</a>(<span class="keywordtype">bool</span> a){};</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#a14772a5f94795f20d2302588fe222123">   36</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/daa/class_update_time_bar.htm#a14772a5f94795f20d2302588fe222123">aSetScreenSize</a>(<span class="keywordtype">unsigned</span> a,<span class="keywordtype">unsigned</span> b){};</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#aa9594a60a9c79d9ebd05ef82d9619e4a">   37</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/daa/class_update_time_bar.htm#aa9594a60a9c79d9ebd05ef82d9619e4a">aSetScreenPosition</a>(<span class="keywordtype">int</span> a,<span class="keywordtype">int</span> b){};</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#a928ae27ce84615147f22cae08efd6746">   38</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d1/daa/class_update_time_bar.htm#a928ae27ce84615147f22cae08efd6746">aSetImageColor</a>(irr::video::SColor* a){};</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#aadaf79c4ec6e1e184549e28ac4530079">   39</a></span>&#160;    irr::video::SColor* <a class="code" href="../../d1/daa/class_update_time_bar.htm#aadaf79c4ec6e1e184549e28ac4530079">getColor</a>(){<span class="keywordflow">return</span> NULL;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#a560badb4b23001742a31871ce16d6dd5">   40</a></span>&#160;    <span class="keywordtype">unsigned</span>    <a class="code" href="../../d1/daa/class_update_time_bar.htm#a560badb4b23001742a31871ce16d6dd5">getScreenWidth</a>(){<span class="keywordflow">return</span> 0;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#a85bbe2b43689d63a0e432a493dc2e325">   41</a></span>&#160;    <span class="keywordtype">unsigned</span>    <a class="code" href="../../d1/daa/class_update_time_bar.htm#a85bbe2b43689d63a0e432a493dc2e325">getScreenHeight</a>(){<span class="keywordflow">return</span> 0;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#aeaeaa931f92e66a1328d841a2d78c94c">   42</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../d1/daa/class_update_time_bar.htm#aeaeaa931f92e66a1328d841a2d78c94c">getScreenPositionX</a>(){<span class="keywordflow">return</span> 0;};</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#a7dee3a3445aac0edc9a4039c05e9dcee">   43</a></span>&#160;    <span class="keywordtype">int</span>         <a class="code" href="../../d1/daa/class_update_time_bar.htm#a7dee3a3445aac0edc9a4039c05e9dcee">getScreenPositionY</a>(){<span class="keywordflow">return</span> 0;};</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d1/daa/class_update_time_bar.htm#a90948890d4abfb45bc7ff5c09d136d4d">   44</a></span>&#160;    <span class="keywordtype">bool</span>        <a class="code" href="../../d1/daa/class_update_time_bar.htm#a90948890d4abfb45bc7ff5c09d136d4d">getDisplay</a>(){<span class="keywordflow">return</span> <span class="keyword">true</span>;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;};</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">namespace </span>Game {</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm">   49</a></span>&#160;<span class="keyword">namespace </span>TimeBar {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> bar(<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a2ef8cc38a2a35135afbaa59767bb2708">TextureCache::sprites</a>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> barBackground(<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a2ef8cc38a2a35135afbaa59767bb2708">TextureCache::sprites</a>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<a class="code" href="../../d1/daa/class_update_time_bar.htm">UpdateTimeBar</a> updateTimeBar;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> timeToShowHint = 7000;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barWidth = 452;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barHeight = 10;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barBackgroundWidth = 456;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barBackgroundHeight = 14;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barResourceX = 4;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barResourceY = 384;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barBackgroundResourceX = 2;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barBackgroundResourceY = 398;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barOffsetLeft = <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ae32e74c3b9d539c526183a4fcf41fd14">Screen::stageBackgroundLeft</a>-2;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">const</span> <span class="keywordtype">unsigned</span> barOffsetTop = <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1285bddff9fb2fc81115aa329106174f">Screen::stageBackgroundTop</a>+<a class="code" href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aa441f243cf1709e4eaf829f06076f257">TextureCache::gemHeight</a>*<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">Screen::num_rows</a>+2;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a60e7ace10e29e3acbac50f031075776e">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a60e7ace10e29e3acbac50f031075776e">initialize</a>(){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  bar.<a class="code" href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">setResourceSize</a>(barWidth,barHeight)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;     .<a class="code" href="../../da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c">setResourcePosition</a>(barResourceX,barResourceY)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;     .<a class="code" href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">setScreenSize</a>(barWidth,barHeight)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;     .<a class="code" href="../../da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535">setScreenPosition</a>(barOffsetLeft+(barBackgroundWidth-barWidth)/2,barOffsetTop+(barBackgroundHeight-barHeight)/2)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;     .<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  barBackground.<a class="code" href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">setResourceSize</a>(barBackgroundWidth,barBackgroundHeight)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;               .<a class="code" href="../../da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c">setResourcePosition</a>(barBackgroundResourceX,barBackgroundResourceY)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;               .<a class="code" href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">setScreenSize</a>(barBackgroundWidth,barBackgroundHeight)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;               .<a class="code" href="../../da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535">setScreenPosition</a>(barOffsetLeft,barOffsetTop)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;               .<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">z_order</a>.addObject(&amp;barBackground,<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">z_order</a>.index_gems);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">z_order</a>.addObject(&amp;bar,<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">z_order</a>.index_gems);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ae4faabe2ff1a462f0d760a95c2367f3c">AnimatorObjectList</a>.<a class="code" href="../../df/d47/class_animator_obj_list.htm#a19b5e6f153a270a9c6b03283a57f7d35">addObject</a>(&amp;updateTimeBar);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a230739d80760fcf660a7389a4f7b193f">   83</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a230739d80760fcf660a7389a4f7b193f">show</a>(){</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  bar.<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  barBackground.<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#ad2ea76e15fb778f413ad5ee895f6624e">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#ad2ea76e15fb778f413ad5ee895f6624e">hide</a>(){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  bar.<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  barBackground.<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a2a0de1fe7e2b2d30d081e4e043b1b4d2">   93</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a2a0de1fe7e2b2d30d081e4e043b1b4d2">updateLength</a>(){</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554">Game::Control::gameIsRunning</a>())</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordflow">if</span>(bar.<a class="code" href="../../da/db9/class_screen_object.htm#aa0a65b34f7d73ef6e06a64fe27f299c7">getDisplay</a>()){</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span>(getLevelTime() &gt;= <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a32823659bbd6c599a5a31b043db4f33a">Game::Control::getLevelTotalTime</a>()){</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5915ced50490ec68db1effe5a0a1f773">Game::Control::levelFail</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      bar.<a class="code" href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">setResourceSize</a>(0,barHeight).<a class="code" href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">setScreenSize</a>(0,barHeight);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span>((getLevelTime()&gt;timeToShowHint+<a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5bf8ee510169518754d4ae7ca81ff75d">core::lastFullCheck</a>.<span class="keyword">get</span>())&amp;&amp;(!<a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a24bfcff1e124296717f19962940a3ae8">Screen::hintIcon</a>.getDisplay())){</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a24bfcff1e124296717f19962940a3ae8">Screen::hintIcon</a>.<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">true</span>).<a class="code" href="../../da/db9/class_screen_object.htm#a4090a3913947fe9eab75f88090ebb673">startSpriteAnimation</a>(getGameTime());</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">unsigned</span> size = ((<a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a32823659bbd6c599a5a31b043db4f33a">Game::Control::getLevelTotalTime</a>()-getLevelTime())*barWidth)/<a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a32823659bbd6c599a5a31b043db4f33a">Game::Control::getLevelTotalTime</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    bar.<a class="code" href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">setResourceSize</a>(size,barHeight).<a class="code" href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">setScreenSize</a>(size,barHeight);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}}}</div>
+<div class="ttc" id="class_update_time_bar_htm_aeaeaa931f92e66a1328d841a2d78c94c"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#aeaeaa931f92e66a1328d841a2d78c94c">UpdateTimeBar::getScreenPositionX</a></div><div class="ttdeci">int getScreenPositionX()</div><div class="ttdoc">Função assíncrona para obter a coordenada X do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00042">GameTimeBar.cpp:42</a></div></div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_a85bbe2b43689d63a0e432a493dc2e325"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#a85bbe2b43689d63a0e432a493dc2e325">UpdateTimeBar::getScreenHeight</a></div><div class="ttdeci">unsigned getScreenHeight()</div><div class="ttdoc">Função assíncrona para obter a altura do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00041">GameTimeBar.cpp:41</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a26fd9e4f552f58611f909d87802c2f19"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a></div><div class="ttdeci">ZOrder&lt; AnimatorObject * &gt; z_order</div><div class="ttdoc">Instancia global do ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/_z_order_8cpp_source.htm#l00015">ZOrder.cpp:15</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a86ad7d80123873c44e37562189996ab8"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">ScreenObject::setDisplay</a></div><div class="ttdeci">ScreenObject &amp; setDisplay(bool value)</div><div class="ttdoc">Define se o objeto será exibido na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00304">ScreenObject.cpp:304</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_ae4faabe2ff1a462f0d760a95c2367f3c"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#ae4faabe2ff1a462f0d760a95c2367f3c">CrazyCrush::AnimatorObjectList</a></div><div class="ttdeci">AnimatorObjList AnimatorObjectList</div><div class="ttdoc">Instância global da lista de objetos a serem processados no tempo. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/d31/_animator_object_list_8cpp_source.htm#l00015">AnimatorObjectList.cpp:15</a></div></div>
+<div class="ttc" id="class_animator_object_htm"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm">AnimatorObject</a></div><div class="ttdoc">Classe abstrata que é base para os elementos da tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8c/_animator_object_8hpp_source.htm#l00026">AnimatorObject.hpp:26</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_aa441f243cf1709e4eaf829f06076f257"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aa441f243cf1709e4eaf829f06076f257">CrazyCrush::TextureCache::gemHeight</a></div><div class="ttdeci">const unsigned char gemHeight</div><div class="ttdoc">Altura básica na tela da pedra. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d44/_texture_cache_8hpp_source.htm#l00029">TextureCache.hpp:29</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa0eca7801f10de1fbda4676410159b0c"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c">ScreenObject::setResourcePosition</a></div><div class="ttdeci">ScreenObject &amp; setResourcePosition(int x, int y)</div><div class="ttdoc">Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00265">ScreenObject.cpp:265</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a5915ced50490ec68db1effe5a0a1f773"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5915ced50490ec68db1effe5a0a1f773">CrazyCrush::Game::Control::levelFail</a></div><div class="ttdeci">void levelFail()</div><div class="ttdoc">Executa as tarefas relacionadas ao perder uma fase. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00122">GameControl.cpp:122</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_ac18b0c8e7e4ab4f516f31d5aafbdbcce"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#ac18b0c8e7e4ab4f516f31d5aafbdbcce">UpdateTimeBar::processTime</a></div><div class="ttdeci">void processTime(irr::u32 t)</div><div class="ttdoc">Função para processamento no tempo para a classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00030">GameTimeBar.cpp:30</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_a7dee3a3445aac0edc9a4039c05e9dcee"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#a7dee3a3445aac0edc9a4039c05e9dcee">UpdateTimeBar::getScreenPositionY</a></div><div class="ttdeci">int getScreenPositionY()</div><div class="ttdoc">Função assíncrona para obter a coordenada Y do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00043">GameTimeBar.cpp:43</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_a14772a5f94795f20d2302588fe222123"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#a14772a5f94795f20d2302588fe222123">UpdateTimeBar::aSetScreenSize</a></div><div class="ttdeci">void aSetScreenSize(unsigned a, unsigned b)</div><div class="ttdoc">Função assíncrona para atribuição do tamanho que o objeto irá ocupar na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00036">GameTimeBar.cpp:36</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a2de678f4bc18774a9f85035e46062e87"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a2de678f4bc18774a9f85035e46062e87">CrazyCrush::Screen::num_rows</a></div><div class="ttdeci">const unsigned char num_rows</div><div class="ttdoc">Número de linhas na matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd1/_game_defines_8hpp_source.htm#l00045">GameDefines.hpp:45</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_ae32e74c3b9d539c526183a4fcf41fd14"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#ae32e74c3b9d539c526183a4fcf41fd14">CrazyCrush::Screen::stageBackgroundLeft</a></div><div class="ttdeci">const unsigned stageBackgroundLeft</div><div class="ttdoc">Coordenada X do &amp;quot;tabuleiro&amp;quot; do jogo em relação à lateral esquerda. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00026">Screen.hpp:26</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_time_bar_htm_a230739d80760fcf660a7389a4f7b193f"><div class="ttname"><a href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a230739d80760fcf660a7389a4f7b193f">CrazyCrush::Game::TimeBar::show</a></div><div class="ttdeci">void show()</div><div class="ttdoc">Exibe a barra de progresso na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00083">GameTimeBar.cpp:83</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a73996917ccd1c5927857eb22f079d535"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535">ScreenObject::setScreenPosition</a></div><div class="ttdeci">ScreenObject &amp; setScreenPosition(int x, int y)</div><div class="ttdoc">Define a coordenada (x,y) do topo esquerdo do sprite na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00234">ScreenObject.cpp:234</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a7e31c6cdcb5c65008eead1cc24b5b464"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464">ScreenObject::setResourceSize</a></div><div class="ttdeci">ScreenObject &amp; setResourceSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho que o sprite usa da textura. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00246">ScreenObject.cpp:246</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm">UpdateTimeBar</a></div><div class="ttdoc">Classe gambiarra para adicionar à Thread de processamento no Tempo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00025">GameTimeBar.cpp:25</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_time_bar_htm_a2a0de1fe7e2b2d30d081e4e043b1b4d2"><div class="ttname"><a href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a2a0de1fe7e2b2d30d081e4e043b1b4d2">CrazyCrush::Game::TimeBar::updateLength</a></div><div class="ttdeci">void updateLength()</div><div class="ttdoc">Atualiza a largura da barra em relação ao tempo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00093">GameTimeBar.cpp:93</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_a3e7216197946dfb86e28d059a314ef3a"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#a3e7216197946dfb86e28d059a314ef3a">UpdateTimeBar::aSetDisplay</a></div><div class="ttdeci">void aSetDisplay(bool a)</div><div class="ttdoc">Função assíncrona para atribuição do display (exibir o objeto) </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00035">GameTimeBar.cpp:35</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_aa9594a60a9c79d9ebd05ef82d9619e4a"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#aa9594a60a9c79d9ebd05ef82d9619e4a">UpdateTimeBar::aSetScreenPosition</a></div><div class="ttdeci">void aSetScreenPosition(int a, int b)</div><div class="ttdoc">Função assíncrona para atribuição da posição do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00037">GameTimeBar.cpp:37</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a1285bddff9fb2fc81115aa329106174f"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1285bddff9fb2fc81115aa329106174f">CrazyCrush::Screen::stageBackgroundTop</a></div><div class="ttdeci">const unsigned stageBackgroundTop</div><div class="ttdoc">Coordenada Y do &amp;quot;tabuleiro&amp;quot; do jogo em relação ao topo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00023">Screen.hpp:23</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_time_bar_htm_ad2ea76e15fb778f413ad5ee895f6624e"><div class="ttname"><a href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#ad2ea76e15fb778f413ad5ee895f6624e">CrazyCrush::Game::TimeBar::hide</a></div><div class="ttdeci">void hide()</div><div class="ttdoc">Oculta a barra de progresso na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00088">GameTimeBar.cpp:88</a></div></div>
+<div class="ttc" id="class_screen_object_htm_aa0a65b34f7d73ef6e06a64fe27f299c7"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#aa0a65b34f7d73ef6e06a64fe27f299c7">ScreenObject::getDisplay</a></div><div class="ttdeci">bool getDisplay()</div><div class="ttdoc">Função assíncrona para saber se o elemento está visível na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00388">ScreenObject.cpp:388</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_a90948890d4abfb45bc7ff5c09d136d4d"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#a90948890d4abfb45bc7ff5c09d136d4d">UpdateTimeBar::getDisplay</a></div><div class="ttdeci">bool getDisplay()</div><div class="ttdoc">Função assíncrona para saber se o elemento está visível na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00044">GameTimeBar.cpp:44</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a4090a3913947fe9eab75f88090ebb673"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a4090a3913947fe9eab75f88090ebb673">ScreenObject::startSpriteAnimation</a></div><div class="ttdeci">ScreenObject &amp; startSpriteAnimation(irr::u32 time)</div><div class="ttdoc">Inicia o SpriteAnimator no tempo informado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00311">ScreenObject.cpp:311</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a5bf8ee510169518754d4ae7ca81ff75d"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5bf8ee510169518754d4ae7ca81ff75d">CrazyCrush::core::lastFullCheck</a></div><div class="ttdeci">Protected&lt; unsigned &gt; lastFullCheck(0)</div><div class="ttdoc">Informação de quando foi a última vez que a matriz foi verificada (usado pela função de dicas) ...</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dfd/_core_process_8hpp_source.htm#l00059">CoreProcess.hpp:59</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a8ae2dec91ac5c6d65340cf4dfab17a79"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79">ScreenObject::setScreenSize</a></div><div class="ttdeci">ScreenObject &amp; setScreenSize(unsigned width, unsigned height)</div><div class="ttdoc">Define o tamanho que o sprite ocupará na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00215">ScreenObject.cpp:215</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a24bfcff1e124296717f19962940a3ae8"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a24bfcff1e124296717f19962940a3ae8">CrazyCrush::Screen::hintIcon</a></div><div class="ttdeci">ScreenObject hintIcon(NULL)</div><div class="ttdoc">Sprite da animação de dica de movimento. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00050">Screen.hpp:50</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_texture_cache_htm_a2ef8cc38a2a35135afbaa59767bb2708"><div class="ttname"><a href="../../dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#a2ef8cc38a2a35135afbaa59767bb2708">CrazyCrush::TextureCache::sprites</a></div><div class="ttdeci">SharedPointer&lt; irr::video::ITexture &gt; sprites</div><div class="ttdoc">Textura multi-uso. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/dd2/_texture_cache_8cpp_source.htm#l00032">TextureCache.cpp:32</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_a560badb4b23001742a31871ce16d6dd5"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#a560badb4b23001742a31871ce16d6dd5">UpdateTimeBar::getScreenWidth</a></div><div class="ttdeci">unsigned getScreenWidth()</div><div class="ttdoc">Função assíncrona para obter a largura do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00040">GameTimeBar.cpp:40</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_aef96aad21d986413899c0faa8f4e3554"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554">CrazyCrush::Game::Control::gameIsRunning</a></div><div class="ttdeci">bool gameIsRunning()</div><div class="ttdoc">Útil para saber se o jogo está rodando (pausado ou ainda não iniciado) </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00138">GameControl.cpp:138</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_a928ae27ce84615147f22cae08efd6746"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#a928ae27ce84615147f22cae08efd6746">UpdateTimeBar::aSetImageColor</a></div><div class="ttdeci">void aSetImageColor(irr::video::SColor *a)</div><div class="ttdoc">Função assíncrona para definir a cor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00038">GameTimeBar.cpp:38</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_aadaf79c4ec6e1e184549e28ac4530079"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#aadaf79c4ec6e1e184549e28ac4530079">UpdateTimeBar::getColor</a></div><div class="ttdeci">irr::video::SColor * getColor()</div><div class="ttdoc">Função assíncrona para obter a cor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00039">GameTimeBar.cpp:39</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a32823659bbd6c599a5a31b043db4f33a"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a32823659bbd6c599a5a31b043db4f33a">CrazyCrush::Game::Control::getLevelTotalTime</a></div><div class="ttdeci">unsigned getLevelTotalTime()</div><div class="ttdoc">Obtém o tempo máximo da fase atual. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00246">GameControl.cpp:246</a></div></div>
+<div class="ttc" id="class_animator_obj_list_htm_a19b5e6f153a270a9c6b03283a57f7d35"><div class="ttname"><a href="../../df/d47/class_animator_obj_list.htm#a19b5e6f153a270a9c6b03283a57f7d35">AnimatorObjList::addObject</a></div><div class="ttdeci">bool addObject(AnimatorObject *object)</div><div class="ttdoc">Adiciona um elemento à lista. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/d31/_animator_object_list_8cpp_source.htm#l00025">AnimatorObjectList.cpp:25</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_time_bar_htm_a60e7ace10e29e3acbac50f031075776e"><div class="ttname"><a href="../../d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a60e7ace10e29e3acbac50f031075776e">CrazyCrush::Game::TimeBar::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializa as dependências internas do espaço. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00067">GameTimeBar.cpp:67</a></div></div>
+<div class="ttc" id="class_update_time_bar_htm_ab3334e41b261e84fbe66ad7727016c18"><div class="ttname"><a href="../../d1/daa/class_update_time_bar.htm#ab3334e41b261e84fbe66ad7727016c18">UpdateTimeBar::getType</a></div><div class="ttdeci">unsigned char getType()</div><div class="ttdoc">Retorna o tipo da classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/dde/_game_time_bar_8cpp_source.htm#l00027">GameTimeBar.cpp:27</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:09 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

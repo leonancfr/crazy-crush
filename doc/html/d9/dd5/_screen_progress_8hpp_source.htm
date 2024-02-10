@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/ScreenProgress.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScreenProgress.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _SCREEN_PROGRESS_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _SCREEN_PROGRESS_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;ScreenObject.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/IrrlichtDevice.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/IVideoDriver.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/ITexture.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;SharedPointer.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d3/df8/class_screen_progress.htm">   25</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/df8/class_screen_progress.htm">ScreenProgress</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">unsigned</span> bar_size;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">unsigned</span> total_load;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> total_loaded;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    irr::IrrlichtDevice *device;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    irr::video::IVideoDriver *driver;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> *barRight,*barLeft,*barMiddle,*loadingText;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt;irr::video::ITexture&gt;</a> bar,loadText;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> instaceObjects();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d3/df8/class_screen_progress.htm#a3ccaf2249f3138245881dc58c559ca92">ScreenProgress</a>(irr::IrrlichtDevice* device);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../d3/df8/class_screen_progress.htm#a3ccaf2249f3138245881dc58c559ca92">ScreenProgress</a>(irr::IrrlichtDevice* device,<span class="keywordtype">unsigned</span> total);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../d3/df8/class_screen_progress.htm#a3ccaf2249f3138245881dc58c559ca92">ScreenProgress</a>(irr::IrrlichtDevice* device,<span class="keywordtype">unsigned</span> total,<span class="keywordtype">unsigned</span> bar_size);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    ~<a class="code" href="../../d3/df8/class_screen_progress.htm">ScreenProgress</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/df8/class_screen_progress.htm#a4eff4e79b25cbc723cae9876c094cca0">setTotalToLoad</a>(<span class="keywordtype">unsigned</span> total);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d3/df8/class_screen_progress.htm#ad01f91ed53e1a8e34343ad83fc83a09e">setMaxBarSize</a>(<span class="keywordtype">unsigned</span> bar_size);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../d3/df8/class_screen_progress.htm#af6c262f4a017a0b971a1d1ae547d2cca">getTotalToLoad</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">unsigned</span> <a class="code" href="../../d3/df8/class_screen_progress.htm#a456722035a01927ba7354597ff95aab1">getTotalLoaded</a>();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    irr::IrrlichtDevice* <a class="code" href="../../d3/df8/class_screen_progress.htm#a17b0535ad2ade1bf6f0bc54f0b0d43e8">getDevice</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    irr::video::IVideoDriver* <a class="code" href="../../d3/df8/class_screen_progress.htm#ac182037c224cb1137a9181284bb643dd">getDriver</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="../../d3/df8/class_screen_progress.htm">ScreenProgress</a>&amp; <a class="code" href="../../d3/df8/class_screen_progress.htm#aa45ad6a029081ff8e9b1b627a35df223">incLoaded</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="../../d3/df8/class_screen_progress.htm">ScreenProgress</a>&amp; <a class="code" href="../../d3/df8/class_screen_progress.htm#aa45ad6a029081ff8e9b1b627a35df223">incLoaded</a>(<span class="keywordtype">unsigned</span> n);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d3/df8/class_screen_progress.htm#aee9244ce4785a67fcb1dc3df6f8c2b18">drawScene</a>();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_a4eff4e79b25cbc723cae9876c094cca0"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#a4eff4e79b25cbc723cae9876c094cca0">ScreenProgress::setTotalToLoad</a></div><div class="ttdeci">void setTotalToLoad(unsigned total)</div><div class="ttdoc">Define a quantidade total de objetos a carregar. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00070">ScreenProgress.cpp:70</a></div></div>
+<div class="ttc" id="class_shared_pointer_htm"><div class="ttname"><a href="../../da/dac/class_shared_pointer.htm">SharedPointer&lt; irr::video::ITexture &gt;</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_a3ccaf2249f3138245881dc58c559ca92"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#a3ccaf2249f3138245881dc58c559ca92">ScreenProgress::ScreenProgress</a></div><div class="ttdeci">ScreenProgress(irr::IrrlichtDevice *device)</div><div class="ttdoc">Instancia a classe associando o dispositivo da engine em uso. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00036">ScreenProgress.cpp:36</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_ac182037c224cb1137a9181284bb643dd"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#ac182037c224cb1137a9181284bb643dd">ScreenProgress::getDriver</a></div><div class="ttdeci">irr::video::IVideoDriver * getDriver()</div><div class="ttdoc">Obtém o driver de vídeo associado ao dispositivo da engine associado à classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00156">ScreenProgress.cpp:156</a></div></div>
+<div class="ttc" id="class_screen_progress_htm"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm">ScreenProgress</a></div><div class="ttdoc">Classe para criar e tratar uma tela de progresso. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/dd5/_screen_progress_8hpp_source.htm#l00025">ScreenProgress.hpp:25</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_a456722035a01927ba7354597ff95aab1"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#a456722035a01927ba7354597ff95aab1">ScreenProgress::getTotalLoaded</a></div><div class="ttdeci">unsigned getTotalLoaded()</div><div class="ttdoc">Obtém a quantidade de elementos carregados. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00149">ScreenProgress.cpp:149</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_ad01f91ed53e1a8e34343ad83fc83a09e"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#ad01f91ed53e1a8e34343ad83fc83a09e">ScreenProgress::setMaxBarSize</a></div><div class="ttdeci">void setMaxBarSize(unsigned bar_size)</div><div class="ttdoc">Define a largura máxima da barra de progresso. </div></div>
+<div class="ttc" id="class_screen_progress_htm_aa45ad6a029081ff8e9b1b627a35df223"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#aa45ad6a029081ff8e9b1b627a35df223">ScreenProgress::incLoaded</a></div><div class="ttdeci">ScreenProgress &amp; incLoaded()</div><div class="ttdoc">Incrementa, em uma unidade, a quantidade de elementos carregados. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00074">ScreenProgress.cpp:74</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_aee9244ce4785a67fcb1dc3df6f8c2b18"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#aee9244ce4785a67fcb1dc3df6f8c2b18">ScreenProgress::drawScene</a></div><div class="ttdeci">bool drawScene()</div><div class="ttdoc">Desenha os elementos internos da classe na tela (ie: A barra de progresso) </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00088">ScreenProgress.cpp:88</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_af6c262f4a017a0b971a1d1ae547d2cca"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#af6c262f4a017a0b971a1d1ae547d2cca">ScreenProgress::getTotalToLoad</a></div><div class="ttdeci">unsigned getTotalToLoad()</div><div class="ttdoc">Obtém a total de elementos a carregar. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00145">ScreenProgress.cpp:145</a></div></div>
+<div class="ttc" id="class_screen_progress_htm_a17b0535ad2ade1bf6f0bc54f0b0d43e8"><div class="ttname"><a href="../../d3/df8/class_screen_progress.htm#a17b0535ad2ade1bf6f0bc54f0b0d43e8">ScreenProgress::getDevice</a></div><div class="ttdeci">irr::IrrlichtDevice * getDevice()</div><div class="ttdoc">Obtém o dispositivo da engine associado à classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/de6/_screen_progress_8cpp_source.htm#l00153">ScreenProgress.cpp:153</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:11 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

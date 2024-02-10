@@ -1,0 +1,7 @@
+<map id="ScreenWindow::inject" name="ScreenWindow::inject">
+<area shape="rect" id="node2" href="$de/d2f/class_animator_object.htm#a6a6574dce9c78a13ee641084421aecef" title="Função assíncrona para atribuição do display (exibir o objeto) " alt="" coords="201,5,392,32"/>
+<area shape="rect" id="node3" href="$de/d2f/class_animator_object.htm#a9fdb6fe9967a76c776d12682694c60fc" title="Função assíncrona para atribuição da posição do objeto na tela. " alt="" coords="203,57,391,98"/>
+<area shape="rect" id="node4" href="$de/d2f/class_animator_object.htm#a8d164b4019c380fa8fa8c67b5ece1193" title="Função assíncrona para obter a coordenada X do objeto na tela. " alt="" coords="207,122,386,163"/>
+<area shape="rect" id="node5" href="$de/d2f/class_animator_object.htm#af2f65aa52ad9fb71942af715a038c3f6" title="Função assíncrona para obter a coordenada Y do objeto na tela. " alt="" coords="207,187,386,229"/>
+<area shape="rect" id="node6" href="$de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0" title="Retorna o tipo da classe. " alt="" coords="213,253,380,280"/>
+</map>

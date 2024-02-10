@@ -1,0 +1,5 @@
+<map id="ScreenHover::mouseHover" name="ScreenHover::mouseHover">
+<area shape="rect" id="node2" href="$da/dc2/class_screen_hover.htm#a6d01a4ac52e65c4eb8f83539cc083500" title="Função a ser extendida que retorna true se a coordenada passada (x,y) está dentro da região que a cla..." alt="" coords="228,5,373,32"/>
+<area shape="rect" id="node3" href="$d1/dd4/class_callback.htm#af1051d87929e76c60a04cf81e7458b3a" title="Função &quot;única&quot; da classe. " alt="" coords="237,56,364,83"/>
+<area shape="rect" id="node4" href="$d1/dd4/class_callback.htm#a3a8c0c16517e1467bf973928b2d9356b" title="Função a ser implementada pelas classes herdadas. " alt="" coords="421,56,556,83"/>
+</map>

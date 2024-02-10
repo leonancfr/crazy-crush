@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/CoreProcess.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CoreProcess.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _CORE_PROCESS_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _CORE_PROCESS_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Protected.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">namespace </span>core {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a96c85777f3fd1b40611a1fb21817734d">simpleCheck</a>(<span class="keywordtype">unsigned</span> i,<span class="keywordtype">unsigned</span> j);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a">checkFullMatrix</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce">checkIfHasMoveLeft</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#ab4c1d339e570f0f9b4aa8e37a6431bd5">processFall</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4">pauseGame</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5e8b8cf454b04403babe527660c88d09">resumeGame</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a00539c9826b42f77c445e978631bc93d">fillMatrix</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a6015a6857c4be56159fa96d36dd5dc2a">   56</a></span>&#160;    <span class="keyword">extern</span> <a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;bool&gt;</a> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a6015a6857c4be56159fa96d36dd5dc2a">triggerCheckMatrix</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5bf8ee510169518754d4ae7ca81ff75d">   59</a></span>&#160;    <span class="keyword">extern</span> <a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;unsigned&gt;</a> <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5bf8ee510169518754d4ae7ca81ff75d">lastFullCheck</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a00539c9826b42f77c445e978631bc93d"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a00539c9826b42f77c445e978631bc93d">CrazyCrush::core::fillMatrix</a></div><div class="ttdeci">void fillMatrix()</div><div class="ttdoc">Preenche toda a matriz de pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00338">CoreProcess.cpp:338</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a9ad6a62d0e3449c0f0d5a7cb33b174d4"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4">CrazyCrush::core::pauseGame</a></div><div class="ttdeci">void pauseGame()</div><div class="ttdoc">Pausa o processamento do jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00251">CoreProcess.cpp:251</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a16d411280cc6fbc1a34549e6d7740b7a"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a">CrazyCrush::core::checkFullMatrix</a></div><div class="ttdeci">bool checkFullMatrix()</div><div class="ttdoc">Verifica toda a matriz para saber se alguma peça irá &amp;quot;quebrar&amp;quot;. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00109">CoreProcess.cpp:109</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a5e8b8cf454b04403babe527660c88d09"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5e8b8cf454b04403babe527660c88d09">CrazyCrush::core::resumeGame</a></div><div class="ttdeci">void resumeGame()</div><div class="ttdoc">Continua o processamento do jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00243">CoreProcess.cpp:243</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a6015a6857c4be56159fa96d36dd5dc2a"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a6015a6857c4be56159fa96d36dd5dc2a">CrazyCrush::core::triggerCheckMatrix</a></div><div class="ttdeci">Protected&lt; bool &gt; triggerCheckMatrix(false)</div><div class="ttdoc">Trigger para forçar a função de verificação da matriz. </div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dfd/_core_process_8hpp_source.htm#l00056">CoreProcess.hpp:56</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a5bf8ee510169518754d4ae7ca81ff75d"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a5bf8ee510169518754d4ae7ca81ff75d">CrazyCrush::core::lastFullCheck</a></div><div class="ttdeci">Protected&lt; unsigned &gt; lastFullCheck(0)</div><div class="ttdoc">Informação de quando foi a última vez que a matriz foi verificada (usado pela função de dicas) ...</div><div class="ttdef"><b>Definition:</b> <a href="../../d0/dfd/_core_process_8hpp_source.htm#l00059">CoreProcess.hpp:59</a></div></div>
+<div class="ttc" id="class_protected_htm"><div class="ttname"><a href="../../de/d7f/class_protected.htm">Protected&lt; bool &gt;</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a96c85777f3fd1b40611a1fb21817734d"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a96c85777f3fd1b40611a1fb21817734d">CrazyCrush::core::simpleCheck</a></div><div class="ttdeci">bool simpleCheck(unsigned i, unsigned j)</div><div class="ttdoc">Verifica se a peça nas coordenadas passadas irá &amp;quot;quebrar&amp;quot;. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00042">CoreProcess.cpp:42</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a3f32e619f5086f6e822296b367b301ce"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce">CrazyCrush::core::checkIfHasMoveLeft</a></div><div class="ttdeci">bool checkIfHasMoveLeft()</div><div class="ttdoc">Verifica se há algum movimento possível. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00275">CoreProcess.cpp:275</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_ab4c1d339e570f0f9b4aa8e37a6431bd5"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#ab4c1d339e570f0f9b4aa8e37a6431bd5">CrazyCrush::core::processFall</a></div><div class="ttdeci">bool processFall()</div><div class="ttdoc">Se houve colisão, processa o caimento das pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00190">CoreProcess.cpp:190</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:05 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

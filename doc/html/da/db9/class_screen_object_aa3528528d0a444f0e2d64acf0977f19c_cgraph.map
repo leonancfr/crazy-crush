@@ -1,0 +1,4 @@
+<map id="ScreenObject::aSetImageColor" name="ScreenObject::aSetImageColor">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#af9be9d3730f538c7087f61e20e505524" title="Define a cor que é usada pela engine para sobrepor o sprite. " alt="" coords="255,5,447,32"/>
+<area shape="rect" id="node3" href="$dd/d77/class_r_g_b_a.htm#ad19fc1f34c53eddbc86029877523cce1" title="Define o ponteiro interno como o ponteiro passado como argumento. " alt="" coords="495,5,609,32"/>
+</map>

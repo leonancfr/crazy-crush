@@ -1,0 +1,11 @@
+<map id="ScreenButton::aSetScreenPosition" name="ScreenButton::aSetScreenPosition">
+<area shape="rect" id="node2" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="231,105,409,146"/>
+<area shape="rect" id="node3" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="457,35,636,77"/>
+<area shape="rect" id="node7" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="457,105,636,146"/>
+<area shape="rect" id="node9" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#aaf880bed4af918f3a7c771f6f88b7028" title="Apenas fecha a tela de pausa. " alt="" coords="457,177,636,218"/>
+<area shape="rect" id="node4" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="702,31,885,73"/>
+<area shape="rect" id="node5" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="968,5,1169,32"/>
+<area shape="rect" id="node6" href="$d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033" title="Função a ser implementada pelas classes herdadas. " alt="" coords="951,56,1187,112"/>
+<area shape="rect" id="node8" href="$dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="684,97,903,153"/>
+<area shape="rect" id="node10" href="$df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="687,177,900,233"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CrazyCrush::Game::TimeAttack::play" name="CrazyCrush::Game::TimeAttack::play">
+<area shape="rect" id="node2" href="$d3/db8/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_play_time_attack_button_click.htm#ac1be45149d67472aba1dd8b7a3f6a476" title="Função a ser implementada pelas classes herdadas. " alt="" coords="261,5,507,61"/>
+<area shape="rect" id="node3" href="$d6/df0/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_time_attack_button_click.htm#a2e637b6b94baf1e1233bf599ed14b7cd" title="Função a ser implementada pelas classes herdadas. " alt="" coords="260,85,508,141"/>
+</map>

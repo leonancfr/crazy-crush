@@ -1,0 +1,4 @@
+<map id="ScreenObject::appendMorph" name="ScreenObject::appendMorph">
+<area shape="rect" id="node2" href="$d7/d1a/class_object_morph.htm#a23a4b595aea37762fd8eaed6a3655585" title="Associa um objeto a este ObjectMorph. " alt="" coords="259,5,419,32"/>
+<area shape="rect" id="node3" href="$d1/d91/class_animator_queue.htm#ae6f8830d3b53ae853e1ec75ef135292f" title="Adiciona um ObjectMorph à lista. " alt="" coords="240,56,439,83"/>
+</map>

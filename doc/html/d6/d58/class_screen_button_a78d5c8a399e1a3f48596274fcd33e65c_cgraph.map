@@ -1,0 +1,4 @@
+<map id="ScreenButton::aSetDisplay" name="ScreenButton::aSetDisplay">
+<area shape="rect" id="node2" href="$d6/d58/class_screen_button.htm#a3e1c03b489f6dbe6f6d6ce5cf4aacbcf" title="Define se o botão será exibido ou não. " alt="" coords="232,5,403,32"/>
+<area shape="rect" id="node3" href="$d6/d58/class_screen_button.htm#a2c65098f1c57adf7e61c25de6cf2cabe" title="Função executada sempre que o display do botão for alterado. " alt="" coords="451,5,660,32"/>
+</map>

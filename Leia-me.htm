@@ -1,0 +1,44 @@
+<h1>CrazyCrush</h1>
+Projeto feito em C++ para Windows e com provável portabilidade para Linux (cAudio não foi testada no Linux ainda).<br>
+Para compilar no Windows, é necessário o uso do MAKE (para Windows), do MinGW e do CMAKE (para Windows).<br>
+<h2>Instalando o MinGW</h2>
+Estamos utilizando uma versão um pouco diferente do MinGW, esta versão possui maior compatibilidade entre Windows e Linux, e pode ser encontrada em: <a href="http://mingw-w64.sourceforge.net/download.php#mingw-builds">http://mingw-w64.sourceforge.net/download.php#mingw-builds</a><br>
+Basta escolher se quer um compilador para Windows 32 ou 64 bits. Escolher o melhor modelo de Exception (pode ser o SEH) e fazer o download da versão mais nova com threading do tipo posix.<br>
+Após o download, basta extrair o conteúdo em algum lugar (por exemplo C:\MinGW) e, logo em seguida, adicionar a pasta bin* no PATH* do Windows para que possa chamar o gcc/g++ direto pela linha de comando.<br>
+Para validar que tudo ocorreu perfeitamente, abra o prompt de comando (cmd) e execute <code>g++ --version</code>, se tudo ocorreu bem, será exibido a versão do GCC que baixou.<br>
+<h2>Instalando o MAKE</h2>
+Faça o download dele em: <a href="http://gnuwin32.sourceforge.net/packages/make.htm">http://gnuwin32.sourceforge.net/packages/make.htm</a><br>
+De preferência, baixe somente os binários e as dependências.<br>
+Extraia ambos arquivos na mesma pasta onde extraiu o MinGW de forma que a pasta \bin do MinGW seja exatamente a mesma \bin do MAKE.<br>
+Com isso e com o GCC já funcionando, execute <code>make --version</code> para verificar se tudo ocorreu bem. (É um tanto comum que o make também funcione, caso o GCC funcione, pois o programa foi colocado na mesma pasta que já está no PATH)<br>
+<h2>Instalando o CMAKE</h2>
+Baixe-o em: <a href="http://www.cmake.org/cmake/resources/software.html">http://www.cmake.org/cmake/resources/software.html</a><br>
+E instale-o da melhor maneira que o convir. Este programa é muito ruim e só será usado uma única vez.<br>
+<h2>Bibliotecas</h2>
+Este projeto usa duas principais bibliotecas, que devem ser compiladas previamente:<br>
+1 - IrrLicht: <a href="http://irrlicht.sourceforge.net/">http://irrlicht.sourceforge.net/</a><br>
+2 - cAudio: <a href="https://github.com/wildicv/cAudio/">https://github.com/wildicv/cAudio/</a><br>
+<h2>Compilando</h2>
+<h3>IrrLicht</h3>
+Após fazer o download da biblioteca e extrai-la numa pasta qualquer, apague os seguintes arquivos:<br>
+<code>bin\Win32-gcc\Irrlicht.dll<br>
+lib\Win32-gcc\libIrrlicht.a</code><br>
+No console do Windows, vá até a pasta <code>source\Irrlicht</code>, e digite o comando <code>make</code> ou <code>make all</code>. Espere compilar e depois digite <code>make win32</code>. É provável que apareça algum erro por não achar uma biblioteca (a do directx), nesse caso, basta abrir o arquivo <code>Makefile</code>, que está nessa mesma pasta, ir até a linha 107 e remover "-ld3dx9d" desta linha e executar o comando <code>make win32</code> novamente.<br>
+Agora copie <code>bin\Win32-gcc\Irrlicht.dll</code> para a pasta bin do projeto e copie <code>lib\Win32-gcc\libIrrlicht.a</code> para a pasta lib do projeto.<br>
+Agora a biblioteca IrrLicht está compilada e pronta pra uso <b>xP</b><br>
+<h3>cAudio</h3>
+Após fazer o download da versão 2.2.0, o que era pra ser simples nem sempre é simples..<br>
+Caso faça o download pelo GIT, certfique-se de fazer <code> git checkout v2.2.0</code>
+Abra o prompt e vá até a pasta onde extraiu o cAudio e execute o comando:<br>
+<code>cmake -G "MinGW Makefiles" -DCAUDIO_DEPENDENCIES_DIR=&gt;Dependencies_Folder&lt;</code><br>
+Onde <code>&gt;Dependencies_Folder&lt;</code> deve ser <code>Dependencies</code> ou <code>Dependencies64</code>, de acordo com a versão do compilador que estiver usando..<br>
+Só com esses comandos nenhum erro deve aparecer, mas a biblioteca ainda não foi compilada..<br>
+Execute <code>make cAudio</code> para compilar a biblioteca. Se tudo ocorrer perfeitamente, parabéns, você teve sorte. Caso dê erro de linkagem, coisas do tipo __imp_alc~~~ not found, você terá que fazer a seguinte gambiarra:<br>
+Vá na pasta do cAudio e acesse: <code>\cAudio\CMakeFiles\cAudio.dir\link.txt</code><br>
+Procure pelo trecho: <code>..\&gt;Dependencies_Folder&lt;\lib\release\OpenAL32.lib</code><br>
+e modifique para: <code>..\&gt;Dependencies_Folder&lt\bin\release\OpenAL32.dll</code><br>
+Volte para o prompt e execute, novamente, <code>make cAudio</code>.<br>
+Torça pra dar certo, pois aqui deu.<br>
+Depois de compilado a biblioteca, copie os arquivos da pasta <code>bin</code> do cAudio para a pasta <code>bin</code> do projeto, copie <code>libcAudio.dll</code> da pasta cAudio do cAudio para a pasta <code>bin</code> do projeto e, por fim, copie <code>libcAudio.dll.a</code> da pasta cAudio do cAudio para a pasta <code>lib</code> do projeto, renomeando, este último, para <code>libcAudio.a</code>.<br>
+<h2>O Projeto</h2>
+Pronto, bibliotecas compiladas. Agora é só compilar o projeto, acessando, pelo prompt, a pasta do projeto e executando <code>make</code>. Se tudo ocorreu bem, é só executar o <code>CrazyCrush.exe</code> que estará prontamente esperando na pasta <code>bin</code>.

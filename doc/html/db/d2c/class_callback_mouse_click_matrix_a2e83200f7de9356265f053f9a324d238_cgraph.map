@@ -1,0 +1,19 @@
+<map id="CallbackMouseClickMatrix::aProcess" name="CallbackMouseClickMatrix::aProcess">
+<area shape="rect" id="node2" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7470a835a44a45edf06e63fb560c8a6a" title="Obtém os índices referente ao último bloco selecionado. " alt="" coords="261,5,399,47"/>
+<area shape="rect" id="node3" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1ac04e859d7d96e99a8952d7bdd77dde" title="Desseleciona quaisquer bloco que esteja selecionado. " alt="" coords="261,71,399,112"/>
+<area shape="rect" id="node5" href="$d9/d95/class_callback_process_matrix.htm#a176704b43ff876389646e825878c0280" title="Define as coordenadas de uma das pedras envolvidas no movimento. " alt="" coords="251,136,409,177"/>
+<area shape="rect" id="node6" href="$d9/d95/class_callback_process_matrix.htm#a6b36cea6bc11ae4b7902e0a69479dafd" title="Define as coordenadas da outra pedra envolvida no movimento. " alt="" coords="251,201,409,243"/>
+<area shape="rect" id="node7" href="$dd/d83/class_morph_linear.htm#a96a3bf2c3f0fddd0466c86c7c97924ab" title="Define a duração da transição. " alt="" coords="247,267,413,294"/>
+<area shape="rect" id="node8" href="$dd/d83/class_morph_linear.htm#ad706f1ac190e905f7654bece686ab478" title="Define a posição final da transição do objeto. " alt="" coords="233,318,427,345"/>
+<area shape="rect" id="node9" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9a61539a8ccba621da69ce548cd82691" title="Converte um índice da matriz para uma posição na tela. " alt="" coords="253,369,407,411"/>
+<area shape="rect" id="node10" href="$da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef" title="Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. " alt="" coords="237,501,423,527"/>
+<area shape="rect" id="node13" href="$da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac" title="Inicia o AnimatorQueue no tempo informado. " alt="" coords="237,551,423,578"/>
+<area shape="rect" id="node15" href="$da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa" title="Adiciona o Callback passado por argumento no AnimatorQueue interno. " alt="" coords="229,602,431,629"/>
+<area shape="rect" id="node17" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#ad87109e852c0e96cf77f21d5b607b476" title="Seleciona o bloco da coordenada passada. " alt="" coords="261,435,399,476"/>
+<area shape="rect" id="node4" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="501,214,671,241"/>
+<area shape="rect" id="node11" href="$d7/d1a/class_object_morph.htm#a23a4b595aea37762fd8eaed6a3655585" title="Associa um objeto a este ObjectMorph. " alt="" coords="506,450,666,477"/>
+<area shape="rect" id="node12" href="$d1/d91/class_animator_queue.htm#ae6f8830d3b53ae853e1ec75ef135292f" title="Adiciona um ObjectMorph à lista. " alt="" coords="487,501,685,527"/>
+<area shape="rect" id="node14" href="$d1/d91/class_animator_queue.htm#a1c4583b178f798ec3535b90b35302e33" title="Inicia a animação no tempo. " alt="" coords="484,551,688,578"/>
+<area shape="rect" id="node16" href="$d1/d91/class_animator_queue.htm#a89e2d21a6e06b5f2347c3d585ab4ed98" title="Adiciona um Callback à lista. " alt="" coords="480,602,692,629"/>
+<area shape="rect" id="node18" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="479,399,693,426"/>
+</map>

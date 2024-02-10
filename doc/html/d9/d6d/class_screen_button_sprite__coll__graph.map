@@ -1,0 +1,6 @@
+<map id="ScreenButtonSprite" name="ScreenButtonSprite">
+<area shape="rect" id="node2" href="$d6/d58/class_screen_button.htm" title="Classe abstrata que é modelo para os demais tipos de botões. " alt="" coords="139,109,240,136"/>
+<area shape="rect" id="node3" href="$de/d2f/class_animator_object.htm" title="Classe abstrata que é base para os elementos da tela. " alt="" coords="5,5,117,32"/>
+<area shape="rect" id="node4" href="$da/dc2/class_screen_hover.htm" title="Classe abstrata para definir uma região da tela com um evento (por mouse) " alt="" coords="142,5,237,32"/>
+<area shape="rect" id="node5" href="$d1/dd4/class_callback.htm" title="Classe abstrata para evitar o uso de ponteiros de função. " alt="" coords="261,5,333,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CrazyCrush::Game::Control::initialize" name="CrazyCrush::Game::Control::initialize">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="242,5,413,32"/>
+<area shape="rect" id="node3" href="$df/d47/class_animator_obj_list.htm#a19b5e6f153a270a9c6b03283a57f7d35" title="Adiciona um elemento à lista. " alt="" coords="236,56,419,83"/>
+</map>

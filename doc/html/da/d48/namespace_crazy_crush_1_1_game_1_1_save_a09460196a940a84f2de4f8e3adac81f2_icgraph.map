@@ -1,0 +1,7 @@
+<map id="CrazyCrush::Game::Save::getTimeAttackRecord" name="CrazyCrush::Game::Save::getTimeAttackRecord">
+<area shape="rect" id="node2" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#a00c71ca5c45b3d9a95cf779161cf0301" title="Exibe a tela de quando o tempo acaba no modo TimaAttak. " alt="" coords="223,50,432,91"/>
+<area shape="rect" id="node3" href="$d6/d67/class_crazy_crush_1_1_game_1_1_control_1_1_callback_show_game_end_dialog.htm#a203aaf350fa9147e863acfbb42b528f6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="480,5,687,61"/>
+<area shape="rect" id="node4" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5915ced50490ec68db1effe5a0a1f773" title="Executa as tarefas relacionadas ao perder uma fase. " alt="" coords="492,86,675,127"/>
+<area shape="rect" id="node5" href="$d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a2a0de1fe7e2b2d30d081e4e043b1b4d2" title="Atualiza a largura da barra em relação ao tempo. " alt="" coords="735,86,924,127"/>
+<area shape="rect" id="node6" href="$d1/daa/class_update_time_bar.htm#ac18b0c8e7e4ab4f516f31d5aafbdbcce" title="Função para processamento no tempo para a classe. " alt="" coords="972,93,1165,120"/>
+</map>

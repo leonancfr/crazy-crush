@@ -1,0 +1,12 @@
+<map id="CrazyCrush::Thread::startProcessMouse" name="CrazyCrush::Thread::startProcessMouse">
+<area shape="rect" id="node2" href="$df/d68/namespace_crazy_crush_1_1_thread_process_mouse.htm#ad305585d25a44c65c013b59e6a364755" title="Thread de processamento do Mouse. " alt="" coords="196,86,381,127"/>
+<area shape="rect" id="node3" href="$de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917" title="Obtém o valor da variável. " alt="" coords="473,5,577,32"/>
+<area shape="rect" id="node4" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#a9a35ccd63d96fdcb1024cd93c2c5ce65" title="Executa o evento OnHover do primeiro ScreenHover da lista que estiver ativo e cuja área delimitada ab..." alt="" coords="429,57,621,98"/>
+<area shape="rect" id="node8" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="473,123,577,149"/>
+<area shape="rect" id="node9" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#a54438d6a870e0cae48f9d7ee743c9999" title="Executa o evento OnClick do primeiro ScreenHover da lista que estiver ativo e cuja área delimitada ab..." alt="" coords="429,174,621,215"/>
+<area shape="rect" id="node5" href="$da/dc2/class_screen_hover.htm#a4b6702a9e6f8c60070abd02d9e714c36" title="Processa o Callback associado ao evento OnOut. " alt="" coords="673,73,836,100"/>
+<area shape="rect" id="node6" href="$d1/dd4/class_callback.htm#af1051d87929e76c60a04cf81e7458b3a" title="Função &quot;única&quot; da classe. " alt="" coords="897,89,1024,116"/>
+<area shape="rect" id="node7" href="$d1/dd4/class_callback.htm#a3a8c0c16517e1467bf973928b2d9356b" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1081,89,1216,116"/>
+<area shape="rect" id="node10" href="$da/dc2/class_screen_hover.htm#af22605bb97c23f17a163a893b36c28f4" title="Processa o Callback associado ao evento OnClick. " alt="" coords="669,148,840,175"/>
+<area shape="rect" id="node11" href="$da/dc2/class_screen_hover.htm#a6d01a4ac52e65c4eb8f83539cc083500" title="Função a ser extendida que retorna true se a coordenada passada (x,y) está dentro da região que a cla..." alt="" coords="888,148,1033,175"/>
+</map>

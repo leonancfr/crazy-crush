@@ -1,0 +1,39 @@
+<map id="Matrix::at" name="Matrix::at">
+<area shape="rect" id="node2" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a" title="Verifica toda a matriz para saber se alguma peça irá &quot;quebrar&quot;. " alt="" coords="375,65,562,107"/>
+<area shape="rect" id="node6" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a3c28216346210ec51f67065d14444372" title="Inicializa as dependências internas do espaço. " alt="" coords="135,196,313,237"/>
+<area shape="rect" id="node8" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#adfb0440e4d8470e43810120d51596fe0" title="Verifica a matriz para saber se a fase está concluída. " alt="" coords="135,65,313,107"/>
+<area shape="rect" id="node9" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a353803a76768de1d4d23b3119fc43964" title="Decrementa, em um ponto, uma posição da matriz. " alt="" coords="135,131,313,172"/>
+<area shape="rect" id="node10" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2" title="Define um valor para um ponto na matriz. " alt="" coords="135,261,313,303"/>
+<area shape="rect" id="node18" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a058257c07ef1a9550778a64f9cf3e868" title="Obtém a pontuação nos índices desejado. " alt="" coords="135,392,313,433"/>
+<area shape="rect" id="node20" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8" title="Zera a matriz. " alt="" coords="135,327,313,368"/>
+<area shape="rect" id="node28" href="$d6/d3f/class_matrix.htm#ae47fea43f6fcb62fe04a63f5d5a719f9" title="Transfere(sem remoção) uma coluna (por completo) de uma matriz à linha da matriz atual. " alt="" coords="131,458,317,485"/>
+<area shape="rect" id="node29" href="$d6/d3f/class_matrix.htm#aba626c56e96ed01060bb634dfc193420" title="Obtém uma subdivisão da matriz. " alt="" coords="163,509,285,535"/>
+<area shape="rect" id="node30" href="$d6/d3f/class_matrix.htm#a220144d29bb52bd0a40c64243273f8d0" title="Obtém um vetor coluna da matriz. " alt="" coords="160,559,288,586"/>
+<area shape="rect" id="node31" href="$d6/d3f/class_matrix.htm#a9fd0ae7fdc4b6d9975023b30289913a4" title="Transfere(sem remoção) toda uma matriz para a matriz atual. " alt="" coords="152,610,296,637"/>
+<area shape="rect" id="node32" href="$d6/d3f/class_matrix.htm#a11fd7dd911127f2548dfe9940fe592c2" title="Multiplica a matriz atual por outra matriz. " alt="" coords="165,661,283,687"/>
+<area shape="rect" id="node33" href="$d6/d3f/class_matrix.htm#aca9c43aacf7efbdc17fda429d52b7e58" title="Subtrai duas matrizes duas matrizes. " alt="" coords="165,711,283,738"/>
+<area shape="rect" id="node34" href="$d6/d3f/class_matrix.htm#a4269762820f692017d96a3978336d8a2" title="Subtrai duas matrizes. " alt="" coords="163,762,285,789"/>
+<area shape="rect" id="node35" href="$d6/d3f/class_matrix.htm#a7d960f17eb693c989a104fe338575b36" title="Divide a matriz atual por um valor. " alt="" coords="165,813,283,839"/>
+<area shape="rect" id="node36" href="$dd/d2d/class_matrix_bool.htm#aeb01aba43fa8e4717f5a550a8318fc77" title="Define o valor de uma posição da matriz. " alt="" coords="169,863,279,890"/>
+<area shape="rect" id="node37" href="$dd/d2d/class_matrix_bool.htm#aeca3279dd832f16a877ecf082a1dcb2d" title="Obtém o valor de uma posição na matriz. " alt="" coords="169,914,279,941"/>
+<area shape="rect" id="node38" href="$dd/d2d/class_matrix_bool.htm#ab5f97cba7edd8e3c063083916b5842e4" title="Preenche toda a matriz com um valor. " alt="" coords="172,965,276,991"/>
+<area shape="rect" id="node3" href="$d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3" title="Função a ser implementada pelas classes herdadas. " alt="" coords="680,5,808,47"/>
+<area shape="rect" id="node4" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#ab9bd4a9a8be29e078303737aea624888" title="Thread de processamento no tempo. " alt="" coords="675,71,813,112"/>
+<area shape="rect" id="node5" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#affa11c846e2b2fff6c703350f96bc407" title="Inicia a thread que processa algumas coisas no tempo. " alt="" coords="970,71,1107,112"/>
+<area shape="rect" id="node7" href="$d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="375,194,563,221"/>
+<area shape="rect" id="node11" href="$d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a2a01280519a6c215c6b07cea05ac8918" title="Abre um nível da forma texto. " alt="" coords="373,311,564,352"/>
+<area shape="rect" id="node12" href="$d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a803c4654b4c11ede7ec295a42e7c295b" title="Abre um nível de forma binária. " alt="" coords="373,245,564,287"/>
+<area shape="rect" id="node13" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a6856382595a3f7282f0eb88f6fa3cbcc" title="Prepara e inicia o jogo na fase informada. " alt="" coords="659,223,829,264"/>
+<area shape="rect" id="node14" href="$dc/de9/class_crazy_crush_1_1_game_1_1_level_1_1_callback_game_play_level_button_click.htm#a1a4e6987e7f4f49be40f0f3e1ed059a6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="935,142,1143,198"/>
+<area shape="rect" id="node15" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a568ddc72ab15ab0f6085ce81c1034cb7" title="Instruções rápidas para ir para o próximo nível. " alt="" coords="953,223,1124,264"/>
+<area shape="rect" id="node17" href="$d4/d58/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_re_try_button_click.htm#a070fff4a388f50c7d2cfbf853cf79e18" title="Função a ser implementada pelas classes herdadas. " alt="" coords="916,289,1161,345"/>
+<area shape="rect" id="node16" href="$de/de7/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_next_button_click.htm#af24b8526179752cd90d77014503c2c9a" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1209,215,1448,271"/>
+<area shape="rect" id="node19" href="$d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a64b976a709aab7465e570f61be4113e5" title="Salva a fase atual num arquivo binário. " alt="" coords="373,521,564,563"/>
+<area shape="rect" id="node21" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5c0518ab5c9bfdd2bfaf28dbb0f8d154" title="Executa as instruções para parar o jogo e exibir o menu principal. " alt="" coords="377,456,560,497"/>
+<area shape="rect" id="node25" href="$d6/db5/namespace_crazy_crush_1_1_game_1_1_time_attack.htm#aaee991f853fe8494efb4380a4ce1272e" title="Inicia o jogo no modo TimeAttack. " alt="" coords="365,376,572,417"/>
+<area shape="rect" id="node22" href="$df/d77/class_crazy_crush_1_1_game_1_1_level_1_1_callback_game_main_menu_button_click.htm#abe3cc1b99273b8860daa21a291b35d9f" title="Função a ser implementada pelas classes herdadas. " alt="" coords="637,609,851,665"/>
+<area shape="rect" id="node23" href="$df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="637,449,851,505"/>
+<area shape="rect" id="node24" href="$d9/d49/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_main_menu_button_click.htm#a7646e52d511f0f64251fc897961ef480" title="Função a ser implementada pelas classes herdadas. " alt="" coords="623,529,865,585"/>
+<area shape="rect" id="node26" href="$d3/db8/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_play_time_attack_button_click.htm#ac1be45149d67472aba1dd8b7a3f6a476" title="Função a ser implementada pelas classes herdadas. " alt="" coords="621,369,867,425"/>
+<area shape="rect" id="node27" href="$d6/df0/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_time_attack_button_click.htm#a2e637b6b94baf1e1233bf599ed14b7cd" title="Função a ser implementada pelas classes herdadas. " alt="" coords="620,289,868,345"/>
+</map>

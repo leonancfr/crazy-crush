@@ -1,0 +1,6 @@
+<map id="CrazyCrush::Game::Points::decreasePoint" name="CrazyCrush::Game::Points::decreasePoint">
+<area shape="rect" id="node2" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a" title="Verifica toda a matriz para saber se alguma peça irá &quot;quebrar&quot;. " alt="" coords="232,39,419,80"/>
+<area shape="rect" id="node3" href="$d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3" title="Função a ser implementada pelas classes herdadas. " alt="" coords="471,5,599,47"/>
+<area shape="rect" id="node4" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#ab9bd4a9a8be29e078303737aea624888" title="Thread de processamento no tempo. " alt="" coords="467,71,604,112"/>
+<area shape="rect" id="node5" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#affa11c846e2b2fff6c703350f96bc407" title="Inicia a thread que processa algumas coisas no tempo. " alt="" coords="652,71,789,112"/>
+</map>

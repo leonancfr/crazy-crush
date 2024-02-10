@@ -1,0 +1,10 @@
+<map id="SharedPointer::set" name="SharedPointer::set">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09" title="Associa uma textura ao objeto. " alt="" coords="188,78,359,105"/>
+<area shape="rect" id="node8" href="$d0/d94/class_screen_text.htm#a2bbd217387984b7540d0cc5602753b62" title="Associa uma fonte ao objeto. " alt="" coords="203,129,343,155"/>
+<area shape="rect" id="node9" href="$dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aead16588055f89b08e4b8fb91f0aab25" title="Carrega todas as texturas. " alt="" coords="184,180,363,221"/>
+<area shape="rect" id="node3" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a70e122b9d152fd4789f9b64b6d7f1017" title="Posiciona a dica na tela. " alt="" coords="411,5,583,47"/>
+<area shape="rect" id="node6" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a56d035cd90f598e0a2a417cb0c3f3ac9" title="Inicializa as dependências internas do espaço. " alt="" coords="427,71,567,112"/>
+<area shape="rect" id="node7" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#ab17f6a0fcd11564e5ebf13bfd5524714" title="Inicializa os objetos básicos da tela. " alt="" coords="427,136,566,177"/>
+<area shape="rect" id="node4" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce" title="Verifica se há algum movimento possível. " alt="" coords="631,5,803,47"/>
+<area shape="rect" id="node5" href="$d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3" title="Função a ser implementada pelas classes herdadas. " alt="" coords="851,5,979,47"/>
+</map>

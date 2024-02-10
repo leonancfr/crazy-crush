@@ -1,0 +1,10 @@
+<map id="CrazyCrush::Game::Save::getTimeAttackAtPosition" name="CrazyCrush::Game::Save::getTimeAttackAtPosition">
+<area shape="rect" id="node2" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#a00c71ca5c45b3d9a95cf779161cf0301" title="Exibe a tela de quando o tempo acaba no modo TimaAttak. " alt="" coords="484,50,693,91"/>
+<area shape="rect" id="node7" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#ab4317cc66826ffa4117c869c95b2c64a" title="Salva o record do modo TimeAttack. " alt="" coords="247,83,416,125"/>
+<area shape="rect" id="node8" href="$d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="228,149,435,190"/>
+<area shape="rect" id="node3" href="$d6/d67/class_crazy_crush_1_1_game_1_1_control_1_1_callback_show_game_end_dialog.htm#a203aaf350fa9147e863acfbb42b528f6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="743,5,949,61"/>
+<area shape="rect" id="node4" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5915ced50490ec68db1effe5a0a1f773" title="Executa as tarefas relacionadas ao perder uma fase. " alt="" coords="755,86,937,127"/>
+<area shape="rect" id="node5" href="$d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a2a0de1fe7e2b2d30d081e4e043b1b4d2" title="Atualiza a largura da barra em relação ao tempo. " alt="" coords="997,86,1187,127"/>
+<area shape="rect" id="node6" href="$d1/daa/class_update_time_bar.htm#ac18b0c8e7e4ab4f516f31d5aafbdbcce" title="Função para processamento no tempo para a classe. " alt="" coords="1235,93,1428,120"/>
+<area shape="rect" id="node9" href="$d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="483,141,695,197"/>
+</map>

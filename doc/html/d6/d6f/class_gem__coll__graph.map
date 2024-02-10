@@ -1,0 +1,4 @@
+<map id="Gem" name="Gem">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm" title="Objeto primitivo para um Sprite. " alt="" coords="11,80,112,107"/>
+<area shape="rect" id="node3" href="$de/d2f/class_animator_object.htm" title="Classe abstrata que é base para os elementos da tela. " alt="" coords="5,5,117,32"/>
+</map>

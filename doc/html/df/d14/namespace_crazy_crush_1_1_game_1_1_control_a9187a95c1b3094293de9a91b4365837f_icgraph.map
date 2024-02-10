@@ -1,0 +1,5 @@
+<map id="CrazyCrush::Game::Control::resumeGame" name="CrazyCrush::Game::Control::resumeGame">
+<area shape="rect" id="node2" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a5e8b8cf454b04403babe527660c88d09" title="Continua o processamento do jogo. " alt="" coords="236,5,445,32"/>
+<area shape="rect" id="node3" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="251,57,430,98"/>
+<area shape="rect" id="node4" href="$dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="493,49,712,105"/>
+</map>

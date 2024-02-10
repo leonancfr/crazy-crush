@@ -1,0 +1,5 @@
+<map id="MatrixBool::fill" name="MatrixBool::fill">
+<area shape="rect" id="node2" href="$d6/d3f/class_matrix.htm#adbb6521184032bd2bc467aeb4c092d88" title="Obtém o número de linhas da matriz. " alt="" coords="167,5,282,32"/>
+<area shape="rect" id="node3" href="$d6/d3f/class_matrix.htm#a34fc6c1821aa3e07d738053b1d734e1a" title="Obtém o número de colunas da matriz. " alt="" coords="157,56,292,83"/>
+<area shape="rect" id="node4" href="$d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455" title="Obtém o elemento dados os índices. " alt="" coords="186,107,263,133"/>
+</map>

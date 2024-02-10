@@ -1,0 +1,34 @@
+<map id="CrazyCrush::Game::Control::levelFail" name="CrazyCrush::Game::Control::levelFail">
+<area shape="rect" id="node2" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#a00c71ca5c45b3d9a95cf779161cf0301" title="Exibe a tela de quando o tempo acaba no modo TimaAttak. " alt="" coords="236,443,445,485"/>
+<area shape="rect" id="node18" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="493,813,708,840"/>
+<area shape="rect" id="node22" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="774,843,945,869"/>
+<area shape="rect" id="node24" href="$da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464" title="Define o tamanho que o sprite usa da textura. " alt="" coords="237,915,445,941"/>
+<area shape="rect" id="node25" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="249,966,432,1007"/>
+<area shape="rect" id="node26" href="$da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79" title="Define o tamanho que o sprite ocupará na tela. " alt="" coords="243,1032,438,1059"/>
+<area shape="rect" id="node27" href="$da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa" title="Adiciona o Callback passado por argumento no AnimatorQueue interno. " alt="" coords="240,1083,441,1109"/>
+<area shape="rect" id="node29" href="$da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef" title="Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. " alt="" coords="247,1133,434,1160"/>
+<area shape="rect" id="node32" href="$da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac" title="Inicia o AnimatorQueue no tempo informado. " alt="" coords="247,1196,434,1223"/>
+<area shape="rect" id="node3" href="$da/d5e/class_screen_window.htm#a579926da4f48265a747286b7f9c369bd" title="Define o tamanho da janela. " alt="" coords="520,5,681,32"/>
+<area shape="rect" id="node4" href="$da/d5e/class_screen_window.htm#a0794182cae97db0b89b31eae46a4ad67" title="Define a posição do topo esquerdo da janela na tela. " alt="" coords="509,56,692,83"/>
+<area shape="rect" id="node5" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#ab4317cc66826ffa4117c869c95b2c64a" title="Salva o record do modo TimeAttack. " alt="" coords="516,107,685,149"/>
+<area shape="rect" id="node7" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#a022ed721199b2af2e1a7a0c894068281" title="Obtém o record do modo TimeAttack da posição informada. " alt="" coords="772,166,947,207"/>
+<area shape="rect" id="node8" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a99a18cd12160a777c043c55d789fad80" title="Obtém a pontuação atual. " alt="" coords="531,225,671,266"/>
+<area shape="rect" id="node10" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="527,291,675,317"/>
+<area shape="rect" id="node11" href="$d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f" title="Define a posição que o botão ocupará na tela. " alt="" coords="493,341,708,368"/>
+<area shape="rect" id="node13" href="$da/d5e/class_screen_window.htm#a0b7970860eb2c35de9082c8457a963e1" title="Obtém a coordenada X do topo esquerdo da janela. " alt="" coords="506,392,695,419"/>
+<area shape="rect" id="node14" href="$d2/d78/class_screen_button_simple.htm#a96b61114a37b9374b6b5825e3d461aae" title="Largura no sprite para uma cor de botão. " alt="" coords="529,443,672,485"/>
+<area shape="rect" id="node15" href="$da/d5e/class_screen_window.htm#a7a6cb031b6ca5c87b499b7ccc9b86550" title="Obtém a coordenada Y do topo esquerdo da janela. " alt="" coords="505,509,696,536"/>
+<area shape="rect" id="node16" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#a09460196a940a84f2de4f8e3adac81f2" title="Obtém o record número um do modo TimeAttack. " alt="" coords="775,475,944,517"/>
+<area shape="rect" id="node17" href="$da/d5e/class_screen_window.htm#ac2fe18fe11697b3507b1b5cdae1a8211" title="Define a visibilidade de um elemento. " alt="" coords="509,611,693,637"/>
+<area shape="rect" id="node19" href="$d0/d94/class_screen_text.htm#ac9aa3f49d1bb6cf711a18962f9b0936f" title="Função assíncrona para obter a coordenada X do objeto na tela. " alt="" coords="496,661,705,688"/>
+<area shape="rect" id="node20" href="$d0/d94/class_screen_text.htm#a54c0488243d4a220cc119fba888beb95" title="Função assíncrona para obter a largura do objeto na tela. " alt="" coords="506,712,695,739"/>
+<area shape="rect" id="node21" href="$da/d5e/class_screen_window.htm#a1654872ed8603b6323b7d01110166b1c" title="Exibe a janela e seus conteúdos. " alt="" coords="527,763,674,789"/>
+<area shape="rect" id="node6" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#a3f5bf8f295f90faa07d331371a2e0d79" title="Inicializa as dependências internas do espaço. " alt="" coords="1011,166,1180,207"/>
+<area shape="rect" id="node9" href="$de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917" title="Obtém o valor da variável. " alt="" coords="807,232,911,259"/>
+<area shape="rect" id="node12" href="$d6/d58/class_screen_button.htm#ae78f2725728e1414fd1cdef464b2df3a" title="Função executada sempre que a posição do botão for alterado. " alt="" coords="756,334,963,375"/>
+<area shape="rect" id="node23" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#aaf3dfd257f4852cda4bd82bc4b7aa042" title="Executa a função suspend() de todos os ScreenHover da lista. " alt="" coords="763,755,955,797"/>
+<area shape="rect" id="node28" href="$d1/d91/class_animator_queue.htm#a89e2d21a6e06b5f2347c3d585ab4ed98" title="Adiciona um Callback à lista. " alt="" coords="495,1069,707,1096"/>
+<area shape="rect" id="node30" href="$d7/d1a/class_object_morph.htm#a23a4b595aea37762fd8eaed6a3655585" title="Associa um objeto a este ObjectMorph. " alt="" coords="521,1120,681,1147"/>
+<area shape="rect" id="node31" href="$d1/d91/class_animator_queue.htm#ae6f8830d3b53ae853e1ec75ef135292f" title="Adiciona um ObjectMorph à lista. " alt="" coords="501,1171,700,1197"/>
+<area shape="rect" id="node33" href="$d1/d91/class_animator_queue.htm#a1c4583b178f798ec3535b90b35302e33" title="Inicia a animação no tempo. " alt="" coords="499,1221,703,1248"/>
+</map>

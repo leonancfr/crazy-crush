@@ -1,0 +1,20 @@
+<map id="AnimatorObject::aSetDisplay" name="AnimatorObject::aSetDisplay">
+<area shape="rect" id="node2" href="$da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="244,184,392,211"/>
+<area shape="rect" id="node3" href="$df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#aba7eea6f5193417f77002a0d6d670b5c" title="Exibe o menu. " alt="" coords="442,13,649,54"/>
+<area shape="rect" id="node5" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426" title="Inicializa as dependências do espaço. " alt="" coords="460,78,631,119"/>
+<area shape="rect" id="node7" href="$df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aa2d652e0a5afd7f9988e2da34c50727b" title="Inicializador das dependências do espaço. " alt="" coords="440,143,651,185"/>
+<area shape="rect" id="node8" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="456,274,635,315"/>
+<area shape="rect" id="node17" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#aedd926d405bc52327ff21aa212beff1c" title="Inicializa as dependências internas do espaço. " alt="" coords="441,209,650,250"/>
+<area shape="rect" id="node18" href="$d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="442,373,649,414"/>
+<area shape="rect" id="node4" href="$d0/dea/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_how_to_play_button_click.htm#a321255d23172cd73c463cea84e0b0428" title="Função a ser implementada pelas classes herdadas. " alt="" coords="699,5,945,61"/>
+<area shape="rect" id="node6" href="$d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="728,151,916,177"/>
+<area shape="rect" id="node9" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="733,203,911,245"/>
+<area shape="rect" id="node13" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="733,271,911,313"/>
+<area shape="rect" id="node15" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#aaf880bed4af918f3a7c771f6f88b7028" title="Apenas fecha a tela de pausa. " alt="" coords="733,337,911,378"/>
+<area shape="rect" id="node10" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="1011,198,1194,239"/>
+<area shape="rect" id="node11" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="1277,172,1479,199"/>
+<area shape="rect" id="node12" href="$d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1260,223,1496,279"/>
+<area shape="rect" id="node14" href="$dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="993,264,1212,320"/>
+<area shape="rect" id="node16" href="$df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="996,344,1209,400"/>
+<area shape="rect" id="node19" href="$d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="716,403,928,459"/>
+</map>

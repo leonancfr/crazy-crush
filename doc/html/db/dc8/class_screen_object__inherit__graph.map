@@ -1,0 +1,4 @@
+<map id="ScreenObject" name="ScreenObject">
+<area shape="rect" id="node3" href="$df/d2e/class_gem.htm" title="Extensão do ScreenObject para manipular mais fácil as pedras. " alt="" coords="36,155,87,181"/>
+<area shape="rect" id="node2" href="$de/d2f/class_animator_object.htm" title="Classe abstrata que é base para os elementos da tela. " alt="" coords="5,5,117,32"/>
+</map>

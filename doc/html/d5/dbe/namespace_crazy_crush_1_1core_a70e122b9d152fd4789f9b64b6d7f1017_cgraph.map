@@ -1,0 +1,5 @@
+<map id="CrazyCrush::core::setHintPosition" name="CrazyCrush::core::setHintPosition">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09" title="Associa uma textura ao objeto. " alt="" coords="247,5,418,32"/>
+<area shape="rect" id="node4" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="225,56,440,83"/>
+<area shape="rect" id="node3" href="$da/dac/class_shared_pointer.htm#ab39ff3eeaa60d180b63acf5bb3cebef6" title="Define o valor do ponteiro. " alt="" coords="488,5,619,32"/>
+</map>

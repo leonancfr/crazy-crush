@@ -1,0 +1,6 @@
+<map id="ScreenObject::getImageColor" name="ScreenObject::getImageColor">
+<area shape="rect" id="node2" href="$d3/df8/class_screen_progress.htm#aee9244ce4785a67fcb1dc3df6f8c2b18" title="Desenha os elementos internos da classe na tela (ie: A barra de progresso) " alt="" coords="245,46,432,73"/>
+<area shape="rect" id="node3" href="$df/df0/namespace_crazy_crush_1_1_audio_cache.htm#a1523dbb9dd054b6e008c320aa5f4ddc2" title="Carrega os arquivos de áudio para cachear (apenas o necessário) " alt="" coords="485,5,653,47"/>
+<area shape="rect" id="node5" href="$dd/d74/namespace_crazy_crush_1_1_texture_cache.htm#aead16588055f89b08e4b8fb91f0aab25" title="Carrega todas as texturas. " alt="" coords="480,71,659,112"/>
+<area shape="rect" id="node4" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a25484f05e4d0ff602a65353c30254d19" title="Carrega o áudio base da AudioCache. " alt="" coords="707,5,888,47"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="ScreenHover::resetStack" name="ScreenHover::resetStack">
+<area shape="rect" id="node2" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5c0518ab5c9bfdd2bfaf28dbb0f8d154" title="Executa as instruções para parar o jogo e exibir o menu principal. " alt="" coords="220,93,403,134"/>
+<area shape="rect" id="node3" href="$df/d77/class_crazy_crush_1_1_game_1_1_level_1_1_callback_game_main_menu_button_click.htm#abe3cc1b99273b8860daa21a291b35d9f" title="Função a ser implementada pelas classes herdadas. " alt="" coords="465,5,679,61"/>
+<area shape="rect" id="node4" href="$df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="465,85,679,141"/>
+<area shape="rect" id="node5" href="$d9/d49/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_main_menu_button_click.htm#a7646e52d511f0f64251fc897961ef480" title="Função a ser implementada pelas classes herdadas. " alt="" coords="451,165,693,221"/>
+</map>

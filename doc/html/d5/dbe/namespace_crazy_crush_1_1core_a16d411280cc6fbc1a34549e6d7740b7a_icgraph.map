@@ -1,0 +1,5 @@
+<map id="CrazyCrush::core::checkFullMatrix" name="CrazyCrush::core::checkFullMatrix">
+<area shape="rect" id="node2" href="$d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3" title="Função a ser implementada pelas classes herdadas. " alt="" coords="245,5,373,47"/>
+<area shape="rect" id="node3" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#ab9bd4a9a8be29e078303737aea624888" title="Thread de processamento no tempo. " alt="" coords="240,71,377,112"/>
+<area shape="rect" id="node4" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#affa11c846e2b2fff6c703350f96bc407" title="Inicia a thread que processa algumas coisas no tempo. " alt="" coords="425,71,563,112"/>
+</map>

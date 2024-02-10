@@ -1,0 +1,4 @@
+<map id="ScreenButtonSprite::onOut" name="ScreenButtonSprite::onOut">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="201,5,383,47"/>
+<area shape="rect" id="node3" href="$da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464" title="Define o tamanho que o sprite usa da textura. " alt="" coords="188,71,396,98"/>
+</map>

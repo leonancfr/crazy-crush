@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/GameControl.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">GameControl.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _GAME_CONTROL_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _GAME_CONTROL_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;  <span class="keyword">namespace </span>Game {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">namespace </span>Control {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a9ccad3cab0322bdc5616567fe5aa4b3b">initialize</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a75247d8625cbf6c8a0bb2a5025252473">processGameTimer</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5915ced50490ec68db1effe5a0a1f773">levelFail</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aefbe6096b6af82c744954b8924813bb4">levelWin</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordtype">bool</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554">gameIsRunning</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a8ff8296cc190b13601407d5e8b6584bb">setNoMoreMoves</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#af6d83baa5d9c01f235a51721caf85bf4">setAllGemsFalled</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad">pauseGame</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a9187a95c1b3094293de9a91b4365837f">resumeGame</a>(<span class="keywordtype">bool</span> force = <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a76b418eeae84053a6814efa56d7354ab">gamePlay</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordtype">void</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5c0518ab5c9bfdd2bfaf28dbb0f8d154">gameGoToMainScreen</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keywordtype">void</span>     <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#ae50dfd1145e5a20a3bafb5b97d66a0d7">setLevelTotalTime</a>(<span class="keywordtype">unsigned</span> time);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordtype">unsigned</span> <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a32823659bbd6c599a5a31b043db4f33a">getLevelTotalTime</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a75247d8625cbf6c8a0bb2a5025252473"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a75247d8625cbf6c8a0bb2a5025252473">CrazyCrush::Game::Control::processGameTimer</a></div><div class="ttdeci">void processGameTimer()</div><div class="ttdoc">Controla o timer do jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00142">GameControl.cpp:142</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a8ff8296cc190b13601407d5e8b6584bb"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a8ff8296cc190b13601407d5e8b6584bb">CrazyCrush::Game::Control::setNoMoreMoves</a></div><div class="ttdeci">void setNoMoreMoves(bool v)</div><div class="ttdoc">Função para definir que não há mais nenhum movimento possível. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00153">GameControl.cpp:153</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_aefbe6096b6af82c744954b8924813bb4"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aefbe6096b6af82c744954b8924813bb4">CrazyCrush::Game::Control::levelWin</a></div><div class="ttdeci">void levelWin()</div><div class="ttdoc">Executa as tarefas relacionadas ao ganhar uma fase. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00110">GameControl.cpp:110</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a5915ced50490ec68db1effe5a0a1f773"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5915ced50490ec68db1effe5a0a1f773">CrazyCrush::Game::Control::levelFail</a></div><div class="ttdeci">void levelFail()</div><div class="ttdoc">Executa as tarefas relacionadas ao perder uma fase. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00122">GameControl.cpp:122</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a0b65f6df4d820f226a757eef9c0390ad"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad">CrazyCrush::Game::Control::pauseGame</a></div><div class="ttdeci">void pauseGame()</div><div class="ttdoc">Pausa o jogo (apenas o jogo) </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00167">GameControl.cpp:167</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_ae50dfd1145e5a20a3bafb5b97d66a0d7"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#ae50dfd1145e5a20a3bafb5b97d66a0d7">CrazyCrush::Game::Control::setLevelTotalTime</a></div><div class="ttdeci">void setLevelTotalTime(unsigned v)</div><div class="ttdoc">Define o tempo máximo da fase atual. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00242">GameControl.cpp:242</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a76b418eeae84053a6814efa56d7354ab"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a76b418eeae84053a6814efa56d7354ab">CrazyCrush::Game::Control::gamePlay</a></div><div class="ttdeci">void gamePlay()</div><div class="ttdoc">Executa as instruções necessárias para iniciar o jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00184">GameControl.cpp:184</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_af6d83baa5d9c01f235a51721caf85bf4"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#af6d83baa5d9c01f235a51721caf85bf4">CrazyCrush::Game::Control::setAllGemsFalled</a></div><div class="ttdeci">void setAllGemsFalled(bool v)</div><div class="ttdoc">Função para definir que todas as pedras já cairam. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00159">GameControl.cpp:159</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a9187a95c1b3094293de9a91b4365837f"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a9187a95c1b3094293de9a91b4365837f">CrazyCrush::Game::Control::resumeGame</a></div><div class="ttdeci">void resumeGame(bool forced)</div><div class="ttdoc">Continua o jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00177">GameControl.cpp:177</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_aef96aad21d986413899c0faa8f4e3554"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554">CrazyCrush::Game::Control::gameIsRunning</a></div><div class="ttdeci">bool gameIsRunning()</div><div class="ttdoc">Útil para saber se o jogo está rodando (pausado ou ainda não iniciado) </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00138">GameControl.cpp:138</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a5c0518ab5c9bfdd2bfaf28dbb0f8d154"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5c0518ab5c9bfdd2bfaf28dbb0f8d154">CrazyCrush::Game::Control::gameGoToMainScreen</a></div><div class="ttdeci">void gameGoToMainScreen()</div><div class="ttdoc">Executa as instruções para parar o jogo e exibir o menu principal. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00214">GameControl.cpp:214</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a32823659bbd6c599a5a31b043db4f33a"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a32823659bbd6c599a5a31b043db4f33a">CrazyCrush::Game::Control::getLevelTotalTime</a></div><div class="ttdeci">unsigned getLevelTotalTime()</div><div class="ttdoc">Obtém o tempo máximo da fase atual. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00246">GameControl.cpp:246</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a9ccad3cab0322bdc5616567fe5aa4b3b"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a9ccad3cab0322bdc5616567fe5aa4b3b">CrazyCrush::Game::Control::initialize</a></div><div class="ttdeci">void initialize()</div><div class="ttdoc">Inicializa as dependências internas do espaço. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00082">GameControl.cpp:82</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:06 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

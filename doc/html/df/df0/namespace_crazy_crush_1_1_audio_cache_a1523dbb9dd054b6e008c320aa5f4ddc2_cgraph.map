@@ -1,0 +1,16 @@
+<map id="CrazyCrush::AudioCache::initialize" name="CrazyCrush::AudioCache::initialize">
+<area shape="rect" id="node2" href="$d3/df8/class_screen_progress.htm#a17b0535ad2ade1bf6f0bc54f0b0d43e8" title="Obtém o dispositivo da engine associado à classe. " alt="" coords="225,56,404,83"/>
+<area shape="rect" id="node3" href="$d3/df8/class_screen_progress.htm#aa45ad6a029081ff8e9b1b627a35df223" title="Incrementa, em uma unidade, a quantidade de elementos carregados. " alt="" coords="223,107,406,133"/>
+<area shape="rect" id="node4" href="$d3/df8/class_screen_progress.htm#aee9244ce4785a67fcb1dc3df6f8c2b18" title="Desenha os elementos internos da classe na tela (ie: A barra de progresso) " alt="" coords="221,157,408,184"/>
+<area shape="rect" id="node5" href="$da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79" title="Define o tamanho que o sprite ocupará na tela. " alt="" coords="466,5,661,32"/>
+<area shape="rect" id="node6" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="456,56,671,83"/>
+<area shape="rect" id="node7" href="$da/db9/class_screen_object.htm#ab31513dacb98cdb918a94e4382ed1fc7" title="Define a transparência da imagem. " alt="" coords="466,107,661,133"/>
+<area shape="rect" id="node10" href="$da/db9/class_screen_object.htm#ab25ba25ea99120a5bc94b9dd3e34461a" title="Retorna a textura usada pelo sprite. " alt="" coords="478,157,649,184"/>
+<area shape="rect" id="node12" href="$da/db9/class_screen_object.htm#a8fd01b7eb1cf9161a9fde78034947971" title="Obtém o retângulo(posição e tamanho) que o sprite ocupará na tela. " alt="" coords="466,208,661,235"/>
+<area shape="rect" id="node13" href="$da/db9/class_screen_object.htm#a1657a19d2eb03d9d3ea6a196c65f65e7" title="Obtém o retângulo(posição e tamanho) que o sprite usará da textura. " alt="" coords="459,259,668,285"/>
+<area shape="rect" id="node14" href="$da/db9/class_screen_object.htm#a1a6ffc5c81109d0ae15b8c8fd35dccec" title="Obtém a cor que irá sobrepor a imagem. " alt="" coords="467,309,659,336"/>
+<area shape="rect" id="node8" href="$dd/d77/class_r_g_b_a.htm#a00c9b60157b780c1bccb8817f90a986f" title="Define o canal alpha de cada SColor interno. " alt="" coords="725,107,843,133"/>
+<area shape="rect" id="node9" href="$dd/d77/class_r_g_b_a.htm#ac1a309dc225f0f14d27bd180ba955b35" title="Instancia o ponteiro interno, caso não esteja instanciado. " alt="" coords="897,107,1012,133"/>
+<area shape="rect" id="node11" href="$da/dac/class_shared_pointer.htm#a544838840bafb2854f5d6775fb34eccf" title="Retorna o ponteiro interno. " alt="" coords="719,157,849,184"/>
+<area shape="rect" id="node15" href="$dd/d77/class_r_g_b_a.htm#ae41c2067574b3a7bbae3d33b7effad5e" title="Obtém o ponteiro. " alt="" coords="727,309,841,336"/>
+</map>

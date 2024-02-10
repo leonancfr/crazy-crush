@@ -1,0 +1,5 @@
+<map id="ScreenObject::processTime" name="ScreenObject::processTime">
+<area shape="rect" id="node2" href="$dc/d7a/class_sprite_animator.htm#ae2c3a0242d3558b6c80d97cf4e2c6862" title="Obtém o retângulo (posição e tamanho) que o sprite ocupará da textura. " alt="" coords="236,5,452,32"/>
+<area shape="rect" id="node3" href="$d1/d91/class_animator_queue.htm#aa9aa00e3deb21b8f7b3fa56db98ddd85" title="Para saber se a classe está processando no tempo. " alt="" coords="255,56,433,83"/>
+<area shape="rect" id="node4" href="$d1/d91/class_animator_queue.htm#a31c19836b3de2fc5f4a2f52e6e7b70d7" title="Processa a posição e tamanho do objeto na tela. " alt="" coords="241,107,447,133"/>
+</map>

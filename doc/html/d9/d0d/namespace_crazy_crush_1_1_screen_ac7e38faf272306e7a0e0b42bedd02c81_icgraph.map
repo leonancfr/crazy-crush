@@ -1,0 +1,8 @@
+<map id="CrazyCrush::Screen::updateScreenPosition" name="CrazyCrush::Screen::updateScreenPosition">
+<area shape="rect" id="node2" href="$d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a803c4654b4c11ede7ec295a42e7c295b" title="Abre um nível de forma binária. " alt="" coords="211,86,401,127"/>
+<area shape="rect" id="node3" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a6856382595a3f7282f0eb88f6fa3cbcc" title="Prepara e inicia o jogo na fase informada. " alt="" coords="449,86,620,127"/>
+<area shape="rect" id="node4" href="$dc/de9/class_crazy_crush_1_1_game_1_1_level_1_1_callback_game_play_level_button_click.htm#a1a4e6987e7f4f49be40f0f3e1ed059a6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="687,5,895,61"/>
+<area shape="rect" id="node5" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a568ddc72ab15ab0f6085ce81c1034cb7" title="Instruções rápidas para ir para o próximo nível. " alt="" coords="705,86,876,127"/>
+<area shape="rect" id="node7" href="$d4/d58/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_re_try_button_click.htm#a070fff4a388f50c7d2cfbf853cf79e18" title="Função a ser implementada pelas classes herdadas. " alt="" coords="668,152,913,208"/>
+<area shape="rect" id="node6" href="$de/de7/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_next_button_click.htm#af24b8526179752cd90d77014503c2c9a" title="Função a ser implementada pelas classes herdadas. " alt="" coords="961,79,1200,135"/>
+</map>

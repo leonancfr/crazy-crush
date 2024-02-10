@@ -1,0 +1,8 @@
+<map id="ScreenButton" name="ScreenButton">
+<area shape="rect" id="node3" href="$d3/d20/class_screen_button_circle.htm" title="Implementação de um botão circular. " alt="" coords="325,5,460,32"/>
+<area shape="rect" id="node4" href="$d8/dca/class_screen_button_default.htm" title="Implementação de um modelo padrão de botão. " alt="" coords="322,56,463,83"/>
+<area shape="rect" id="node5" href="$da/db4/class_screen_button_extended.htm" title="Implementação de um botão com suporte a dois labels (vide botão de seleção de nível) ..." alt="" coords="315,107,471,133"/>
+<area shape="rect" id="node6" href="$d2/d78/class_screen_button_simple.htm" title="Implemetação de um botão simples com grande controle de seus atributos. " alt="" coords="322,157,463,184"/>
+<area shape="rect" id="node7" href="$df/d52/class_screen_button_sprite.htm" title="Implementação de um botão formado apenas por sprites. " alt="" coords="325,208,460,235"/>
+<area shape="rect" id="node2" href="$de/d2f/class_animator_object.htm" title="Classe abstrata que é base para os elementos da tela. " alt="" coords="5,107,117,133"/>
+</map>

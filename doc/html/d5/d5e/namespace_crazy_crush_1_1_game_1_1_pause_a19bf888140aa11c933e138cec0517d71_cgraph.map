@@ -1,0 +1,11 @@
+<map id="CrazyCrush::Game::Pause::resume" name="CrazyCrush::Game::Pause::resume">
+<area shape="rect" id="node2" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="234,123,413,164"/>
+<area shape="rect" id="node10" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a9187a95c1b3094293de9a91b4365837f" title="Continua o jogo. " alt="" coords="232,188,415,229"/>
+<area shape="rect" id="node3" href="$d8/dca/class_screen_button_default.htm#a982ca421b04aaf6acfba4d3804649c5b" title="Define o texto do botão. " alt="" coords="481,5,622,47"/>
+<area shape="rect" id="node4" href="$d6/d58/class_screen_button.htm#a64d86cdbacb13a5c03b4a0afc4842c71" title="Associa um Callback que será executado quando o botão for clicado. " alt="" coords="465,71,638,98"/>
+<area shape="rect" id="node5" href="$d6/d58/class_screen_button.htm#a884c35d01ac65820d1c1033d19e29643" title="Função assíncrona para atribuição da posição do objeto na tela. " alt="" coords="463,123,640,164"/>
+<area shape="rect" id="node8" href="$dc/ddb/class_events.htm#a4dfc47cf7656b32ca24ffbba26c052b8" title="Define um Callback para o evento OnShow. " alt="" coords="483,189,619,215"/>
+<area shape="rect" id="node9" href="$dc/ddb/class_events.htm#adbbb57f4b9d7a7b53d832931f3039a62" title="Define um Callback para o evento OnClose. " alt="" coords="483,239,620,266"/>
+<area shape="rect" id="node6" href="$d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f" title="Define a posição que o botão ocupará na tela. " alt="" coords="688,130,903,157"/>
+<area shape="rect" id="node7" href="$d6/d58/class_screen_button.htm#ae78f2725728e1414fd1cdef464b2df3a" title="Função executada sempre que a posição do botão for alterado. " alt="" coords="951,123,1157,164"/>
+</map>

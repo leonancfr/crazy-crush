@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/Gem.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Gem.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _GEM_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _GEM_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;ScreenObject.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Protected.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../df/d2e/class_gem.htm">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/d2e/class_gem.htm">Gem</a> : <span class="keyword">public</span> <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;char&gt;</a> gemType;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;bool&gt;</a> isEnabled,isFixed,hasTimeEffect;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;ScreenObject*&gt;</a> effect_icon;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">enum</span> {gem1,gem2,gem3,gem4,gem5,gem6,gem7,rock};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="../../df/d2e/class_gem.htm">Gem</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    ~<a class="code" href="../../df/d2e/class_gem.htm">Gem</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../df/d2e/class_gem.htm">Gem</a>&amp; <a class="code" href="../../df/d2e/class_gem.htm#a76e1a42a526cef1d122a18264f0d5365">setGem</a>(<span class="keywordtype">char</span> type);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../df/d2e/class_gem.htm">Gem</a>&amp; <a class="code" href="../../df/d2e/class_gem.htm#acbf4e6cebda4212130c261c4b383293b">setEnabled</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../df/d2e/class_gem.htm">Gem</a>&amp; <a class="code" href="../../df/d2e/class_gem.htm#a28faccd27f3eef6c6443c6e7d3d8f226">randGem</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/d2e/class_gem.htm#ad09b06bc8eb292a82e8eddf8759d10a3">operator==</a>(<a class="code" href="../../df/d2e/class_gem.htm">Gem</a>&amp; other);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/d2e/class_gem.htm#a4f14b7b06a0bb48cb0195d244f7c39ca">operator!=</a>(<a class="code" href="../../df/d2e/class_gem.htm">Gem</a>&amp;);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="../../df/d2e/class_gem.htm#acd7b9eb76db09f28e02aa2554369236a">getGem</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/d2e/class_gem.htm#af0f34bf7957b3b77990169fc2c0aff34">getEnabled</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/d2e/class_gem.htm#a74d9099b3984eaf5a7b9dee3602b5856">getFixed</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/d2e/class_gem.htm#ada2534582837a65730d41bb77dcadabc">getTimeEffect</a>();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../df/d2e/class_gem.htm#aef457c84cef3c7538144792e2ac8fd8c">hasEffect</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d2e/class_gem.htm#a162b45017376c8304b2efc8897156371">processEffect</a>();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d2e/class_gem.htm#a609c6c0ab068560f6c3d5e04e1a8b106">aSetDisplay</a>(<span class="keywordtype">bool</span>);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d2e/class_gem.htm#a44dd704fd492db9ec4538bc136ca5dcb">aSetScreenPosition</a>(<span class="keywordtype">int</span>,<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_gem_htm"><div class="ttname"><a href="../../df/d2e/class_gem.htm">Gem</a></div><div class="ttdoc">Extensão do ScreenObject para manipular mais fácil as pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/d71/_gem_8hpp_source.htm#l00019">Gem.hpp:19</a></div></div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="class_gem_htm_af0f34bf7957b3b77990169fc2c0aff34"><div class="ttname"><a href="../../df/d2e/class_gem.htm#af0f34bf7957b3b77990169fc2c0aff34">Gem::getEnabled</a></div><div class="ttdeci">bool getEnabled()</div><div class="ttdoc">Se a pedra está habilitada. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00087">Gem.cpp:87</a></div></div>
+<div class="ttc" id="class_gem_htm_a74d9099b3984eaf5a7b9dee3602b5856"><div class="ttname"><a href="../../df/d2e/class_gem.htm#a74d9099b3984eaf5a7b9dee3602b5856">Gem::getFixed</a></div><div class="ttdeci">bool getFixed()</div><div class="ttdoc">Se a peça está fixada. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00093">Gem.cpp:93</a></div></div>
+<div class="ttc" id="class_gem_htm_ada2534582837a65730d41bb77dcadabc"><div class="ttname"><a href="../../df/d2e/class_gem.htm#ada2534582837a65730d41bb77dcadabc">Gem::getTimeEffect</a></div><div class="ttdeci">bool getTimeEffect()</div><div class="ttdoc">Se a pedra possui bônus de tempo. </div></div>
+<div class="ttc" id="class_gem_htm_a28faccd27f3eef6c6443c6e7d3d8f226"><div class="ttname"><a href="../../df/d2e/class_gem.htm#a28faccd27f3eef6c6443c6e7d3d8f226">Gem::randGem</a></div><div class="ttdeci">Gem &amp; randGem()</div><div class="ttdoc">Define que a peça atual será uma pedra aleatória. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00097">Gem.cpp:97</a></div></div>
+<div class="ttc" id="class_gem_htm_a76e1a42a526cef1d122a18264f0d5365"><div class="ttname"><a href="../../df/d2e/class_gem.htm#a76e1a42a526cef1d122a18264f0d5365">Gem::setGem</a></div><div class="ttdeci">Gem &amp; setGem(char type)</div><div class="ttdoc">Define um tipo de pedra para o objeto. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00036">Gem.cpp:36</a></div></div>
+<div class="ttc" id="class_protected_htm"><div class="ttname"><a href="../../de/d7f/class_protected.htm">Protected&lt; char &gt;</a></div></div>
+<div class="ttc" id="class_gem_htm_aef457c84cef3c7538144792e2ac8fd8c"><div class="ttname"><a href="../../df/d2e/class_gem.htm#aef457c84cef3c7538144792e2ac8fd8c">Gem::hasEffect</a></div><div class="ttdeci">bool hasEffect()</div><div class="ttdoc">Se a pedra possui algum tipo de &amp;quot;efeito especial&amp;quot;. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00120">Gem.cpp:120</a></div></div>
+<div class="ttc" id="class_gem_htm_a4f14b7b06a0bb48cb0195d244f7c39ca"><div class="ttname"><a href="../../df/d2e/class_gem.htm#a4f14b7b06a0bb48cb0195d244f7c39ca">Gem::operator!=</a></div><div class="ttdeci">bool operator!=(Gem &amp;)</div><div class="ttdoc">Compara duas pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00108">Gem.cpp:108</a></div></div>
+<div class="ttc" id="class_gem_htm_a44dd704fd492db9ec4538bc136ca5dcb"><div class="ttname"><a href="../../df/d2e/class_gem.htm#a44dd704fd492db9ec4538bc136ca5dcb">Gem::aSetScreenPosition</a></div><div class="ttdeci">void aSetScreenPosition(int, int)</div><div class="ttdoc">Função assíncrona para atribuição da posição do objeto na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00116">Gem.cpp:116</a></div></div>
+<div class="ttc" id="class_gem_htm_acbf4e6cebda4212130c261c4b383293b"><div class="ttname"><a href="../../df/d2e/class_gem.htm#acbf4e6cebda4212130c261c4b383293b">Gem::setEnabled</a></div><div class="ttdeci">Gem &amp; setEnabled(bool value)</div><div class="ttdoc">Define se a pedra está habilitada. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00082">Gem.cpp:82</a></div></div>
+<div class="ttc" id="class_gem_htm_a162b45017376c8304b2efc8897156371"><div class="ttname"><a href="../../df/d2e/class_gem.htm#a162b45017376c8304b2efc8897156371">Gem::processEffect</a></div><div class="ttdeci">void processEffect()</div><div class="ttdoc">Processa o &amp;quot;efeito especial&amp;quot;, se houver. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00124">Gem.cpp:124</a></div></div>
+<div class="ttc" id="class_gem_htm_ad09b06bc8eb292a82e8eddf8759d10a3"><div class="ttname"><a href="../../df/d2e/class_gem.htm#ad09b06bc8eb292a82e8eddf8759d10a3">Gem::operator==</a></div><div class="ttdeci">bool operator==(Gem &amp;other)</div><div class="ttdoc">Compara duas pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00105">Gem.cpp:105</a></div></div>
+<div class="ttc" id="class_gem_htm_acd7b9eb76db09f28e02aa2554369236a"><div class="ttname"><a href="../../df/d2e/class_gem.htm#acd7b9eb76db09f28e02aa2554369236a">Gem::getGem</a></div><div class="ttdeci">char getGem()</div><div class="ttdoc">Obtém o tipo atual da pedra. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00078">Gem.cpp:78</a></div></div>
+<div class="ttc" id="class_gem_htm_a609c6c0ab068560f6c3d5e04e1a8b106"><div class="ttname"><a href="../../df/d2e/class_gem.htm#a609c6c0ab068560f6c3d5e04e1a8b106">Gem::aSetDisplay</a></div><div class="ttdeci">void aSetDisplay(bool)</div><div class="ttdoc">Função assíncrona para atribuição do display (exibir o objeto) </div><div class="ttdef"><b>Definition:</b> <a href="../../db/ded/_gem_8cpp_source.htm#l00112">Gem.cpp:112</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:09 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

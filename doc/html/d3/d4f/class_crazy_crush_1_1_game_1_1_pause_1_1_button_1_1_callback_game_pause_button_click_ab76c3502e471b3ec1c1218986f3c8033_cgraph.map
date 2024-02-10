@@ -1,0 +1,27 @@
+<map id="CrazyCrush::Game::Pause::Button::CallbackGamePauseButtonClick::aProcess" name="CrazyCrush::Game::Pause::Button::CallbackGamePauseButtonClick::aProcess">
+<area shape="rect" id="node2" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="290,111,471,153"/>
+<area shape="rect" id="node6" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="289,194,472,235"/>
+<area shape="rect" id="node3" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="520,77,701,118"/>
+<area shape="rect" id="node4" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="750,15,927,41"/>
+<area shape="rect" id="node5" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="1020,5,1124,32"/>
+<area shape="rect" id="node7" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="521,203,700,245"/>
+<area shape="rect" id="node8" href="$d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="749,203,928,245"/>
+<area shape="rect" id="node24" href="$da/d5e/class_screen_window.htm#a1654872ed8603b6323b7d01110166b1c" title="Exibe a janela e seus conteúdos. " alt="" coords="765,392,912,419"/>
+<area shape="rect" id="node9" href="$d8/dca/class_screen_button_default.htm#a982ca421b04aaf6acfba4d3804649c5b" title="Define o texto do botão. " alt="" coords="1001,57,1143,98"/>
+<area shape="rect" id="node11" href="$d6/d58/class_screen_button.htm#a64d86cdbacb13a5c03b4a0afc4842c71" title="Associa um Callback que será executado quando o botão for clicado. " alt="" coords="985,123,1159,149"/>
+<area shape="rect" id="node13" href="$d6/d58/class_screen_button.htm#a884c35d01ac65820d1c1033d19e29643" title="Função assíncrona para atribuição da posição do objeto na tela. " alt="" coords="983,174,1161,215"/>
+<area shape="rect" id="node16" href="$dc/ddb/class_events.htm#a4dfc47cf7656b32ca24ffbba26c052b8" title="Define um Callback para o evento OnShow. " alt="" coords="1004,240,1140,267"/>
+<area shape="rect" id="node17" href="$dc/ddb/class_events.htm#adbbb57f4b9d7a7b53d832931f3039a62" title="Define um Callback para o evento OnClose. " alt="" coords="1003,291,1141,317"/>
+<area shape="rect" id="node18" href="$da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="998,341,1146,368"/>
+<area shape="rect" id="node10" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="1249,64,1397,91"/>
+<area shape="rect" id="node12" href="$da/dc2/class_screen_hover.htm#a4d1ba74cd36581ea09a4152d51d04242" title="Associa um Callback ao evento OnClick da região. " alt="" coords="1232,123,1415,149"/>
+<area shape="rect" id="node14" href="$d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f" title="Define a posição que o botão ocupará na tela. " alt="" coords="1216,177,1431,204"/>
+<area shape="rect" id="node15" href="$d6/d58/class_screen_button.htm#ae78f2725728e1414fd1cdef464b2df3a" title="Função executada sempre que a posição do botão for alterado. " alt="" coords="1479,170,1685,211"/>
+<area shape="rect" id="node19" href="$de/d2f/class_animator_object.htm#a6a6574dce9c78a13ee641084421aecef" title="Função assíncrona para atribuição do display (exibir o objeto) " alt="" coords="1228,228,1419,255"/>
+<area shape="rect" id="node20" href="$de/d2f/class_animator_object.htm#a9fdb6fe9967a76c776d12682694c60fc" title="Função assíncrona para atribuição da posição do objeto na tela. " alt="" coords="1229,279,1417,321"/>
+<area shape="rect" id="node21" href="$de/d2f/class_animator_object.htm#a8d164b4019c380fa8fa8c67b5ece1193" title="Função assíncrona para obter a coordenada X do objeto na tela. " alt="" coords="1234,345,1413,386"/>
+<area shape="rect" id="node22" href="$de/d2f/class_animator_object.htm#af2f65aa52ad9fb71942af715a038c3f6" title="Função assíncrona para obter a coordenada Y do objeto na tela. " alt="" coords="1234,410,1413,451"/>
+<area shape="rect" id="node23" href="$de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0" title="Retorna o tipo da classe. " alt="" coords="1240,476,1407,503"/>
+<area shape="rect" id="node25" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="987,392,1157,419"/>
+<area shape="rect" id="node26" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#aaf3dfd257f4852cda4bd82bc4b7aa042" title="Executa a função suspend() de todos os ScreenHover da lista. " alt="" coords="976,443,1168,485"/>
+</map>

@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/CallbackAfterFall.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">CallbackAfterFall.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Polit�cnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletr�nica e Computa��o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programa��o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan Fran�a    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;CallbackAfterFall.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;AnimationCount.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;CoreProcess.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Screen.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;GameDefines.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;Timer.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;CallbackFillMatrix.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;MorphTimer.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;GameControl.hpp&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d1/d06/class_callback_after_fall.htm#a3e1550be7353bcc527406c06fdcc894d">   22</a></span>&#160;<a class="code" href="../../d1/d06/class_callback_after_fall.htm#a3e1550be7353bcc527406c06fdcc894d">CallbackAfterFall::CallbackAfterFall</a>(<span class="keywordtype">unsigned</span> I,<span class="keywordtype">unsigned</span> J){</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  i = I;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  j = J;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3">   27</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3">CallbackAfterFall::aProcess</a>(){</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a>.at(i,j)-&gt;setEnabled(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="../../db/d6f/namespace_crazy_crush_1_1_screen_1_1_animation_count.htm#a2a1736e822b12f52c47785731ec9111c">CrazyCrush::Screen::AnimationCount::decrease</a>() == 0){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#af6d83baa5d9c01f235a51721caf85bf4">CrazyCrush::Game::Control::setAllGemsFalled</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a">CrazyCrush::core::checkFullMatrix</a>()){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      <span class="keywordflow">if</span>(!<a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554">CrazyCrush::Game::Control::gameIsRunning</a>())</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      <a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#ab4c1d339e570f0f9b4aa8e37a6431bd5">CrazyCrush::core::processFall</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordflow">if</span>(!<a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554">CrazyCrush::Game::Control::gameIsRunning</a>())</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">if</span>(!<a class="code" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce">CrazyCrush::core::checkIfHasMoveLeft</a>()){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a8ff8296cc190b13601407d5e8b6584bb">CrazyCrush::Game::Control::setNoMoreMoves</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a32256c0978cfc47a8144bd6b96367b6d">CrazyCrush::Screen::noMoreMovesObj</a>.<a class="code" href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">setDisplay</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a32256c0978cfc47a8144bd6b96367b6d">CrazyCrush::Screen::noMoreMovesObj</a>.<a class="code" href="../../da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef">appendMorph</a>(<span class="keyword">new</span> <a class="code" href="../../d0/d51/class_morph_timer.htm">MorphTimer</a>(1000));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a32256c0978cfc47a8144bd6b96367b6d">CrazyCrush::Screen::noMoreMovesObj</a>.<a class="code" href="../../da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa">appendCallback</a>(<span class="keyword">new</span> <a class="code" href="../../dd/d33/class_callback_fill_matrix.htm">CallbackFillMatrix</a>());</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a32256c0978cfc47a8144bd6b96367b6d">CrazyCrush::Screen::noMoreMovesObj</a>.<a class="code" href="../../da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac">startAnimator</a>(getGameTime());</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="ttc" id="class_morph_timer_htm"><div class="ttname"><a href="../../d0/d51/class_morph_timer.htm">MorphTimer</a></div><div class="ttdoc">Classe que funciona apenas como um timer. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d12/_morph_timer_8hpp_source.htm#l00021">MorphTimer.hpp:21</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a32256c0978cfc47a8144bd6b96367b6d"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a32256c0978cfc47a8144bd6b96367b6d">CrazyCrush::Screen::noMoreMovesObj</a></div><div class="ttdeci">ScreenObject noMoreMovesObj(NULL)</div><div class="ttdoc">Sprite do texto de &amp;quot;No More Moves&amp;quot;. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dfd/_screen_8hpp_source.htm#l00048">Screen.hpp:48</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a43e8e1299bb8451d6ef83f120cdb8eaa"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a43e8e1299bb8451d6ef83f120cdb8eaa">ScreenObject::appendCallback</a></div><div class="ttdeci">ScreenObject &amp; appendCallback(Callback *callback)</div><div class="ttdoc">Adiciona o Callback passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00447">ScreenObject.cpp:447</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_a8ff8296cc190b13601407d5e8b6584bb"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a8ff8296cc190b13601407d5e8b6584bb">CrazyCrush::Game::Control::setNoMoreMoves</a></div><div class="ttdeci">void setNoMoreMoves(bool v)</div><div class="ttdoc">Função para definir que não há mais nenhum movimento possível. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00153">GameControl.cpp:153</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a86ad7d80123873c44e37562189996ab8"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8">ScreenObject::setDisplay</a></div><div class="ttdeci">ScreenObject &amp; setDisplay(bool value)</div><div class="ttdoc">Define se o objeto será exibido na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00304">ScreenObject.cpp:304</a></div></div>
+<div class="ttc" id="class_callback_fill_matrix_htm"><div class="ttname"><a href="../../dd/d33/class_callback_fill_matrix.htm">CallbackFillMatrix</a></div><div class="ttdoc">Callback usado para preencher toda a matriz de pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d70/_callback_fill_matrix_8hpp_source.htm#l00017">CallbackFillMatrix.hpp:17</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a16d411280cc6fbc1a34549e6d7740b7a"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a">CrazyCrush::core::checkFullMatrix</a></div><div class="ttdeci">bool checkFullMatrix()</div><div class="ttdoc">Verifica toda a matriz para saber se alguma peça irá &amp;quot;quebrar&amp;quot;. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00109">CoreProcess.cpp:109</a></div></div>
+<div class="ttc" id="class_callback_after_fall_htm_ac6db53d72df6c285db23d7c04d8d47f3"><div class="ttname"><a href="../../d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3">CallbackAfterFall::aProcess</a></div><div class="ttdeci">void aProcess()</div><div class="ttdoc">Função a ser implementada pelas classes herdadas. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9d/_callback_after_fall_8cpp_source.htm#l00027">CallbackAfterFall.cpp:27</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_1_1_animation_count_htm_a2a1736e822b12f52c47785731ec9111c"><div class="ttname"><a href="../../db/d6f/namespace_crazy_crush_1_1_screen_1_1_animation_count.htm#a2a1736e822b12f52c47785731ec9111c">CrazyCrush::Screen::AnimationCount::decrease</a></div><div class="ttdeci">unsigned decrease()</div><div class="ttdoc">Decrementa a contagem em uma unidade. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/d88/_animation_count_8cpp_source.htm#l00055">AnimationCount.cpp:55</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_af6d83baa5d9c01f235a51721caf85bf4"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#af6d83baa5d9c01f235a51721caf85bf4">CrazyCrush::Game::Control::setAllGemsFalled</a></div><div class="ttdeci">void setAllGemsFalled(bool v)</div><div class="ttdoc">Função para definir que todas as pedras já cairam. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00159">GameControl.cpp:159</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_game_1_1_control_htm_aef96aad21d986413899c0faa8f4e3554"><div class="ttname"><a href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554">CrazyCrush::Game::Control::gameIsRunning</a></div><div class="ttdeci">bool gameIsRunning()</div><div class="ttdoc">Útil para saber se o jogo está rodando (pausado ou ainda não iniciado) </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dcb/_game_control_8cpp_source.htm#l00138">GameControl.cpp:138</a></div></div>
+<div class="ttc" id="class_screen_object_htm_a546c3bd466ae367a01fff36b116f41ac"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#a546c3bd466ae367a01fff36b116f41ac">ScreenObject::startAnimator</a></div><div class="ttdeci">ScreenObject &amp; startAnimator(irr::u32 time)</div><div class="ttdoc">Inicia o AnimatorQueue no tempo informado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00436">ScreenObject.cpp:436</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_a3f32e619f5086f6e822296b367b301ce"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce">CrazyCrush::core::checkIfHasMoveLeft</a></div><div class="ttdeci">bool checkIfHasMoveLeft()</div><div class="ttdoc">Verifica se há algum movimento possível. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00275">CoreProcess.cpp:275</a></div></div>
+<div class="ttc" id="class_callback_after_fall_htm_a3e1550be7353bcc527406c06fdcc894d"><div class="ttname"><a href="../../d1/d06/class_callback_after_fall.htm#a3e1550be7353bcc527406c06fdcc894d">CallbackAfterFall::CallbackAfterFall</a></div><div class="ttdeci">CallbackAfterFall(unsigned i, unsigned j)</div><div class="ttdoc">Construtor. </div><div class="ttdef"><b>Definition:</b> <a href="../../d7/d9d/_callback_after_fall_8cpp_source.htm#l00022">CallbackAfterFall.cpp:22</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_screen_htm_a7a93f052fe580f13bd2003f486e7fc10"><div class="ttname"><a href="../../d9/d0d/namespace_crazy_crush_1_1_screen.htm#a7a93f052fe580f13bd2003f486e7fc10">CrazyCrush::Screen::matrix</a></div><div class="ttdeci">Matrix&lt; Gem * &gt; matrix(num_rows, num_columns)</div><div class="ttdoc">Matriz de pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dd1/_game_defines_8hpp_source.htm#l00057">GameDefines.hpp:57</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1core_htm_ab4c1d339e570f0f9b4aa8e37a6431bd5"><div class="ttname"><a href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#ab4c1d339e570f0f9b4aa8e37a6431bd5">CrazyCrush::core::processFall</a></div><div class="ttdeci">bool processFall()</div><div class="ttdoc">Se houve colisão, processa o caimento das pedras. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dd4/_core_process_8cpp_source.htm#l00190">CoreProcess.cpp:190</a></div></div>
+<div class="ttc" id="class_screen_object_htm_acfefc3d518865997039a779d887f83ef"><div class="ttname"><a href="../../da/db9/class_screen_object.htm#acfefc3d518865997039a779d887f83ef">ScreenObject::appendMorph</a></div><div class="ttdeci">ScreenObject &amp; appendMorph(ObjectMorph *morph)</div><div class="ttdoc">Adiciona o ObjectMorph passado por argumento no AnimatorQueue interno. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/d89/_screen_object_8cpp_source.htm#l00441">ScreenObject.cpp:441</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:04 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

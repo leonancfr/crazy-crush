@@ -1,0 +1,10 @@
+<map id="CrazyCrush::core::checkIfHasMoveLeft" name="CrazyCrush::core::checkIfHasMoveLeft">
+<area shape="rect" id="node2" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a70e122b9d152fd4789f9b64b6d7f1017" title="Posiciona a dica na tela. " alt="" coords="231,49,403,90"/>
+<area shape="rect" id="node6" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#af979b646f2c5ccff485e40ae96bb9071" title="Reinicia a dica. " alt="" coords="225,136,408,163"/>
+<area shape="rect" id="node3" href="$da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09" title="Associa uma textura ao objeto. " alt="" coords="478,5,649,32"/>
+<area shape="rect" id="node5" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="456,56,671,83"/>
+<area shape="rect" id="node4" href="$da/dac/class_shared_pointer.htm#ab39ff3eeaa60d180b63acf5bb3cebef6" title="Define o valor do ponteiro. " alt="" coords="719,5,849,32"/>
+<area shape="rect" id="node7" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="511,107,615,133"/>
+<area shape="rect" id="node8" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="478,157,649,184"/>
+<area shape="rect" id="node9" href="$da/db9/class_screen_object.htm#ace8160e055a2acb107c6f8abe36ef712" title="Pára o SpriteAnimator e volta os valores de Resource para os valores antigos. " alt="" coords="477,209,649,250"/>
+</map>

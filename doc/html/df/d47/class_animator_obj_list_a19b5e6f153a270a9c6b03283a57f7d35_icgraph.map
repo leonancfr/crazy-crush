@@ -1,0 +1,9 @@
+<map id="AnimatorObjList::addObject" name="AnimatorObjList::addObject">
+<area shape="rect" id="node2" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a9ccad3cab0322bdc5616567fe5aa4b3b" title="Inicializa as dependências internas do espaço. " alt="" coords="248,5,431,47"/>
+<area shape="rect" id="node4" href="$df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#aba7eea6f5193417f77002a0d6d670b5c" title="Exibe o menu. " alt="" coords="236,136,443,177"/>
+<area shape="rect" id="node6" href="$d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a60e7ace10e29e3acbac50f031075776e" title="Inicializa as dependências internas do espaço. " alt="" coords="245,71,434,112"/>
+<area shape="rect" id="node7" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a56d035cd90f598e0a2a417cb0c3f3ac9" title="Inicializa as dependências internas do espaço. " alt="" coords="269,201,409,243"/>
+<area shape="rect" id="node8" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#ab17f6a0fcd11564e5ebf13bfd5524714" title="Inicializa os objetos básicos da tela. " alt="" coords="270,267,409,308"/>
+<area shape="rect" id="node3" href="$d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="520,46,708,73"/>
+<area shape="rect" id="node5" href="$d0/dea/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_how_to_play_button_click.htm#a321255d23172cd73c463cea84e0b0428" title="Função a ser implementada pelas classes herdadas. " alt="" coords="491,129,737,185"/>
+</map>

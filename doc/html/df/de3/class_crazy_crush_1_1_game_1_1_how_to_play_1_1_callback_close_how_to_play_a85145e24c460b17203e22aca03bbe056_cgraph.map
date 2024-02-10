@@ -1,0 +1,8 @@
+<map id="CrazyCrush::Game::HowToPlay::CallbackCloseHowToPlay::aProcess" name="CrazyCrush::Game::HowToPlay::CallbackCloseHowToPlay::aProcess">
+<area shape="rect" id="node2" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="273,5,454,47"/>
+<area shape="rect" id="node6" href="$df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#a2e8feefb460580bc4b745560a3314c09" title="Fecha o menu. " alt="" coords="260,71,467,112"/>
+<area shape="rect" id="node3" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="515,5,697,47"/>
+<area shape="rect" id="node4" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="745,13,923,39"/>
+<area shape="rect" id="node5" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="971,13,1075,39"/>
+<area shape="rect" id="node7" href="$df/d47/class_animator_obj_list.htm#ac1c967705e602bdaad10dd3b536b639e" title="Remove um elemento da lista. " alt="" coords="515,78,697,105"/>
+</map>

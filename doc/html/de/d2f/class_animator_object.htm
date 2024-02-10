@@ -1,0 +1,657 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Referência da Classe AnimatorObject</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li class="current"><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../annotated.htm"><span>Lista&#160;de&#160;Componentes</span></a></li>
+      <li><a href="../../classes.htm"><span>Índice&#160;dos&#160;Componentes</span></a></li>
+      <li><a href="../../inherits.htm"><span>Hierarquia&#160;de&#160;Classes</span></a></li>
+      <li><a href="../../functions.htm"><span>Componentes&#160;Membros</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-types">Tipos Públicos</a> &#124;
+<a href="#pub-methods">Métodos Públicos</a> &#124;
+<a href="../../dd/d8c/class_animator_object-members.htm">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe AnimatorObject<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe abstrata que é base para os elementos da tela.  
+ <a href="../../de/d2f/class_animator_object.htm#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d6/d8c/_animator_object_8hpp_source.htm">AnimatorObject.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de Hierarquia para AnimatorObject:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d5/d72/class_animator_object__inherit__graph.png" border="0" usemap="#_animator_object_inherit__map" alt="Inheritance graph"/></div>
+<map name="_animator_object_inherit__map" id="_animator_object_inherit__map">
+<area shape="rect" id="node2" href="../../d6/d58/class_screen_button.htm" title="Classe abstrata que é modelo para os demais tipos de botões. " alt="" coords="170,132,271,159"/><area shape="rect" id="node8" href="../../da/db9/class_screen_object.htm" title="Objeto primitivo para um Sprite. " alt="" coords="170,220,271,247"/><area shape="rect" id="node10" href="../../d0/d94/class_screen_text.htm" title="Objeto primitivo para um texto. " alt="" coords="177,271,265,297"/><area shape="rect" id="node11" href="../../d1/daa/class_update_time_bar.htm" title="Classe gambiarra para adicionar à Thread de processamento no Tempo. " alt="" coords="165,321,276,348"/><area shape="rect" id="node3" href="../../d3/d20/class_screen_button_circle.htm" title="Implementação de um botão circular. " alt="" coords="335,5,469,32"/><area shape="rect" id="node4" href="../../d8/dca/class_screen_button_default.htm" title="Implementação de um modelo padrão de botão. " alt="" coords="331,56,473,83"/><area shape="rect" id="node5" href="../../da/db4/class_screen_button_extended.htm" title="Implementação de um botão com suporte a dois labels (vide botão de seleção de nível) ..." alt="" coords="324,107,480,133"/><area shape="rect" id="node6" href="../../d2/d78/class_screen_button_simple.htm" title="Implemetação de um botão simples com grande controle de seus atributos. " alt="" coords="331,157,473,184"/><area shape="rect" id="node7" href="../../df/d52/class_screen_button_sprite.htm" title="Implementação de um botão formado apenas por sprites. " alt="" coords="335,208,469,235"/><area shape="rect" id="node9" href="../../df/d2e/class_gem.htm" title="Extensão do ScreenObject para manipular mais fácil as pedras. " alt="" coords="377,259,427,285"/></map>
+<center><span class="legend">[<a href="../../graph_legend.htm">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Tipos Públicos</h2></td></tr>
+<tr class="memitem:aa948abaa89d7c2fe7bb979312156ec95"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>typeScreenObject</b>, 
+<b>typeScreenText</b>, 
+<b>typeScreenButton</b>
+ }</td></tr>
+<tr class="memdesc:aa948abaa89d7c2fe7bb979312156ec95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tipos possíveis para as classes herdadas. <br/></td></tr>
+<tr class="separator:aa948abaa89d7c2fe7bb979312156ec95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Métodos Públicos</h2></td></tr>
+<tr class="memitem:a6be7da8b272fdfff923c1c553ff5bad0"><td class="memItemLeft" align="right" valign="top">virtual unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0">getType</a> ()=0</td></tr>
+<tr class="memdesc:a6be7da8b272fdfff923c1c553ff5bad0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tipo da classe.  <a href="#a6be7da8b272fdfff923c1c553ff5bad0">Mais...</a><br/></td></tr>
+<tr class="separator:a6be7da8b272fdfff923c1c553ff5bad0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d3b231e4b24399d41daa86077f62608"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a9d3b231e4b24399d41daa86077f62608">processTime</a> (irr::u32 time)=0</td></tr>
+<tr class="memdesc:a9d3b231e4b24399d41daa86077f62608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para processamento no tempo para a classe.  <a href="#a9d3b231e4b24399d41daa86077f62608">Mais...</a><br/></td></tr>
+<tr class="separator:a9d3b231e4b24399d41daa86077f62608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e73df4a5badbe084f15567ecfe30a53"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e73df4a5badbe084f15567ecfe30a53"></a>
+virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a6e73df4a5badbe084f15567ecfe30a53">~AnimatorObject</a> ()</td></tr>
+<tr class="memdesc:a6e73df4a5badbe084f15567ecfe30a53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe. <br/></td></tr>
+<tr class="separator:a6e73df4a5badbe084f15567ecfe30a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a6574dce9c78a13ee641084421aecef"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a6a6574dce9c78a13ee641084421aecef">aSetDisplay</a> (bool value)=0</td></tr>
+<tr class="memdesc:a6a6574dce9c78a13ee641084421aecef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para atribuição do display (exibir o objeto)  <a href="#a6a6574dce9c78a13ee641084421aecef">Mais...</a><br/></td></tr>
+<tr class="separator:a6a6574dce9c78a13ee641084421aecef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6ada0bb13e367c1efb19f61b87bc3d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a3e6ada0bb13e367c1efb19f61b87bc3d">aSetScreenSize</a> (unsigned width, unsigned height)=0</td></tr>
+<tr class="memdesc:a3e6ada0bb13e367c1efb19f61b87bc3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para atribuição do tamanho que o objeto irá ocupar na tela.  <a href="#a3e6ada0bb13e367c1efb19f61b87bc3d">Mais...</a><br/></td></tr>
+<tr class="separator:a3e6ada0bb13e367c1efb19f61b87bc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fdb6fe9967a76c776d12682694c60fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a9fdb6fe9967a76c776d12682694c60fc">aSetScreenPosition</a> (int x, int y)=0</td></tr>
+<tr class="memdesc:a9fdb6fe9967a76c776d12682694c60fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para atribuição da posição do objeto na tela.  <a href="#a9fdb6fe9967a76c776d12682694c60fc">Mais...</a><br/></td></tr>
+<tr class="separator:a9fdb6fe9967a76c776d12682694c60fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3b3733297ee9acb478698732f60a788"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#ab3b3733297ee9acb478698732f60a788">aSetImageColor</a> (irr::video::SColor *color)=0</td></tr>
+<tr class="memdesc:ab3b3733297ee9acb478698732f60a788"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para definir a cor.  <a href="#ab3b3733297ee9acb478698732f60a788">Mais...</a><br/></td></tr>
+<tr class="separator:ab3b3733297ee9acb478698732f60a788"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23552729f180e5e12ced1f2526b34a6"><td class="memItemLeft" align="right" valign="top">virtual irr::video::SColor *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#aa23552729f180e5e12ced1f2526b34a6">getColor</a> ()=0</td></tr>
+<tr class="memdesc:aa23552729f180e5e12ced1f2526b34a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para obter a cor.  <a href="#aa23552729f180e5e12ced1f2526b34a6">Mais...</a><br/></td></tr>
+<tr class="separator:aa23552729f180e5e12ced1f2526b34a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae166026379fa67457cf89c4b9f037b4"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#aae166026379fa67457cf89c4b9f037b4">getScreenWidth</a> ()=0</td></tr>
+<tr class="memdesc:aae166026379fa67457cf89c4b9f037b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para obter a largura do objeto na tela.  <a href="#aae166026379fa67457cf89c4b9f037b4">Mais...</a><br/></td></tr>
+<tr class="separator:aae166026379fa67457cf89c4b9f037b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf0b253b3503774f7a0992225c90a51"><td class="memItemLeft" align="right" valign="top">virtual unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a8cf0b253b3503774f7a0992225c90a51">getScreenHeight</a> ()=0</td></tr>
+<tr class="memdesc:a8cf0b253b3503774f7a0992225c90a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para obter a altura do objeto na tela.  <a href="#a8cf0b253b3503774f7a0992225c90a51">Mais...</a><br/></td></tr>
+<tr class="separator:a8cf0b253b3503774f7a0992225c90a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d164b4019c380fa8fa8c67b5ece1193"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a8d164b4019c380fa8fa8c67b5ece1193">getScreenPositionX</a> ()=0</td></tr>
+<tr class="memdesc:a8d164b4019c380fa8fa8c67b5ece1193"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para obter a coordenada X do objeto na tela.  <a href="#a8d164b4019c380fa8fa8c67b5ece1193">Mais...</a><br/></td></tr>
+<tr class="separator:a8d164b4019c380fa8fa8c67b5ece1193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2f65aa52ad9fb71942af715a038c3f6"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#af2f65aa52ad9fb71942af715a038c3f6">getScreenPositionY</a> ()=0</td></tr>
+<tr class="memdesc:af2f65aa52ad9fb71942af715a038c3f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para obter a coordenada Y do objeto na tela.  <a href="#af2f65aa52ad9fb71942af715a038c3f6">Mais...</a><br/></td></tr>
+<tr class="separator:af2f65aa52ad9fb71942af715a038c3f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b59872aef49e6ba5d42710a473ea2d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d2f/class_animator_object.htm#a62b59872aef49e6ba5d42710a473ea2d">getDisplay</a> ()=0</td></tr>
+<tr class="memdesc:a62b59872aef49e6ba5d42710a473ea2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função assíncrona para saber se o elemento está visível na tela.  <a href="#a62b59872aef49e6ba5d42710a473ea2d">Mais...</a><br/></td></tr>
+<tr class="separator:a62b59872aef49e6ba5d42710a473ea2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição Detalhada</h2>
+<div class="textblock"><p>Classe abstrata que é base para os elementos da tela. </p>
+<p>A thread principal usa apenas os tipos primitivos <a class="el" href="../../da/db9/class_screen_object.htm" title="Objeto primitivo para um Sprite. ">ScreenObject</a> e <a class="el" href="../../d0/d94/class_screen_text.htm" title="Objeto primitivo para um texto. ">ScreenText</a>. A grande utilidade dessa classe para as demais classes é o uso delas pela thread de processamento no tempo sem quaisquer outra adaptação.</p>
+<p>Observação: Nem todas as funções possuem real funcionalidade em todas as classes. </p>
+
+<p>Definição na linha <a class="el" href="../../d6/d8c/_animator_object_8hpp_source.htm#l00026">26</a> do arquivo <a class="el" href="../../d6/d8c/_animator_object_8hpp_source.htm">AnimatorObject.hpp</a>.</p>
+</div><h2 class="groupheader">Métodos</h2>
+<a class="anchor" id="a6a6574dce9c78a13ee641084421aecef"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AnimatorObject::aSetDisplay </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para atribuição do display (exibir o objeto) </p>
+<p>Basicamente irá executar a função interna (setDisplay) da classe. Tal função (setDisplay) possui retorno de classe, essa função assíncrona não possui retorno </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value,:</td><td>Exibir o objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#acb1928b7499e681cc15728ca19b6ecdc">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#ae4b578f6533b60dbb5f879b9f0bbee97">ScreenText</a>, <a class="el" href="../../df/d2e/class_gem.htm#a609c6c0ab068560f6c3d5e04e1a8b106">Gem</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a78d5c8a399e1a3f48596274fcd33e65c">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#a3e7216197946dfb86e28d059a314ef3a">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_a6a6574dce9c78a13ee641084421aecef_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_a6a6574dce9c78a13ee641084421aecef_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_a6a6574dce9c78a13ee641084421aecef_icgraph" id="de/d2f/class_animator_object_a6a6574dce9c78a13ee641084421aecef_icgraph">
+<area shape="rect" id="node2" href="../../da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="244,184,392,211"/><area shape="rect" id="node3" href="../../df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#aba7eea6f5193417f77002a0d6d670b5c" title="Exibe o menu. " alt="" coords="442,13,649,54"/><area shape="rect" id="node5" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426" title="Inicializa as dependências do espaço. " alt="" coords="460,78,631,119"/><area shape="rect" id="node7" href="../../df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aa2d652e0a5afd7f9988e2da34c50727b" title="Inicializador das dependências do espaço. " alt="" coords="440,143,651,185"/><area shape="rect" id="node8" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="456,274,635,315"/><area shape="rect" id="node17" href="../../d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#aedd926d405bc52327ff21aa212beff1c" title="Inicializa as dependências internas do espaço. " alt="" coords="441,209,650,250"/><area shape="rect" id="node18" href="../../d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="442,373,649,414"/><area shape="rect" id="node4" href="../../d0/dea/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_how_to_play_button_click.htm#a321255d23172cd73c463cea84e0b0428" title="Função a ser implementada pelas classes herdadas. " alt="" coords="699,5,945,61"/><area shape="rect" id="node6" href="../../d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="728,151,916,177"/><area shape="rect" id="node9" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="733,203,911,245"/><area shape="rect" id="node13" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="733,271,911,313"/><area shape="rect" id="node15" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#aaf880bed4af918f3a7c771f6f88b7028" title="Apenas fecha a tela de pausa. " alt="" coords="733,337,911,378"/><area shape="rect" id="node10" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="1011,198,1194,239"/><area shape="rect" id="node11" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="1277,172,1479,199"/><area shape="rect" id="node12" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1260,223,1496,279"/><area shape="rect" id="node14" href="../../dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="993,264,1212,320"/><area shape="rect" id="node16" href="../../df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="996,344,1209,400"/><area shape="rect" id="node19" href="../../d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="716,403,928,459"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ab3b3733297ee9acb478698732f60a788"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AnimatorObject::aSetImageColor </td>
+          <td>(</td>
+          <td class="paramtype">irr::video::SColor *&#160;</td>
+          <td class="paramname"><em>color</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para definir a cor. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">color,:</td><td>Cor </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#aa3528528d0a444f0e2d64acf0977f19c">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a0b5a8ad5ac1f636feeef4831c40d3e60">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a3fe099d0ac781be11d904e66d8b5a7f9">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#a928ae27ce84615147f22cae08efd6746">UpdateTimeBar</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9fdb6fe9967a76c776d12682694c60fc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AnimatorObject::aSetScreenPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para atribuição da posição do objeto na tela. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,:</td><td>Coordenada X </td></tr>
+    <tr><td class="paramname">y,:</td><td>Coordenada y </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#a459d9b98ad70b2c6e1fffa191b75b185">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a33c7439f20dda14c78b612df10f414b2">ScreenText</a>, <a class="el" href="../../df/d2e/class_gem.htm#a44dd704fd492db9ec4538bc136ca5dcb">Gem</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a884c35d01ac65820d1c1033d19e29643">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#aa9594a60a9c79d9ebd05ef82d9619e4a">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_a9fdb6fe9967a76c776d12682694c60fc_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_a9fdb6fe9967a76c776d12682694c60fc_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_a9fdb6fe9967a76c776d12682694c60fc_icgraph" id="de/d2f/class_animator_object_a9fdb6fe9967a76c776d12682694c60fc_icgraph">
+<area shape="rect" id="node2" href="../../da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="241,184,389,211"/><area shape="rect" id="node3" href="../../df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#aba7eea6f5193417f77002a0d6d670b5c" title="Exibe o menu. " alt="" coords="439,13,646,54"/><area shape="rect" id="node5" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426" title="Inicializa as dependências do espaço. " alt="" coords="457,78,628,119"/><area shape="rect" id="node7" href="../../df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aa2d652e0a5afd7f9988e2da34c50727b" title="Inicializador das dependências do espaço. " alt="" coords="437,143,648,185"/><area shape="rect" id="node8" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="453,274,632,315"/><area shape="rect" id="node17" href="../../d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#aedd926d405bc52327ff21aa212beff1c" title="Inicializa as dependências internas do espaço. " alt="" coords="438,209,647,250"/><area shape="rect" id="node18" href="../../d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="439,373,646,414"/><area shape="rect" id="node4" href="../../d0/dea/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_how_to_play_button_click.htm#a321255d23172cd73c463cea84e0b0428" title="Função a ser implementada pelas classes herdadas. " alt="" coords="696,5,943,61"/><area shape="rect" id="node6" href="../../d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="725,151,913,177"/><area shape="rect" id="node9" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="730,203,909,245"/><area shape="rect" id="node13" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="730,271,909,313"/><area shape="rect" id="node15" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#aaf880bed4af918f3a7c771f6f88b7028" title="Apenas fecha a tela de pausa. " alt="" coords="730,337,909,378"/><area shape="rect" id="node10" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="1009,198,1191,239"/><area shape="rect" id="node11" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="1275,172,1476,199"/><area shape="rect" id="node12" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1257,223,1493,279"/><area shape="rect" id="node14" href="../../dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="991,264,1209,320"/><area shape="rect" id="node16" href="../../df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="993,344,1207,400"/><area shape="rect" id="node19" href="../../d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="713,403,925,459"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a3e6ada0bb13e367c1efb19f61b87bc3d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AnimatorObject::aSetScreenSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para atribuição do tamanho que o objeto irá ocupar na tela. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width,:</td><td>Largura do objeto </td></tr>
+    <tr><td class="paramname">height,:</td><td>Altura do objeto </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#a9608733c2aba221d60c7816c6fab6afb">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a43a0c7119b1a6a7f13b9ff2efde6c5f6">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a8a6d2676876fc2a5e69db7f1db8825ba">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#a14772a5f94795f20d2302588fe222123">UpdateTimeBar</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa23552729f180e5e12ced1f2526b34a6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual irr::video::SColor* AnimatorObject::getColor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para obter a cor. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Objeto de cor </dd></dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#a1a2327597357fc11a965932efe9a01ce">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a9fb0345c1db17c4d0271cec7d1883894">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a814a33341e5aa244768cb7eb7c499581">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#aadaf79c4ec6e1e184549e28ac4530079">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_aa23552729f180e5e12ced1f2526b34a6_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_aa23552729f180e5e12ced1f2526b34a6_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_aa23552729f180e5e12ced1f2526b34a6_icgraph" id="de/d2f/class_animator_object_aa23552729f180e5e12ced1f2526b34a6_icgraph">
+<area shape="rect" id="node2" href="../../d7/d1a/class_object_morph.htm#ad2c188f76a31478e9e8c9016cea5edf7" title="Obtém a nova cor no tempo informado. " alt="" coords="221,5,412,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a62b59872aef49e6ba5d42710a473ea2d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool AnimatorObject::getDisplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para saber se o elemento está visível na tela. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Se o elemento está visível </dd></dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#aa0a65b34f7d73ef6e06a64fe27f299c7">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#aa6a0420b15cfe50a8d76a0b1b5cf8408">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a2d04080134009948ca29afe693055f0e">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#a90948890d4abfb45bc7ff5c09d136d4d">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_a62b59872aef49e6ba5d42710a473ea2d_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_a62b59872aef49e6ba5d42710a473ea2d_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_a62b59872aef49e6ba5d42710a473ea2d_icgraph" id="de/d2f/class_animator_object_a62b59872aef49e6ba5d42710a473ea2d_icgraph">
+<area shape="rect" id="node2" href="../../dd/dae/namespace_crazy_crush.htm#afcd2db0eb3dc31d767b2f461db5962e0" title="Função principal que exibe todos elementos do ZOrder na tela. " alt="" coords="235,5,360,32"/><area shape="rect" id="node3" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="408,5,609,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8cf0b253b3503774f7a0992225c90a51"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned AnimatorObject::getScreenHeight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para obter a altura do objeto na tela. </p>
+<dl class="section return"><dt>Retorna</dt><dd>A altura do objeto </dd></dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#af0b1b67abfa502cef486d77bc36e8af5">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a3975ec4c9fb0304f8a71133236742499">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#abbc449161cb54fac9af75d30c96352b5">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#a85bbe2b43689d63a0e432a493dc2e325">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_a8cf0b253b3503774f7a0992225c90a51_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_a8cf0b253b3503774f7a0992225c90a51_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_a8cf0b253b3503774f7a0992225c90a51_icgraph" id="de/d2f/class_animator_object_a8cf0b253b3503774f7a0992225c90a51_icgraph">
+<area shape="rect" id="node2" href="../../dd/d83/class_morph_linear.htm#ad1bdfda7f557b8590a7e4614b8ffc726" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="232,5,419,32"/><area shape="rect" id="node3" href="../../d0/d51/class_morph_timer.htm#a1ac3a635c79306fdfebaa600e63a2c92" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="233,56,417,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8d164b4019c380fa8fa8c67b5ece1193"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int AnimatorObject::getScreenPositionX </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para obter a coordenada X do objeto na tela. </p>
+<dl class="section return"><dt>Retorna</dt><dd>A coordenada X do objeto </dd></dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#a84bbe23d021616fe062806802570113e">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#ac9aa3f49d1bb6cf711a18962f9b0936f">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#aa78e6644f06fd2afd102e39ef5c0fc6b">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#aeaeaa931f92e66a1328d841a2d78c94c">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_a8d164b4019c380fa8fa8c67b5ece1193_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_a8d164b4019c380fa8fa8c67b5ece1193_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_a8d164b4019c380fa8fa8c67b5ece1193_icgraph" id="de/d2f/class_animator_object_a8d164b4019c380fa8fa8c67b5ece1193_icgraph">
+<area shape="rect" id="node2" href="../../dd/d83/class_morph_linear.htm#ad1bdfda7f557b8590a7e4614b8ffc726" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="232,83,419,109"/><area shape="rect" id="node3" href="../../d0/d51/class_morph_timer.htm#a1ac3a635c79306fdfebaa600e63a2c92" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="233,133,417,160"/><area shape="rect" id="node4" href="../../da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="251,184,399,211"/><area shape="rect" id="node5" href="../../df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#aba7eea6f5193417f77002a0d6d670b5c" title="Exibe o menu. " alt="" coords="469,13,675,54"/><area shape="rect" id="node7" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426" title="Inicializa as dependências do espaço. " alt="" coords="487,78,657,119"/><area shape="rect" id="node9" href="../../df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aa2d652e0a5afd7f9988e2da34c50727b" title="Inicializador das dependências do espaço. " alt="" coords="467,143,677,185"/><area shape="rect" id="node10" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="483,274,661,315"/><area shape="rect" id="node19" href="../../d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#aedd926d405bc52327ff21aa212beff1c" title="Inicializa as dependências internas do espaço. " alt="" coords="467,209,677,250"/><area shape="rect" id="node20" href="../../d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="469,373,675,414"/><area shape="rect" id="node6" href="../../d0/dea/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_how_to_play_button_click.htm#a321255d23172cd73c463cea84e0b0428" title="Função a ser implementada pelas classes herdadas. " alt="" coords="725,5,972,61"/><area shape="rect" id="node8" href="../../d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="755,151,943,177"/><area shape="rect" id="node11" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="759,203,938,245"/><area shape="rect" id="node15" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="759,271,938,313"/><area shape="rect" id="node17" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#aaf880bed4af918f3a7c771f6f88b7028" title="Apenas fecha a tela de pausa. " alt="" coords="759,337,938,378"/><area shape="rect" id="node12" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="1038,198,1221,239"/><area shape="rect" id="node13" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="1304,172,1505,199"/><area shape="rect" id="node14" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1287,223,1523,279"/><area shape="rect" id="node16" href="../../dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1020,264,1239,320"/><area shape="rect" id="node18" href="../../df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1023,344,1236,400"/><area shape="rect" id="node21" href="../../d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="743,403,955,459"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af2f65aa52ad9fb71942af715a038c3f6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int AnimatorObject::getScreenPositionY </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para obter a coordenada Y do objeto na tela. </p>
+<dl class="section return"><dt>Retorna</dt><dd>A coordenada Y do objeto </dd></dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#aa1de66b181ed1b318936af50c458e5cc">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#aa53cd9cc510c3b4223254d476637aa2a">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#ad064baafe928c261a51377fadc674dfd">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#a7dee3a3445aac0edc9a4039c05e9dcee">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_af2f65aa52ad9fb71942af715a038c3f6_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_af2f65aa52ad9fb71942af715a038c3f6_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_af2f65aa52ad9fb71942af715a038c3f6_icgraph" id="de/d2f/class_animator_object_af2f65aa52ad9fb71942af715a038c3f6_icgraph">
+<area shape="rect" id="node2" href="../../dd/d83/class_morph_linear.htm#ad1bdfda7f557b8590a7e4614b8ffc726" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="232,83,419,109"/><area shape="rect" id="node3" href="../../d0/d51/class_morph_timer.htm#a1ac3a635c79306fdfebaa600e63a2c92" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="233,133,417,160"/><area shape="rect" id="node4" href="../../da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="251,184,399,211"/><area shape="rect" id="node5" href="../../df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#aba7eea6f5193417f77002a0d6d670b5c" title="Exibe o menu. " alt="" coords="469,13,675,54"/><area shape="rect" id="node7" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426" title="Inicializa as dependências do espaço. " alt="" coords="487,78,657,119"/><area shape="rect" id="node9" href="../../df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aa2d652e0a5afd7f9988e2da34c50727b" title="Inicializador das dependências do espaço. " alt="" coords="467,143,677,185"/><area shape="rect" id="node10" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="483,274,661,315"/><area shape="rect" id="node19" href="../../d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#aedd926d405bc52327ff21aa212beff1c" title="Inicializa as dependências internas do espaço. " alt="" coords="467,209,677,250"/><area shape="rect" id="node20" href="../../d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="469,373,675,414"/><area shape="rect" id="node6" href="../../d0/dea/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_how_to_play_button_click.htm#a321255d23172cd73c463cea84e0b0428" title="Função a ser implementada pelas classes herdadas. " alt="" coords="725,5,972,61"/><area shape="rect" id="node8" href="../../d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="755,151,943,177"/><area shape="rect" id="node11" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="759,203,938,245"/><area shape="rect" id="node15" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="759,271,938,313"/><area shape="rect" id="node17" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#aaf880bed4af918f3a7c771f6f88b7028" title="Apenas fecha a tela de pausa. " alt="" coords="759,337,938,378"/><area shape="rect" id="node12" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="1038,198,1221,239"/><area shape="rect" id="node13" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="1304,172,1505,199"/><area shape="rect" id="node14" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1287,223,1523,279"/><area shape="rect" id="node16" href="../../dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1020,264,1239,320"/><area shape="rect" id="node18" href="../../df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1023,344,1236,400"/><area shape="rect" id="node21" href="../../d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="743,403,955,459"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aae166026379fa67457cf89c4b9f037b4"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned AnimatorObject::getScreenWidth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função assíncrona para obter a largura do objeto na tela. </p>
+<dl class="section return"><dt>Retorna</dt><dd>A largura do objeto </dd></dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#a6b8b50106548e49cdc73b7e62716f053">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a54c0488243d4a220cc119fba888beb95">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a504ee29093bac52e3ac5273c211faf05">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#a560badb4b23001742a31871ce16d6dd5">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_aae166026379fa67457cf89c4b9f037b4_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_aae166026379fa67457cf89c4b9f037b4_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_aae166026379fa67457cf89c4b9f037b4_icgraph" id="de/d2f/class_animator_object_aae166026379fa67457cf89c4b9f037b4_icgraph">
+<area shape="rect" id="node2" href="../../dd/d83/class_morph_linear.htm#ad1bdfda7f557b8590a7e4614b8ffc726" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="232,5,419,32"/><area shape="rect" id="node3" href="../../d0/d51/class_morph_timer.htm#a1ac3a635c79306fdfebaa600e63a2c92" title="Obtém a nova posição e novo tamanho da imagem na tela no tempo informado. " alt="" coords="233,56,417,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6be7da8b272fdfff923c1c553ff5bad0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual unsigned char AnimatorObject::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna o tipo da classe. </p>
+<dl class="section return"><dt>Retorna</dt><dd>O tipo da classe </dd></dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#ac680880da757b6eb1a062671e49faa77">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a1a013c01403e2064a49f0e833438b230">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#a05aa72b75db0d0b7c02e38acd38eb720">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#ab3334e41b261e84fbe66ad7727016c18">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_a6be7da8b272fdfff923c1c553ff5bad0_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_a6be7da8b272fdfff923c1c553ff5bad0_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_a6be7da8b272fdfff923c1c553ff5bad0_icgraph" id="de/d2f/class_animator_object_a6be7da8b272fdfff923c1c553ff5bad0_icgraph">
+<area shape="rect" id="node2" href="../../dd/dae/namespace_crazy_crush.htm#afcd2db0eb3dc31d767b2f461db5962e0" title="Função principal que exibe todos elementos do ZOrder na tela. " alt="" coords="231,60,357,87"/><area shape="rect" id="node4" href="../../da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="220,180,368,207"/><area shape="rect" id="node3" href="../../d5/dbe/namespace_crazy_crush_1_1core.htm#a9ad6a62d0e3449c0f0d5a7cb33b174d4" title="Pausa o processamento do jogo. " alt="" coords="1253,59,1455,86"/><area shape="rect" id="node5" href="../../df/d3f/namespace_crazy_crush_1_1_game_1_1_how_to_play.htm#aba7eea6f5193417f77002a0d6d670b5c" title="Exibe o menu. " alt="" coords="418,42,625,84"/><area shape="rect" id="node7" href="../../dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a609a0da4b24de69ba3181fa3207fd426" title="Inicializa as dependências do espaço. " alt="" coords="436,108,607,149"/><area shape="rect" id="node9" href="../../df/d77/namespace_crazy_crush_1_1_game_1_1_main_screen.htm#aa2d652e0a5afd7f9988e2da34c50727b" title="Inicializador das dependências do espaço. " alt="" coords="416,173,627,214"/><area shape="rect" id="node10" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#afe491a73b09ba98ff0554c109d8d283a" title="Inicializa as dependências do espaço. " alt="" coords="432,304,611,345"/><area shape="rect" id="node18" href="../../d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#aedd926d405bc52327ff21aa212beff1c" title="Inicializa as dependências internas do espaço. " alt="" coords="417,238,626,280"/><area shape="rect" id="node19" href="../../d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="418,373,625,414"/><area shape="rect" id="node6" href="../../d0/dea/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_how_to_play_button_click.htm#a321255d23172cd73c463cea84e0b0428" title="Função a ser implementada pelas classes herdadas. " alt="" coords="675,42,921,98"/><area shape="rect" id="node8" href="../../d7/d89/namespace_crazy_crush_1_1_game.htm#a10555bf139cdd6398578c9817ab8a556" title="Inicializador das dependências. " alt="" coords="704,151,892,178"/><area shape="rect" id="node11" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a82a1ce62d6e3c354aac607bc5def071a" title="Exibe a tela de pausa. " alt="" coords="709,202,887,244"/><area shape="rect" id="node14" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#a19bf888140aa11c933e138cec0517d71" title="Fecha a tela de pausa e propaga ao controle do jogo. " alt="" coords="709,268,887,309"/><area shape="rect" id="node16" href="../../d5/d5e/namespace_crazy_crush_1_1_game_1_1_pause.htm#aaf880bed4af918f3a7c771f6f88b7028" title="Apenas fecha a tela de pausa. " alt="" coords="709,333,887,374"/><area shape="rect" id="node12" href="../../df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a0b65f6df4d820f226a757eef9c0390ad" title="Pausa o jogo (apenas o jogo) " alt="" coords="987,152,1170,193"/><area shape="rect" id="node13" href="../../d3/d4f/class_crazy_crush_1_1_game_1_1_pause_1_1_button_1_1_callback_game_pause_button_click.htm#ab76c3502e471b3ec1c1218986f3c8033" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1236,144,1472,200"/><area shape="rect" id="node15" href="../../dd/d77/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_pause_button_click.htm#aa9fcc281802ef6fc3a4a30bba7795046" title="Função a ser implementada pelas classes herdadas. " alt="" coords="969,252,1188,308"/><area shape="rect" id="node17" href="../../df/de7/class_crazy_crush_1_1_game_1_1_pause_1_1_callback_game_main_menu_button_click.htm#a496f0532469e855fa7b522ecda51cd21" title="Função a ser implementada pelas classes herdadas. " alt="" coords="972,332,1185,388"/><area shape="rect" id="node20" href="../../d0/dd2/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_rank_button_click.htm#a1b2d9042c94bfb29c0165e47abd56489" title="Função a ser implementada pelas classes herdadas. " alt="" coords="692,399,904,455"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9d3b231e4b24399d41daa86077f62608"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AnimatorObject::processTime </td>
+          <td>(</td>
+          <td class="paramtype">irr::u32&#160;</td>
+          <td class="paramname"><em>time</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Função para processamento no tempo para a classe. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">time,:</td><td>O tempo atual para processamento </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implementado por <a class="el" href="../../da/db9/class_screen_object.htm#af1580ea5cd4cc5bce70657c8a7d8734e">ScreenObject</a>, <a class="el" href="../../d0/d94/class_screen_text.htm#a5f004392bce05453538d81a214847b74">ScreenText</a>, <a class="el" href="../../d6/d58/class_screen_button.htm#aa2895991a0f13af23c761747ddedd67a">ScreenButton</a> e <a class="el" href="../../d1/daa/class_update_time_bar.htm#ac18b0c8e7e4ab4f516f31d5aafbdbcce">UpdateTimeBar</a>.</p>
+
+<p><div class="dynheader">
+Este é o diagrama das funções que utilizam esta função:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../de/d2f/class_animator_object_a9d3b231e4b24399d41daa86077f62608_icgraph.png" border="0" usemap="#de/d2f/class_animator_object_a9d3b231e4b24399d41daa86077f62608_icgraph" alt=""/></div>
+<map name="de/d2f/class_animator_object_a9d3b231e4b24399d41daa86077f62608_icgraph" id="de/d2f/class_animator_object_a9d3b231e4b24399d41daa86077f62608_icgraph">
+<area shape="rect" id="node2" href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#ab9bd4a9a8be29e078303737aea624888" title="Thread de processamento no tempo. " alt="" coords="248,5,385,47"/><area shape="rect" id="node3" href="../../d4/df3/namespace_crazy_crush_1_1_thread.htm#affa11c846e2b2fff6c703350f96bc407" title="Inicia a thread que processa algumas coisas no tempo. " alt="" coords="433,5,571,47"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir do seguinte arquivo:<ul>
+<li>src/<a class="el" href="../../d6/d8c/_animator_object_8hpp_source.htm">AnimatorObject.hpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:13 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

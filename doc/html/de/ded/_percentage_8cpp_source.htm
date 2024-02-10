@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: C√≥digo-Fonte de src/Percentage.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>P√°gina&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fun√ß√µes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Vari√°veis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Percentage.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola PolitÈcnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de EletrÙnica e ComputaÁ„o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de ProgramaÁ„o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan FranÁa    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;Percentage.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;Random.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm">   17</a></span>&#160;<span class="keyword">namespace </span>Percentage {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#adc169b174794fe9820ab704472c376cc">   19</a></span>&#160;<span class="keywordtype">bool</span> <span class="keyword">get</span>(<a class="code" href="../../d4/dd5/struct_crazy_crush_1_1_percentage_1_1_percent.htm">Percent</a>&amp; p){</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keywordflow">if</span>(p.range == 1)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">unsigned</span> val = <a class="code" href="../../dc/d71/namespace_crazy_crush_1_1_random.htm#af358f9b9dc21baa5b201b86360cdbbea">Random::get</a>()%p.range;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordflow">if</span>(val &lt; p.value)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#af077e405d13cb7a1d8434de27400782e">   28</a></span>&#160;<span class="keywordtype">bool</span> <span class="keyword">get</span>(<a class="code" href="../../db/d61/struct_crazy_crush_1_1_percentage_1_1_h_percent.htm">HPercent</a>&amp; p){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordflow">if</span>(<span class="keyword">get</span>(p.p1)&amp;&amp;<span class="keyword">get</span>(p.p2)&amp;&amp;<span class="keyword">get</span>(p.p3)&amp;&amp;<span class="keyword">get</span>(p.p4))</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">   34</a></span>&#160;<a class="code" href="../../d4/dd5/struct_crazy_crush_1_1_percentage_1_1_percent.htm">Percent</a> <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>(<span class="keywordtype">float</span> v){</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">float</span> ratio = 0.0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">float</span> temp = 0.0;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="../../d4/dd5/struct_crazy_crush_1_1_percentage_1_1_percent.htm">Percent</a> t;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keywordtype">bool</span> finded = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">for</span>(t.range = 2;t.range&lt;=<a class="code" href="../../dc/d71/namespace_crazy_crush_1_1_random.htm#a7fadf9ff60e1980b65fc42591d7e7d3c">Random::max</a>+1;t.range*=2){</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    ratio = ((float)1)/t.range;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">for</span>(t.value = 1;t.value&lt;t.range;t.value++){</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      temp = t.value*ratio;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <span class="keywordflow">if</span>(temp == v){</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        finded = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(temp &gt; v){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">if</span>(t.value != 1){</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          <span class="keywordflow">if</span>(temp-v &gt; v-(t.value-1)*ratio){</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            t.value--;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordflow">if</span>(finded)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">if</span>(!finded){</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    t.range/=2;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a4dfc41ca85748100dd097dc51950f3cb">   64</a></span>&#160;<a class="code" href="../../db/d61/struct_crazy_crush_1_1_percentage_1_1_h_percent.htm">HPercent</a> <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a4dfc41ca85748100dd097dc51950f3cb">formatH</a>(<span class="keywordtype">float</span> v){</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="../../db/d61/struct_crazy_crush_1_1_percentage_1_1_h_percent.htm">HPercent</a> t;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  t.p2.range = t.p3.range = t.p4.range = t.p2.value = t.p3.value = t.p4.value = 1;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">float</span> ratio = ((float)1)/(<a class="code" href="../../dc/d71/namespace_crazy_crush_1_1_random.htm#a7fadf9ff60e1980b65fc42591d7e7d3c">Random::max</a>+1);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">if</span>(v &gt; ratio){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    t.p1 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>(v);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  ratio*=ratio;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">if</span>(v &gt; ratio){</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    t.p1 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>(sqrt(v));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    t.p2 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>( v*t.p1.range/((<span class="keywordtype">float</span>)t.p1.value) );</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  t.p1 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>(sqrt(sqrt(v)));</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  t.p2 = t.p1;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  t.p3 = t.p1;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#af4ad725c053e357a840cd6583a9b2f02">   84</a></span>&#160;<a class="code" href="../../db/d61/struct_crazy_crush_1_1_percentage_1_1_h_percent.htm">HPercent</a> <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a4dfc41ca85748100dd097dc51950f3cb">formatH</a>(<span class="keywordtype">float</span> v,<span class="keywordtype">float</span> err){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="../../db/d61/struct_crazy_crush_1_1_percentage_1_1_h_percent.htm">HPercent</a> t;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  t.p2.range = t.p3.range = t.p4.range = t.p2.value = t.p3.value = t.p4.value = 1;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">float</span> ratio = ((float)1)/(<a class="code" href="../../dc/d71/namespace_crazy_crush_1_1_random.htm#a7fadf9ff60e1980b65fc42591d7e7d3c">Random::max</a>+1);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">if</span>(err &gt; ratio){</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    t.p1 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>(v);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  ratio*=ratio;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keywordflow">if</span>(err &gt; ratio){</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    t.p1 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>(sqrt(v));</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    t.p2 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>( v*t.p1.range/((<span class="keywordtype">float</span>)t.p1.value) );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  t.p1 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>(sqrt(sqrt(v)));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  t.p2 = t.p1;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  t.p3 = t.p1;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  t.p4 = <a class="code" href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">format</a>( v*t.p1.range*t.p1.range*t.p1.range/(t.p1.value*t.p1.value*t.p1.value));</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">return</span> t;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}}</div>
+<div class="ttc" id="namespace_crazy_crush_1_1_percentage_htm_a4dfc41ca85748100dd097dc51950f3cb"><div class="ttname"><a href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a4dfc41ca85748100dd097dc51950f3cb">CrazyCrush::Percentage::formatH</a></div><div class="ttdeci">HPercent formatH(float v)</div><div class="ttdoc">Converte um valor (entre 0 e 1) para uma estrutura HPercent equivalente. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/ded/_percentage_8cpp_source.htm#l00064">Percentage.cpp:64</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_random_htm_a7fadf9ff60e1980b65fc42591d7e7d3c"><div class="ttname"><a href="../../dc/d71/namespace_crazy_crush_1_1_random.htm#a7fadf9ff60e1980b65fc42591d7e7d3c">CrazyCrush::Random::max</a></div><div class="ttdeci">const unsigned max</div><div class="ttdoc">Valor m√°ximo que a fun√ß√£o get() pode retornar. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1e/_random_8cpp_source.htm#l00022">Random.cpp:22</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_random_htm_af358f9b9dc21baa5b201b86360cdbbea"><div class="ttname"><a href="../../dc/d71/namespace_crazy_crush_1_1_random.htm#af358f9b9dc21baa5b201b86360cdbbea">CrazyCrush::Random::get</a></div><div class="ttdeci">int get()</div><div class="ttdoc">Obt√©m um valor aleat√≥rio entre 0 e max. </div><div class="ttdef"><b>Definition:</b> <a href="../../d9/d1e/_random_8cpp_source.htm#l00024">Random.cpp:24</a></div></div>
+<div class="ttc" id="struct_crazy_crush_1_1_percentage_1_1_h_percent_htm"><div class="ttname"><a href="../../db/d61/struct_crazy_crush_1_1_percentage_1_1_h_percent.htm">CrazyCrush::Percentage::HPercent</a></div><div class="ttdoc">Estrutura de porcentagem avan√ßada. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/dba/_percentage_8hpp_source.htm#l00030">Percentage.hpp:30</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_1_1_percentage_htm_a5c8eb7c8c10d4c3bbec2f24581001899"><div class="ttname"><a href="../../d1/d5c/namespace_crazy_crush_1_1_percentage.htm#a5c8eb7c8c10d4c3bbec2f24581001899">CrazyCrush::Percentage::format</a></div><div class="ttdeci">Percent format(float v)</div><div class="ttdoc">Converte um valor (entre 0 e 1) para uma estrutura Percent equivalente. </div><div class="ttdef"><b>Definition:</b> <a href="../../de/ded/_percentage_8cpp_source.htm#l00034">Percentage.cpp:34</a></div></div>
+<div class="ttc" id="struct_crazy_crush_1_1_percentage_1_1_percent_htm"><div class="ttname"><a href="../../d4/dd5/struct_crazy_crush_1_1_percentage_1_1_percent.htm">CrazyCrush::Percentage::Percent</a></div><div class="ttdoc">Estrutura de porcentagem simples. </div><div class="ttdef"><b>Definition:</b> <a href="../../da/dba/_percentage_8hpp_source.htm#l00022">Percentage.hpp:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:09 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

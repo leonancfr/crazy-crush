@@ -1,0 +1,12 @@
+<map id="CrazyCrush::Game::Control::setLevelTotalTime" name="CrazyCrush::Game::Control::setLevelTotalTime">
+<area shape="rect" id="node2" href="$d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a2a01280519a6c215c6b07cea05ac8918" title="Abre um nível da forma texto. " alt="" coords="244,25,435,66"/>
+<area shape="rect" id="node3" href="$d8/de4/namespace_crazy_crush_1_1_game_1_1_level_file.htm#a803c4654b4c11ede7ec295a42e7c295b" title="Abre um nível de forma binária. " alt="" coords="244,90,435,131"/>
+<area shape="rect" id="node9" href="$d6/db5/namespace_crazy_crush_1_1_game_1_1_time_attack.htm#aaee991f853fe8494efb4380a4ce1272e" title="Inicia o jogo no modo TimeAttack. " alt="" coords="236,159,443,201"/>
+<area shape="rect" id="node4" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a6856382595a3f7282f0eb88f6fa3cbcc" title="Prepara e inicia o jogo na fase informada. " alt="" coords="529,86,700,127"/>
+<area shape="rect" id="node5" href="$dc/de9/class_crazy_crush_1_1_game_1_1_level_1_1_callback_game_play_level_button_click.htm#a1a4e6987e7f4f49be40f0f3e1ed059a6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="805,5,1013,61"/>
+<area shape="rect" id="node6" href="$dc/d3a/namespace_crazy_crush_1_1_game_1_1_level.htm#a568ddc72ab15ab0f6085ce81c1034cb7" title="Instruções rápidas para ir para o próximo nível. " alt="" coords="824,86,995,127"/>
+<area shape="rect" id="node8" href="$d4/d58/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_re_try_button_click.htm#a070fff4a388f50c7d2cfbf853cf79e18" title="Função a ser implementada pelas classes herdadas. " alt="" coords="787,152,1032,208"/>
+<area shape="rect" id="node7" href="$de/de7/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_level_next_button_click.htm#af24b8526179752cd90d77014503c2c9a" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1080,79,1319,135"/>
+<area shape="rect" id="node10" href="$d3/db8/class_crazy_crush_1_1_game_1_1_main_screen_1_1_callback_game_play_time_attack_button_click.htm#ac1be45149d67472aba1dd8b7a3f6a476" title="Função a ser implementada pelas classes herdadas. " alt="" coords="492,152,737,208"/>
+<area shape="rect" id="node11" href="$d6/df0/class_crazy_crush_1_1_game_1_1_post_screen_1_1_callback_game_time_attack_button_click.htm#a2e637b6b94baf1e1233bf599ed14b7cd" title="Função a ser implementada pelas classes herdadas. " alt="" coords="491,232,739,288"/>
+</map>

@@ -1,0 +1,17 @@
+<map id="CrazyCrush::Screen::initializeScreen" name="CrazyCrush::Screen::initializeScreen">
+<area shape="rect" id="node2" href="$da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09" title="Associa uma textura ao objeto. " alt="" coords="214,5,385,32"/>
+<area shape="rect" id="node4" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="208,57,391,98"/>
+<area shape="rect" id="node5" href="$da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464" title="Define o tamanho que o sprite usa da textura. " alt="" coords="195,123,403,149"/>
+<area shape="rect" id="node6" href="$da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79" title="Define o tamanho que o sprite ocupará na tela. " alt="" coords="202,173,397,200"/>
+<area shape="rect" id="node7" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="214,224,385,251"/>
+<area shape="rect" id="node8" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="192,275,407,301"/>
+<area shape="rect" id="node9" href="$df/d47/class_animator_obj_list.htm#a19b5e6f153a270a9c6b03283a57f7d35" title="Adiciona um elemento à lista. " alt="" coords="208,325,391,352"/>
+<area shape="rect" id="node10" href="$da/db9/class_screen_object.htm#af31cd0131c42fcac9a5133b7c2c7759b" title="Define o SpriteAnimator interno do objeto. " alt="" coords="193,376,406,403"/>
+<area shape="rect" id="node11" href="$da/dc2/class_screen_hover.htm#a4d1ba74cd36581ea09a4152d51d04242" title="Associa um Callback ao evento OnClick da região. " alt="" coords="208,427,391,453"/>
+<area shape="rect" id="node12" href="$da/dc2/class_screen_hover.htm#abcc1ad8a6fa36589a4f0fcf7b2f5bfe6" title="Associa um Callback ao evento OnHover da região. " alt="" coords="207,477,392,504"/>
+<area shape="rect" id="node13" href="$da/dc2/class_screen_hover.htm#aa3f161d9e9e14283ecc1b65aa3c2ca58" title="Define se a região delimitada pela classe será usada. " alt="" coords="215,528,383,555"/>
+<area shape="rect" id="node3" href="$da/dac/class_shared_pointer.htm#ab39ff3eeaa60d180b63acf5bb3cebef6" title="Define o valor do ponteiro. " alt="" coords="471,5,601,32"/>
+<area shape="rect" id="node14" href="$da/dc2/class_screen_hover.htm#a4b6702a9e6f8c60070abd02d9e714c36" title="Processa o Callback associado ao evento OnOut. " alt="" coords="455,528,617,555"/>
+<area shape="rect" id="node15" href="$d1/dd4/class_callback.htm#af1051d87929e76c60a04cf81e7458b3a" title="Função &quot;única&quot; da classe. " alt="" coords="665,528,792,555"/>
+<area shape="rect" id="node16" href="$d1/dd4/class_callback.htm#a3a8c0c16517e1467bf973928b2d9356b" title="Função a ser implementada pelas classes herdadas. " alt="" coords="840,528,975,555"/>
+</map>

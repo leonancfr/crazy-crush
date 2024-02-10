@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/ScreenButtonExtended.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ScreenButtonExtended.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _SCREEN_BUTTON_EXTENDED_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _SCREEN_BUTTON_EXTENDED_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;ScreenButton.hpp&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;ScreenObject.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;ScreenText.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/SColor.h&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../da/db4/class_screen_button_extended.htm">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a> : <span class="keyword">public</span> <a class="code" href="../../d6/d58/class_screen_button.htm">ScreenButton</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> bg_top_left,bg_top_middle,bg_top_right;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> bg_middle_left,bg_middle_middle,bg_middle_right;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a> bg_bottom_left,bg_bottom_middle,bg_bottom_right;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a> label;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a> subLbl;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> oZOrder;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> lblOffsetX,lblOffsetY,slblOffsetX,slblOffsetY;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    irr::video::SColor txtNormal, txtHover;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    irr::video::SColor txtSNormal, txtSHover;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> propagateAdjust();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ~<a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#a805d21ec33b04661c1670b6dbb440a5c">setLabel</a>(std::string <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#a75806dd7900997e4316b219d72baf1e0">setLabelOffset</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#ae9ede6dda82745a3235f49f44611bbc4">setLabelColor</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> r,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> g,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> b);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#a936f8909f5e18789cd141525adbe2659">setLabelColorHover</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> r,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> g,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> b);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#a0ec79e4cc4a26aaec58d60fdd1b90022">setSubLabel</a>(std::string <span class="keywordtype">string</span>);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#a71c6a30f010c6ed669e393b59e03f4c4">setSubLabelOffset</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#aff2ac0221da05d3df5632a5f97aefc3f">setSubLabelColor</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> r,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> g,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> b);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a>&amp; <a class="code" href="../../da/db4/class_screen_button_extended.htm#a04c064caf1b957754fb3821181592503">setSubLabelColorHover</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> a,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> r,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> g,<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> b);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; getLabelObject();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>&amp; getSubLabelObject();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db4/class_screen_button_extended.htm#a6c8988ee2ea7e901c2326db262358c5c">onHover</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db4/class_screen_button_extended.htm#a65adee0476641075471b5c5efd813e9f">onOut</a>();</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db4/class_screen_button_extended.htm#a64944042ffb1eea598c464c5b872a314">propagateScreenSize</a>();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db4/class_screen_button_extended.htm#a9485104e1bc86d71f8d2b0b5d63d1b29">propagateScreenPosition</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db4/class_screen_button_extended.htm#a5507c6f38b5626a093a0da8a123ec5d6">propagateDisplay</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/db4/class_screen_button_extended.htm#a1880ead01529c52471ccf15f9c588ba4">setZIndex</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_screen_button_extended_htm_a805d21ec33b04661c1670b6dbb440a5c"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a805d21ec33b04661c1670b6dbb440a5c">ScreenButtonExtended::setLabel</a></div><div class="ttdeci">ScreenButtonExtended &amp; setLabel(std::string string)</div><div class="ttdoc">Define o texto principal do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00079">ScreenButtonExtended.cpp:79</a></div></div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="class_screen_button_htm"><div class="ttname"><a href="../../d6/d58/class_screen_button.htm">ScreenButton</a></div><div class="ttdoc">Classe abstrata que é modelo para os demais tipos de botões. </div><div class="ttdef"><b>Definition:</b> <a href="../../dd/d5d/_screen_button_8hpp_source.htm#l00020">ScreenButton.hpp:20</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a75806dd7900997e4316b219d72baf1e0"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a75806dd7900997e4316b219d72baf1e0">ScreenButtonExtended::setLabelOffset</a></div><div class="ttdeci">ScreenButtonExtended &amp; setLabelOffset(int x, int y)</div><div class="ttdoc">Define o offset do texto principal em relação ao canto superior esquerdo do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00084">ScreenButtonExtended.cpp:84</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a71c6a30f010c6ed669e393b59e03f4c4"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a71c6a30f010c6ed669e393b59e03f4c4">ScreenButtonExtended::setSubLabelOffset</a></div><div class="ttdeci">ScreenButtonExtended &amp; setSubLabelOffset(int x, int y)</div><div class="ttdoc">Define o offset do texto secundário em relação ao canto superior esquerdo do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00110">ScreenButtonExtended.cpp:110</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a0ec79e4cc4a26aaec58d60fdd1b90022"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a0ec79e4cc4a26aaec58d60fdd1b90022">ScreenButtonExtended::setSubLabel</a></div><div class="ttdeci">ScreenButtonExtended &amp; setSubLabel(std::string string)</div><div class="ttdoc">Define o texto secundário do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00105">ScreenButtonExtended.cpp:105</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a04c064caf1b957754fb3821181592503"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a04c064caf1b957754fb3821181592503">ScreenButtonExtended::setSubLabelColorHover</a></div><div class="ttdeci">ScreenButtonExtended &amp; setSubLabelColorHover(unsigned char a, unsigned char r, unsigned char g, unsigned char b)</div><div class="ttdoc">Define a cor do texto secundário quando o mouse estiver sobre o botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00122">ScreenButtonExtended.cpp:122</a></div></div>
+<div class="ttc" id="class_screen_text_htm"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm">ScreenText</a></div><div class="ttdoc">Objeto primitivo para um texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/_screen_text_8hpp_source.htm#l00027">ScreenText.hpp:27</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a5507c6f38b5626a093a0da8a123ec5d6"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a5507c6f38b5626a093a0da8a123ec5d6">ScreenButtonExtended::propagateDisplay</a></div><div class="ttdeci">void propagateDisplay()</div><div class="ttdoc">Função executada sempre que o display do botão for alterado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00227">ScreenButtonExtended.cpp:227</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a1880ead01529c52471ccf15f9c588ba4"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a1880ead01529c52471ccf15f9c588ba4">ScreenButtonExtended::setZIndex</a></div><div class="ttdeci">void setZIndex(int)</div><div class="ttdoc">Altera o index dos elementos do botão no ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00268">ScreenButtonExtended.cpp:268</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a936f8909f5e18789cd141525adbe2659"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a936f8909f5e18789cd141525adbe2659">ScreenButtonExtended::setLabelColorHover</a></div><div class="ttdeci">ScreenButtonExtended &amp; setLabelColorHover(unsigned char a, unsigned char r, unsigned char g, unsigned char b)</div><div class="ttdoc">Define a cor do texto principal quando o mouse estiver sobre o botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00096">ScreenButtonExtended.cpp:96</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm">ScreenButtonExtended</a></div><div class="ttdoc">Implementação de um botão com suporte a dois labels (vide botão de seleção de nível) ...</div><div class="ttdef"><b>Definition:</b> <a href="../../da/d01/_screen_button_extended_8hpp_source.htm#l00034">ScreenButtonExtended.hpp:34</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a65adee0476641075471b5c5efd813e9f"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a65adee0476641075471b5c5efd813e9f">ScreenButtonExtended::onOut</a></div><div class="ttdeci">void onOut()</div><div class="ttdoc">Função automaticamente executada quando o mouse sair de cima do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00144">ScreenButtonExtended.cpp:144</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_aff2ac0221da05d3df5632a5f97aefc3f"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#aff2ac0221da05d3df5632a5f97aefc3f">ScreenButtonExtended::setSubLabelColor</a></div><div class="ttdeci">ScreenButtonExtended &amp; setSubLabelColor(unsigned char a, unsigned char r, unsigned char g, unsigned char b)</div><div class="ttdoc">Define a cor do texto secundário normal. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00117">ScreenButtonExtended.cpp:117</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a6c8988ee2ea7e901c2326db262358c5c"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a6c8988ee2ea7e901c2326db262358c5c">ScreenButtonExtended::onHover</a></div><div class="ttdeci">void onHover()</div><div class="ttdoc">Função automaticamente executada quando o mouse estiver sobre a região do botão. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00137">ScreenButtonExtended.cpp:137</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a9485104e1bc86d71f8d2b0b5d63d1b29"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a9485104e1bc86d71f8d2b0b5d63d1b29">ScreenButtonExtended::propagateScreenPosition</a></div><div class="ttdeci">void propagateScreenPosition()</div><div class="ttdoc">Função executada sempre que a posição do botão for alterado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00223">ScreenButtonExtended.cpp:223</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_a64944042ffb1eea598c464c5b872a314"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#a64944042ffb1eea598c464c5b872a314">ScreenButtonExtended::propagateScreenSize</a></div><div class="ttdeci">void propagateScreenSize()</div><div class="ttdoc">Função executada sempre que o tamanho do botão for alterado. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00215">ScreenButtonExtended.cpp:215</a></div></div>
+<div class="ttc" id="class_screen_button_extended_htm_ae9ede6dda82745a3235f49f44611bbc4"><div class="ttname"><a href="../../da/db4/class_screen_button_extended.htm#ae9ede6dda82745a3235f49f44611bbc4">ScreenButtonExtended::setLabelColor</a></div><div class="ttdeci">ScreenButtonExtended &amp; setLabelColor(unsigned char a, unsigned char r, unsigned char g, unsigned char b)</div><div class="ttdoc">Define a cor do texto principal normal. </div><div class="ttdef"><b>Definition:</b> <a href="../../d2/df4/_screen_button_extended_8cpp_source.htm#l00091">ScreenButtonExtended.cpp:91</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:10 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

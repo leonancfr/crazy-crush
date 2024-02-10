@@ -1,0 +1,6 @@
+<map id="MorphTimer::getScreenRect" name="MorphTimer::getScreenRect">
+<area shape="rect" id="node2" href="$de/d2f/class_animator_object.htm#a8d164b4019c380fa8fa8c67b5ece1193" title="Função assíncrona para obter a coordenada X do objeto na tela. " alt="" coords="237,5,416,47"/>
+<area shape="rect" id="node3" href="$de/d2f/class_animator_object.htm#af2f65aa52ad9fb71942af715a038c3f6" title="Função assíncrona para obter a coordenada Y do objeto na tela. " alt="" coords="237,71,416,112"/>
+<area shape="rect" id="node4" href="$de/d2f/class_animator_object.htm#aae166026379fa67457cf89c4b9f037b4" title="Função assíncrona para obter a largura do objeto na tela. " alt="" coords="237,136,416,177"/>
+<area shape="rect" id="node5" href="$de/d2f/class_animator_object.htm#a8cf0b253b3503774f7a0992225c90a51" title="Função assíncrona para obter a altura do objeto na tela. " alt="" coords="237,201,416,243"/>
+</map>

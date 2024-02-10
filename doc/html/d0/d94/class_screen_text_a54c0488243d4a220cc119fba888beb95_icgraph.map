@@ -1,0 +1,8 @@
+<map id="ScreenText::getScreenWidth" name="ScreenText::getScreenWidth">
+<area shape="rect" id="node2" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#ad0bc36914e52ccb366b9d2780f5e3002" title="Exibe a tela de quando se ganha um nível. " alt="" coords="243,13,452,54"/>
+<area shape="rect" id="node4" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#a00c71ca5c45b3d9a95cf779161cf0301" title="Exibe a tela de quando o tempo acaba no modo TimaAttak. " alt="" coords="243,78,452,119"/>
+<area shape="rect" id="node3" href="$d6/d67/class_crazy_crush_1_1_game_1_1_control_1_1_callback_show_game_end_dialog.htm#a203aaf350fa9147e863acfbb42b528f6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="500,5,707,61"/>
+<area shape="rect" id="node5" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a5915ced50490ec68db1effe5a0a1f773" title="Executa as tarefas relacionadas ao perder uma fase. " alt="" coords="512,86,695,127"/>
+<area shape="rect" id="node6" href="$d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a2a0de1fe7e2b2d30d081e4e043b1b4d2" title="Atualiza a largura da barra em relação ao tempo. " alt="" coords="755,86,944,127"/>
+<area shape="rect" id="node7" href="$d1/daa/class_update_time_bar.htm#ac18b0c8e7e4ab4f516f31d5aafbdbcce" title="Função para processamento no tempo para a classe. " alt="" coords="992,93,1185,120"/>
+</map>

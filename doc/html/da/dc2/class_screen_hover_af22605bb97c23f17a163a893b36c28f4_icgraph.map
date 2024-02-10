@@ -1,0 +1,5 @@
+<map id="ScreenHover::mouseClick" name="ScreenHover::mouseClick">
+<area shape="rect" id="node2" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#a54438d6a870e0cae48f9d7ee743c9999" title="Executa o evento OnClick do primeiro ScreenHover da lista que estiver ativo e cuja área delimitada ab..." alt="" coords="224,5,416,47"/>
+<area shape="rect" id="node3" href="$df/d68/namespace_crazy_crush_1_1_thread_process_mouse.htm#ad305585d25a44c65c013b59e6a364755" title="Thread de processamento do Mouse. " alt="" coords="464,5,649,47"/>
+<area shape="rect" id="node4" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#aaa61ffd25c624f1af28f46539e621a89" title="Inicia a thread que processa o mouse. " alt="" coords="697,5,840,47"/>
+</map>

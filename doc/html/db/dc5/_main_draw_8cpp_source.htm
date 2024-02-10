@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/MainDraw.cpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MainDraw.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Polit�cnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletr�nica e Computa��o</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programa��o</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan Fran�a    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;MainDraw.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/IFileSystem.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/IReadFile.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Logger.hpp&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;ScreenObject.hpp&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;ScreenText.hpp&quot;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;ZOrder.hpp&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;pthread.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;queue&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span>CrazyCrush {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">   26</a></span>&#160;irr::IrrlichtDevice* <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">device</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">   27</a></span>&#160;irr::video::IVideoDriver *<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">driver</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">   28</a></span>&#160;<a class="code" href="../../d6/d75/class_my_event_receiver.htm">MyEventReceiver</a> <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">event</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;bool&gt;</a> <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf58f7e471dcf4a3e35b4659eb21a3e6">shutdownGame</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="../../de/d7f/class_protected.htm">Protected&lt;bool&gt;</a> <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aa48faf15b4fa34e777a5c0bd6f200102">externalRead</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<a class="code" href="../../de/d2f/class_animator_object.htm">AnimatorObject</a>* lObj;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../dd/dae/namespace_crazy_crush.htm#afcd2db0eb3dc31d767b2f461db5962e0">   33</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#afcd2db0eb3dc31d767b2f461db5962e0">draw</a>(){</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">driver</a>-&gt;beginScene(<span class="keyword">true</span>, <span class="keyword">true</span>, irr::video::SColor(255,0,0,0));</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">driver</a>-&gt;enableMaterial2D(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a>.begin();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">while</span>((lObj = <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a>.next()) != NULL){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span>(lObj-&gt;<a class="code" href="../../de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0">getType</a>() == AnimatorObject::typeScreenObject){</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordflow">if</span>(lObj-&gt;<a class="code" href="../../de/d2f/class_animator_object.htm#a62b59872aef49e6ba5d42710a473ea2d">getDisplay</a>()){</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">driver</a>-&gt;draw2DImage(</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          ((<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>*)lObj)-&gt;getTexture(),</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          ((<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>*)lObj)-&gt;getScreenRect(),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          ((<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>*)lObj)-&gt;getResourceRect(),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          0,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          ((<a class="code" href="../../da/db9/class_screen_object.htm">ScreenObject</a>*)lObj)-&gt;getImageColor(),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          <span class="keyword">true</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        );</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }<span class="keywordflow">else</span> <span class="keywordflow">if</span>(lObj-&gt;<a class="code" href="../../de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0">getType</a>() == AnimatorObject::typeScreenText){</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">if</span>(lObj-&gt;<a class="code" href="../../de/d2f/class_animator_object.htm#a62b59872aef49e6ba5d42710a473ea2d">getDisplay</a>()){</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="comment">//std::cout &lt;&lt; &quot;Text: &quot;&lt;&lt;lObj&lt;&lt;&quot;  &quot;&lt;&lt;((ScreenText*)lObj)-&gt;getScreenPositionY()&lt;&lt;std::endl;</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ((<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>*)lObj)-&gt;getFont()-&gt;draw(</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          ((<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>*)lObj)-&gt;getString().c_str(),</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;          ((<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>*)lObj)-&gt;getScreenRect(),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          ((<a class="code" href="../../d0/d94/class_screen_text.htm">ScreenText</a>*)lObj)-&gt;getSColor()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        );</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">driver</a>-&gt;enableMaterial2D(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">driver</a>-&gt;endScene();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../df/dbd/struct_crazy_crush_1_1_data_access.htm">   65</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  std::string filename;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">char</span>* pnt;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">unsigned</span> len;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">bool</span> success;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  pthread_cond_t*  tCond;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  pthread_mutex_t* tMutex;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;} <a class="code" href="../../df/dbd/struct_crazy_crush_1_1_data_access.htm">DataAccess</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;pthread_mutex_t queueMutex = PTHREAD_MUTEX_INITIALIZER;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;std::queue&lt;DataAccess*&gt; FileReadQueue;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment">/*  Old</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="comment">bool readWithWait(std::string file,char* p,const unsigned len){</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">  DataAccess t;</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment">  t.filename = file;</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment">  t.pnt = p;</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">  t.len = len;</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment">  t.tMutex = new pthread_mutex_t;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="comment">  t.tCond = new pthread_cond_t;</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">  if(pthread_mutex_init(t.tMutex,NULL)!=0){</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">    LOG_ERROR(&quot;Thread: Failed to initialize pthread mutex.&quot;);</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment">    return false;</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="comment">  }</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment">  if(pthread_cond_init(t.tCond,NULL)!=0){</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="comment">    LOG_ERROR(&quot;Thread: Failed to initialize pthread condition.&quot;);</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="comment">    return false;</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="comment">  }</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">  pthread_mutex_lock(&amp;queueMutex);</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">  FileReadQueue.push(&amp;t);</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="comment">  </span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment">  pthread_mutex_lock(t.tMutex);</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">  pthread_mutex_unlock(&amp;queueMutex);</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">  externalRead.set(true);</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="comment">  pthread_cond_wait(t.tCond,t.tMutex);</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">  pthread_mutex_unlock(t.tMutex);</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment">  return t.success;</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">}</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="../../dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9">  105</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9">readWithWait</a>(std::string file,<span class="keywordtype">char</span>*&amp; p,<span class="keywordtype">unsigned</span>&amp; len){</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="../../df/dbd/struct_crazy_crush_1_1_data_access.htm">DataAccess</a> t;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordtype">bool</span> alocate = (p==NULL);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  t.filename = file;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  t.pnt = p;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  t.len = len;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  t.tMutex = <span class="keyword">new</span> pthread_mutex_t;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  t.tCond = <span class="keyword">new</span> pthread_cond_t;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span>(pthread_mutex_init(t.tMutex,NULL)!=0){</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Thread: Failed to initialize pthread mutex.&quot;</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  <span class="keywordflow">if</span>(pthread_cond_init(t.tCond,NULL)!=0){</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    LOG_ERROR(<span class="stringliteral">&quot;Thread: Failed to initialize pthread condition.&quot;</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  }</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  pthread_mutex_lock(&amp;queueMutex);</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  FileReadQueue.push(&amp;t);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  pthread_mutex_lock(t.tMutex);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  pthread_mutex_unlock(&amp;queueMutex);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aa48faf15b4fa34e777a5c0bd6f200102">externalRead</a>.<a class="code" href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">set</a>(<span class="keyword">true</span>);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  pthread_cond_wait(t.tCond,t.tMutex);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  pthread_mutex_unlock(t.tMutex);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <span class="keywordflow">if</span>(alocate){</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    p = t.pnt;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    len = t.len;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  <span class="keywordflow">return</span> t.success;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="../../dd/dae/namespace_crazy_crush.htm#a7ffea452030c8ebd50a851af5abbb100">  136</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#a7ffea452030c8ebd50a851af5abbb100">irrlicht_thread_read_file</a>(){</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aa48faf15b4fa34e777a5c0bd6f200102">externalRead</a>.<a class="code" href="../../de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917">get</a>())</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <a class="code" href="../../df/dbd/struct_crazy_crush_1_1_data_access.htm">DataAccess</a> *t;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  pthread_mutex_lock(&amp;queueMutex);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordflow">if</span>(FileReadQueue.size() == 0){</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aa48faf15b4fa34e777a5c0bd6f200102">externalRead</a>.<a class="code" href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">set</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    pthread_mutex_unlock(&amp;queueMutex);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  t = FileReadQueue.front();</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  FileReadQueue.pop();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">if</span>(FileReadQueue.size() == 0)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aa48faf15b4fa34e777a5c0bd6f200102">externalRead</a>.<a class="code" href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">set</a>(<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  pthread_mutex_unlock(&amp;queueMutex);</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  irr::io::IFileSystem* fSys = <a class="code" href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">device</a>-&gt;getFileSystem();</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  irr::io::IReadFile* fRead = fSys-&gt;createAndOpenFile(t-&gt;filename.c_str());</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keywordflow">if</span>(fRead == NULL){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    std::stringstream SS;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    SS &lt;&lt; <span class="stringliteral">&quot;CrazyError: Unable to open file &#39;&quot;</span> &lt;&lt; t-&gt;filename &lt;&lt; <span class="stringliteral">&quot;&#39;&quot;</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    LOG_ERROR(SS.str().c_str());</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    t-&gt;success = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">if</span>(t-&gt;pnt == NULL){</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      <span class="keywordflow">if</span>(t-&gt;len == 0){</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        t-&gt;len = fRead-&gt;getSize();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      t-&gt;pnt = <span class="keyword">new</span> <span class="keywordtype">char</span>[t-&gt;len];</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">int</span> readed = fRead-&gt;read((<span class="keywordtype">void</span>*)t-&gt;pnt,t-&gt;len);</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">if</span>(readed == (<span class="keywordtype">int</span>)t-&gt;len){</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      t-&gt;success = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    }<span class="keywordflow">else</span>{</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      std::stringstream SS;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      SS &lt;&lt; <span class="stringliteral">&quot;CrazyError: Readed &quot;</span>&lt;&lt;readed&lt;&lt;<span class="stringliteral">&quot; where is isperated &quot;</span>&lt;&lt;t-&gt;len;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      LOG_ERROR(SS.str().c_str());</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      t-&gt;success = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  pthread_mutex_lock(t-&gt;tMutex);</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  pthread_cond_broadcast(t-&gt;tCond);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  pthread_mutex_unlock(t-&gt;tMutex);</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;}</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;}</div>
+<div class="ttc" id="namespace_crazy_crush_htm_ad87927aa6650b80d82a440ac404c5449"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#ad87927aa6650b80d82a440ac404c5449">CrazyCrush::driver</a></div><div class="ttdeci">irr::video::IVideoDriver * driver</div><div class="ttdoc">Driver usado pela engine gráfica. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00027">MainDraw.cpp:27</a></div></div>
+<div class="ttc" id="class_screen_object_htm"><div class="ttname"><a href="../../da/db9/class_screen_object.htm">ScreenObject</a></div><div class="ttdoc">Objeto primitivo para um Sprite. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/de9/_screen_object_8hpp_source.htm#l00035">ScreenObject.hpp:35</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a26fd9e4f552f58611f909d87802c2f19"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a26fd9e4f552f58611f909d87802c2f19">CrazyCrush::z_order</a></div><div class="ttdeci">ZOrder&lt; AnimatorObject * &gt; z_order</div><div class="ttdoc">Instancia global do ZOrder. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/d5b/_z_order_8cpp_source.htm#l00015">ZOrder.cpp:15</a></div></div>
+<div class="ttc" id="class_animator_object_htm_a62b59872aef49e6ba5d42710a473ea2d"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a62b59872aef49e6ba5d42710a473ea2d">AnimatorObject::getDisplay</a></div><div class="ttdeci">virtual bool getDisplay()=0</div><div class="ttdoc">Função assíncrona para saber se o elemento está visível na tela. </div></div>
+<div class="ttc" id="class_animator_object_htm"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm">AnimatorObject</a></div><div class="ttdoc">Classe abstrata que é base para os elementos da tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8c/_animator_object_8hpp_source.htm#l00026">AnimatorObject.hpp:26</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_aaf58f7e471dcf4a3e35b4659eb21a3e6"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#aaf58f7e471dcf4a3e35b4659eb21a3e6">CrazyCrush::shutdownGame</a></div><div class="ttdeci">Protected&lt; bool &gt; shutdownGame(false)</div><div class="ttdoc">Trigger para encerrar o jogo. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_main_draw_8hpp_source.htm#l00031">MainDraw.hpp:31</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a8f9d2e97b9e04292b70d413d289f6aa9"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9">CrazyCrush::readWithWait</a></div><div class="ttdeci">bool readWithWait(std::string file, char *&amp;p, unsigned &amp;len)</div><div class="ttdoc">Lê um arquivo do .ZIP da engine. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00105">MainDraw.cpp:105</a></div></div>
+<div class="ttc" id="class_screen_text_htm"><div class="ttname"><a href="../../d0/d94/class_screen_text.htm">ScreenText</a></div><div class="ttdoc">Objeto primitivo para um texto. </div><div class="ttdef"><b>Definition:</b> <a href="../../d1/dd0/_screen_text_8hpp_source.htm#l00027">ScreenText.hpp:27</a></div></div>
+<div class="ttc" id="class_protected_htm_a9d7dbfb640d9701481c55a107a445354"><div class="ttname"><a href="../../de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354">Protected::set</a></div><div class="ttdeci">void set(T value)</div><div class="ttdoc">Atribui um valor a variável. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dcd/_protected_8hpp_source.htm#l00059">Protected.hpp:59</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_aa48faf15b4fa34e777a5c0bd6f200102"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#aa48faf15b4fa34e777a5c0bd6f200102">CrazyCrush::externalRead</a></div><div class="ttdeci">Protected&lt; bool &gt; externalRead(false)</div><div class="ttdoc">Trigger para abrir um arquivo que está dentro do arquivo .ZIP usado pela engine gráfica. </div><div class="ttdef"><b>Definition:</b> <a href="../../d4/d4a/_main_draw_8hpp_source.htm#l00034">MainDraw.hpp:34</a></div></div>
+<div class="ttc" id="struct_crazy_crush_1_1_data_access_htm"><div class="ttname"><a href="../../df/dbd/struct_crazy_crush_1_1_data_access.htm">CrazyCrush::DataAccess</a></div><div class="ttdoc">Estrutura para leitura de arquivo pela engine. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00065">MainDraw.cpp:65</a></div></div>
+<div class="ttc" id="class_protected_htm_a7d589984ca87b788e496288b556b5917"><div class="ttname"><a href="../../de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917">Protected::get</a></div><div class="ttdeci">T get()</div><div class="ttdoc">Obtém o valor da variável. </div><div class="ttdef"><b>Definition:</b> <a href="../../df/dcd/_protected_8hpp_source.htm#l00050">Protected.hpp:50</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a7ffea452030c8ebd50a851af5abbb100"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a7ffea452030c8ebd50a851af5abbb100">CrazyCrush::irrlicht_thread_read_file</a></div><div class="ttdeci">void irrlicht_thread_read_file()</div><div class="ttdoc">Função usada para processar as requisições de leitura de arquivo. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00136">MainDraw.cpp:136</a></div></div>
+<div class="ttc" id="class_protected_htm"><div class="ttname"><a href="../../de/d7f/class_protected.htm">Protected&lt; bool &gt;</a></div></div>
+<div class="ttc" id="class_my_event_receiver_htm"><div class="ttname"><a href="../../d6/d75/class_my_event_receiver.htm">MyEventReceiver</a></div><div class="ttdoc">Classe para tratamento dos eventos (mouse, teclado, joystick) gerados pela engine. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dde/_event_receiver_8hpp_source.htm#l00020">EventReceiver.hpp:20</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_aaf9910f600723248ac22f724f6ee871f"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#aaf9910f600723248ac22f724f6ee871f">CrazyCrush::device</a></div><div class="ttdeci">irr::IrrlichtDevice * device</div><div class="ttdoc">Dispositivo usado pela engine gráfica. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00026">MainDraw.cpp:26</a></div></div>
+<div class="ttc" id="class_animator_object_htm_a6be7da8b272fdfff923c1c553ff5bad0"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0">AnimatorObject::getType</a></div><div class="ttdeci">virtual unsigned char getType()=0</div><div class="ttdoc">Retorna o tipo da classe. </div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_a77c7c7c197578855f17a0c92df1fe72f"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#a77c7c7c197578855f17a0c92df1fe72f">CrazyCrush::event</a></div><div class="ttdeci">MyEventReceiver event</div><div class="ttdoc">Instância global para o gerenciador de eventos. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00028">MainDraw.cpp:28</a></div></div>
+<div class="ttc" id="namespace_crazy_crush_htm_afcd2db0eb3dc31d767b2f461db5962e0"><div class="ttname"><a href="../../dd/dae/namespace_crazy_crush.htm#afcd2db0eb3dc31d767b2f461db5962e0">CrazyCrush::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">Função principal que exibe todos elementos do ZOrder na tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../db/dc5/_main_draw_8cpp_source.htm#l00033">MainDraw.cpp:33</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:09 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

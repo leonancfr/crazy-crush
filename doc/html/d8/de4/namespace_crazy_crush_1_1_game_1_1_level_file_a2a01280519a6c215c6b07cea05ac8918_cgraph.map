@@ -1,0 +1,8 @@
+<map id="CrazyCrush::Game::LevelFile::openLevelText" name="CrazyCrush::Game::LevelFile::openLevelText">
+<area shape="rect" id="node2" href="$d9/d0c/namespacecommon.htm#af5b1ed36a8ad4a1e3c0118f2c41214c3" title="Converte uma string num double. " alt="" coords="258,5,413,32"/>
+<area shape="rect" id="node3" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#ae50dfd1145e5a20a3bafb5b97d66a0d7" title="Define o tempo máximo da fase atual. " alt="" coords="244,57,427,98"/>
+<area shape="rect" id="node4" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8" title="Zera a matriz. " alt="" coords="246,122,425,163"/>
+<area shape="rect" id="node6" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#a05edf6265bb21d6100c016d4978a47f2" title="Define um valor para um ponto na matriz. " alt="" coords="246,187,425,229"/>
+<area shape="rect" id="node5" href="$d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455" title="Obtém o elemento dados os índices. " alt="" coords="488,137,565,164"/>
+<area shape="rect" id="node7" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="475,195,579,221"/>
+</map>

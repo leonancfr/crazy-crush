@@ -1,0 +1,4 @@
+<map id="ScreenButton::aSetScreenPosition" name="ScreenButton::aSetScreenPosition">
+<area shape="rect" id="node2" href="$d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f" title="Define a posição que o botão ocupará na tela. " alt="" coords="231,13,445,39"/>
+<area shape="rect" id="node3" href="$d6/d58/class_screen_button.htm#ae78f2725728e1414fd1cdef464b2df3a" title="Função executada sempre que a posição do botão for alterado. " alt="" coords="493,5,700,47"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="CrazyCrush::Game::Save::setLevelPoint" name="CrazyCrush::Game::Save::setLevelPoint">
+<area shape="rect" id="node2" href="$d2/d32/namespace_crazy_crush_1_1_game_1_1_post_screen.htm#ad0bc36914e52ccb366b9d2780f5e3002" title="Exibe a tela de quando se ganha um nível. " alt="" coords="223,13,432,54"/>
+<area shape="rect" id="node3" href="$d6/d67/class_crazy_crush_1_1_game_1_1_control_1_1_callback_show_game_end_dialog.htm#a203aaf350fa9147e863acfbb42b528f6" title="Função a ser implementada pelas classes herdadas. " alt="" coords="480,5,687,61"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="ScreenObject::resetSpriteAnimation" name="ScreenObject::resetSpriteAnimation">
+<area shape="rect" id="node2" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#af979b646f2c5ccff485e40ae96bb9071" title="Reinicia a dica. " alt="" coords="237,45,420,71"/>
+<area shape="rect" id="node8" href="$da/dc0/class_crazy_crush_1_1_game_1_1_how_to_play_1_1_callback_animation_page1.htm#aeec423c71674b1d05ee700b01777c750" title="Função a ser implementada pelas classes herdadas. " alt="" coords="225,95,432,151"/>
+<area shape="rect" id="node9" href="$d7/df9/class_crazy_crush_1_1_game_1_1_how_to_play_1_1_callback_animation_page2_loop.htm#af705f3400323e506e15307c04747e06b" title="Função a ser implementada pelas classes herdadas. " alt="" coords="225,175,432,231"/>
+<area shape="rect" id="node10" href="$d7/dc0/class_crazy_crush_1_1_game_1_1_how_to_play_1_1_callback_animation_page3_loop.htm#a585d2184392d7cd88124c54981e615c7" title="Função a ser implementada pelas classes herdadas. " alt="" coords="225,255,432,311"/>
+<area shape="rect" id="node11" href="$de/d49/class_crazy_crush_1_1_game_1_1_how_to_play_1_1_callback_animation_page4_loop.htm#ad68a5e5a2213b17a5cee560ace5e9e08" title="Função a ser implementada pelas classes herdadas. " alt="" coords="225,335,432,391"/>
+<area shape="rect" id="node12" href="$d4/d39/class_crazy_crush_1_1_game_1_1_how_to_play_1_1_callback_animation_page5.htm#ad0a75b8658762d6c4c30a76469eae064" title="Função a ser implementada pelas classes herdadas. " alt="" coords="225,415,432,471"/>
+<area shape="rect" id="node3" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a16d411280cc6fbc1a34549e6d7740b7a" title="Verifica toda a matriz para saber se alguma peça irá &quot;quebrar&quot;. " alt="" coords="480,71,667,112"/>
+<area shape="rect" id="node7" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a3f32e619f5086f6e822296b367b301ce" title="Verifica se há algum movimento possível. " alt="" coords="487,5,659,47"/>
+<area shape="rect" id="node4" href="$d1/d06/class_callback_after_fall.htm#ac6db53d72df6c285db23d7c04d8d47f3" title="Função a ser implementada pelas classes herdadas. " alt="" coords="719,5,847,47"/>
+<area shape="rect" id="node5" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#ab9bd4a9a8be29e078303737aea624888" title="Thread de processamento no tempo. " alt="" coords="715,71,852,112"/>
+<area shape="rect" id="node6" href="$d4/df3/namespace_crazy_crush_1_1_thread.htm#affa11c846e2b2fff6c703350f96bc407" title="Inicia a thread que processa algumas coisas no tempo. " alt="" coords="900,71,1037,112"/>
+</map>

@@ -1,0 +1,39 @@
+<map id="CrazyCrush::Game::MainScreen::CallbackGamePlayTimeAttackButtonClick::aProcess" name="CrazyCrush::Game::MainScreen::CallbackGamePlayTimeAttackButtonClick::aProcess">
+<area shape="rect" id="node2" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="793,57,975,98"/>
+<area shape="rect" id="node6" href="$d6/db5/namespace_crazy_crush_1_1_game_1_1_time_attack.htm#aaee991f853fe8494efb4380a4ce1272e" title="Inicia o jogo no modo TimeAttack. " alt="" coords="299,253,505,294"/>
+<area shape="rect" id="node37" href="$da/d5e/class_screen_window.htm#addba8c5fed15afdb5c30a2b7364ab651" title="Fecha a janela e seus conteúdos. " alt="" coords="328,620,476,647"/>
+<area shape="rect" id="node3" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="1031,35,1213,77"/>
+<area shape="rect" id="node4" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="1285,47,1463,73"/>
+<area shape="rect" id="node5" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="1560,75,1664,101"/>
+<area shape="rect" id="node7" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#aef96aad21d986413899c0faa8f4e3554" title="Útil para saber se o jogo está rodando (pausado ou ainda não iniciado) " alt="" coords="558,219,741,261"/>
+<area shape="rect" id="node8" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#ae50dfd1145e5a20a3bafb5b97d66a0d7" title="Define o tempo máximo da fase atual. " alt="" coords="558,285,741,326"/>
+<area shape="rect" id="node9" href="$d5/d75/namespace_crazy_crush_1_1_game_1_1_points.htm#ac66764905f9ed26a88f90fa09b9acdd8" title="Zera a matriz. " alt="" coords="560,143,739,185"/>
+<area shape="rect" id="node11" href="$df/d14/namespace_crazy_crush_1_1_game_1_1_control.htm#a76b418eeae84053a6814efa56d7354ab" title="Executa as instruções necessárias para iniciar o jogo. " alt="" coords="558,355,741,397"/>
+<area shape="rect" id="node10" href="$d6/d3f/class_matrix.htm#abaa9af9b23ee648fabba8834ca58c455" title="Obtém o elemento dados os índices. " alt="" coords="845,5,923,32"/>
+<area shape="rect" id="node12" href="$db/d6f/namespace_crazy_crush_1_1_screen_1_1_animation_count.htm#ad8b541347ad96da8d4c1bbf6921aec99" title="Define uma quantidade de pedras em movimento. " alt="" coords="810,473,958,514"/>
+<area shape="rect" id="node13" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#a00539c9826b42f77c445e978631bc93d" title="Preenche toda a matriz de pedras. " alt="" coords="795,589,973,616"/>
+<area shape="rect" id="node17" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="1527,672,1697,699"/>
+<area shape="rect" id="node21" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#ab6519d1765da411bc9602e94f8605135" title="Zera completamente o Score. " alt="" coords="814,122,954,163"/>
+<area shape="rect" id="node23" href="$da/dc2/class_screen_hover.htm#aa3f161d9e9e14283ecc1b65aa3c2ca58" title="Define se a região delimitada pela classe será usada. " alt="" coords="1038,304,1206,331"/>
+<area shape="rect" id="node27" href="$da/dc2/class_screen_hover.htm#a61ee8ac449ee43b2fb4731d64723a07f" title="Suspende o estado atual. " alt="" coords="1298,253,1450,280"/>
+<area shape="rect" id="node28" href="$d0/d55/namespace_crazy_crush_1_1_score.htm#a3620a4d0390456c39b8b6deb9fdf0601" title="Exibe os elementos do Score na tela. " alt="" coords="799,539,969,565"/>
+<area shape="rect" id="node30" href="$d1/dd0/namespace_crazy_crush_1_1_game_1_1_time_bar.htm#a230739d80760fcf660a7389a4f7b193f" title="Exibe a barra de progresso na tela. " alt="" coords="1027,778,1217,819"/>
+<area shape="rect" id="node31" href="$dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#afff8d9772d513d2e7f33fb0c7f8cc861" title="Exibe o botão na tela. " alt="" coords="795,355,973,397"/>
+<area shape="rect" id="node34" href="$dd/d5c/namespace_crazy_crush_1_1_game_1_1_pause_1_1_button.htm#a88d8af11679ee6b63d8a2070f71421f9" title="Suspende o evento do botão (ver mais em ScreenHoverList) " alt="" coords="795,187,973,229"/>
+<area shape="rect" id="node36" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#ab655693f740d4b3626f45b84474383e5" title="Pára um stream de áudio. " alt="" coords="793,691,975,733"/>
+<area shape="rect" id="node14" href="$d5/dbe/namespace_crazy_crush_1_1core.htm#ab4c1d339e570f0f9b4aa8e37a6431bd5" title="Se houve colisão, processa o caimento das pedras. " alt="" coords="1023,640,1221,667"/>
+<area shape="rect" id="node15" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a9a61539a8ccba621da69ce548cd82691" title="Converte um índice da matriz para uma posição na tela. " alt="" coords="1297,730,1451,771"/>
+<area shape="rect" id="node16" href="$d9/d0d/namespace_crazy_crush_1_1_screen.htm#a1ac04e859d7d96e99a8952d7bdd77dde" title="Desseleciona quaisquer bloco que esteja selecionado. " alt="" coords="1305,665,1443,706"/>
+<area shape="rect" id="node18" href="$dd/d83/class_morph_linear.htm#ad706f1ac190e905f7654bece686ab478" title="Define a posição final da transição do objeto. " alt="" coords="1277,796,1471,823"/>
+<area shape="rect" id="node19" href="$dd/d83/class_morph_linear.htm#adafd7ca7f4bd2c942950c2f893d1d007" title="Define a velocidade do movimento do objeto. " alt="" coords="1291,548,1457,575"/>
+<area shape="rect" id="node20" href="$db/d6f/namespace_crazy_crush_1_1_screen_1_1_animation_count.htm#aca0578c1914acff3715bb3587574d939" title="Incrementa a contagem em uma unidade. " alt="" coords="1285,599,1463,641"/>
+<area shape="rect" id="node22" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="1048,152,1196,179"/>
+<area shape="rect" id="node24" href="$da/dc2/class_screen_hover.htm#a4b6702a9e6f8c60070abd02d9e714c36" title="Processa o Callback associado ao evento OnOut. " alt="" coords="1531,279,1693,305"/>
+<area shape="rect" id="node25" href="$d1/dd4/class_callback.htm#af1051d87929e76c60a04cf81e7458b3a" title="Função &quot;única&quot; da classe. " alt="" coords="1745,279,1872,305"/>
+<area shape="rect" id="node26" href="$d1/dd4/class_callback.htm#a3a8c0c16517e1467bf973928b2d9356b" title="Função a ser implementada pelas classes herdadas. " alt="" coords="1920,279,2055,305"/>
+<area shape="rect" id="node29" href="$d0/d94/class_screen_text.htm#a2e782926094d317cb916eb219ebc7941" title="Define se o texto será exibido na tela. " alt="" coords="1043,472,1201,499"/>
+<area shape="rect" id="node32" href="$d6/d58/class_screen_button.htm#a3e1c03b489f6dbe6f6d6ce5cf4aacbcf" title="Define se o botão será exibido ou não. " alt="" coords="1037,363,1207,389"/>
+<area shape="rect" id="node33" href="$d6/d58/class_screen_button.htm#a2c65098f1c57adf7e61c25de6cf2cabe" title="Função executada sempre que o display do botão for alterado. " alt="" coords="1269,363,1479,389"/>
+<area shape="rect" id="node35" href="$d6/d58/class_screen_button.htm#a961a3e67dbf733fd14ea5361cc24f167" title="Suspende o efeito Hover (ver mais em ScreenHover::suspend()) " alt="" coords="1027,203,1217,229"/>
+<area shape="rect" id="node38" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#a6e700f347751921b7228a59239777715" title="Executa a função resume() de todos os ScreenHover da lista. " alt="" coords="553,613,745,654"/>
+</map>

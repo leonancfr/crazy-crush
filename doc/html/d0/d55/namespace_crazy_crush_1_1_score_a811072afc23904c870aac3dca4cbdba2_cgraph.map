@@ -1,0 +1,5 @@
+<map id="CrazyCrush::Score::increase" name="CrazyCrush::Score::increase">
+<area shape="rect" id="node2" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="215,5,319,32"/>
+<area shape="rect" id="node3" href="$de/d7f/class_protected.htm#a7d589984ca87b788e496288b556b5917" title="Obtém o valor da variável. " alt="" coords="215,56,319,83"/>
+<area shape="rect" id="node4" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="193,107,341,133"/>
+</map>

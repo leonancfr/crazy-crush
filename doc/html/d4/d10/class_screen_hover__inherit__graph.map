@@ -1,0 +1,4 @@
+<map id="ScreenHover" name="ScreenHover">
+<area shape="rect" id="node2" href="$dd/d84/class_screen_hover_circle.htm" title="Extensão da ScreenHover cuja região delimitada é uma circunferência. " alt="" coords="5,80,133,107"/>
+<area shape="rect" id="node3" href="$d9/de0/class_screen_hover_rect.htm" title="Extensão da ScreenHover cuja região delimitada é um retângulo. " alt="" coords="157,80,280,107"/>
+</map>

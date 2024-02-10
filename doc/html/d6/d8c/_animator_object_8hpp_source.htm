@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>CrazyCrush: Código-Fonte de src/AnimatorObject.hpp</title>
+<link href="../../tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../jquery.js"></script>
+<script type="text/javascript" src="../../dynsections.js"></script>
+<link href="../../search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../../search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CrazyCrush
+   &#160;<span id="projectnumber">1.0.7</span>
+   </div>
+   <div id="projectbrief">Um simples jogo</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../../search",false,'Busca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="../../index.htm"><span>Página&#160;Principal</span></a></li>
+      <li><a href="../../namespaces.htm"><span>Namespaces</span></a></li>
+      <li><a href="../../annotated.htm"><span>Classes</span></a></li>
+      <li class="current"><a href="../../files.htm"><span>Arquivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="../../search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Busca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../../search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="../../files.htm"><span>Lista&#160;de&#160;Arquivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funções</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variáveis</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.htm">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">AnimatorObject.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Universidade Federal do Rio de Janeiro</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * Escola Politécnica</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * Departamento de Eletrônica e Computação</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Prof. Fernando Silva</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> * EEL 670 - Linguagem de Programação</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Authors: Daniel Dahis     (dahisdaniel@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *          Leonan França    (leonancfr@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *          Gustavo Silva    (diguser@gmail.com)</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *          Michael Douglas  (michaeldouglas@poli.ufrj.br)</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef _ANIMATOR_OBJECT_HPP_</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define _ANIMATOR_OBJECT_HPP_ 1</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/irrTypes.h&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/rect.h&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;Irrlicht/SColor.h&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../de/d2f/class_animator_object.htm">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../de/d2f/class_animator_object.htm">AnimatorObject</a> {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">enum</span> { typeScreenObject, typeScreenText, typeScreenButton };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> <a class="code" href="../../de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0">getType</a>()=0;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/d2f/class_animator_object.htm#a9d3b231e4b24399d41daa86077f62608">processTime</a>(irr::u32 time)=0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../de/d2f/class_animator_object.htm#a6e73df4a5badbe084f15567ecfe30a53">   44</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../de/d2f/class_animator_object.htm#a6e73df4a5badbe084f15567ecfe30a53">~AnimatorObject</a>(){};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/d2f/class_animator_object.htm#a6a6574dce9c78a13ee641084421aecef">aSetDisplay</a>(<span class="keywordtype">bool</span> value)=0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/d2f/class_animator_object.htm#a3e6ada0bb13e367c1efb19f61b87bc3d">aSetScreenSize</a>(<span class="keywordtype">unsigned</span> width,<span class="keywordtype">unsigned</span> height)=0;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/d2f/class_animator_object.htm#a9fdb6fe9967a76c776d12682694c60fc">aSetScreenPosition</a>(<span class="keywordtype">int</span> x,<span class="keywordtype">int</span> y)=0;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../de/d2f/class_animator_object.htm#ab3b3733297ee9acb478698732f60a788">aSetImageColor</a>(irr::video::SColor* color)=0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keyword">virtual</span> irr::video::SColor* <a class="code" href="../../de/d2f/class_animator_object.htm#aa23552729f180e5e12ced1f2526b34a6">getColor</a>()=0;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span>    <a class="code" href="../../de/d2f/class_animator_object.htm#aae166026379fa67457cf89c4b9f037b4">getScreenWidth</a>()=0;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">unsigned</span>    <a class="code" href="../../de/d2f/class_animator_object.htm#a8cf0b253b3503774f7a0992225c90a51">getScreenHeight</a>()=0;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span>         <a class="code" href="../../de/d2f/class_animator_object.htm#a8d164b4019c380fa8fa8c67b5ece1193">getScreenPositionX</a>()=0;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span>         <a class="code" href="../../de/d2f/class_animator_object.htm#af2f65aa52ad9fb71942af715a038c3f6">getScreenPositionY</a>()=0;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span>        <a class="code" href="../../de/d2f/class_animator_object.htm#a62b59872aef49e6ba5d42710a473ea2d">getDisplay</a>()=0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_animator_object_htm_a62b59872aef49e6ba5d42710a473ea2d"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a62b59872aef49e6ba5d42710a473ea2d">AnimatorObject::getDisplay</a></div><div class="ttdeci">virtual bool getDisplay()=0</div><div class="ttdoc">Função assíncrona para saber se o elemento está visível na tela. </div></div>
+<div class="ttc" id="class_animator_object_htm_aa23552729f180e5e12ced1f2526b34a6"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#aa23552729f180e5e12ced1f2526b34a6">AnimatorObject::getColor</a></div><div class="ttdeci">virtual irr::video::SColor * getColor()=0</div><div class="ttdoc">Função assíncrona para obter a cor. </div></div>
+<div class="ttc" id="class_animator_object_htm"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm">AnimatorObject</a></div><div class="ttdoc">Classe abstrata que é base para os elementos da tela. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8c/_animator_object_8hpp_source.htm#l00026">AnimatorObject.hpp:26</a></div></div>
+<div class="ttc" id="class_animator_object_htm_a9fdb6fe9967a76c776d12682694c60fc"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a9fdb6fe9967a76c776d12682694c60fc">AnimatorObject::aSetScreenPosition</a></div><div class="ttdeci">virtual void aSetScreenPosition(int x, int y)=0</div><div class="ttdoc">Função assíncrona para atribuição da posição do objeto na tela. </div></div>
+<div class="ttc" id="class_animator_object_htm_a3e6ada0bb13e367c1efb19f61b87bc3d"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a3e6ada0bb13e367c1efb19f61b87bc3d">AnimatorObject::aSetScreenSize</a></div><div class="ttdeci">virtual void aSetScreenSize(unsigned width, unsigned height)=0</div><div class="ttdoc">Função assíncrona para atribuição do tamanho que o objeto irá ocupar na tela. </div></div>
+<div class="ttc" id="class_animator_object_htm_a6e73df4a5badbe084f15567ecfe30a53"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a6e73df4a5badbe084f15567ecfe30a53">AnimatorObject::~AnimatorObject</a></div><div class="ttdeci">virtual ~AnimatorObject()</div><div class="ttdoc">Destrutor da classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d6/d8c/_animator_object_8hpp_source.htm#l00044">AnimatorObject.hpp:44</a></div></div>
+<div class="ttc" id="class_animator_object_htm_ab3b3733297ee9acb478698732f60a788"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#ab3b3733297ee9acb478698732f60a788">AnimatorObject::aSetImageColor</a></div><div class="ttdeci">virtual void aSetImageColor(irr::video::SColor *color)=0</div><div class="ttdoc">Função assíncrona para definir a cor. </div></div>
+<div class="ttc" id="class_animator_object_htm_aae166026379fa67457cf89c4b9f037b4"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#aae166026379fa67457cf89c4b9f037b4">AnimatorObject::getScreenWidth</a></div><div class="ttdeci">virtual unsigned getScreenWidth()=0</div><div class="ttdoc">Função assíncrona para obter a largura do objeto na tela. </div></div>
+<div class="ttc" id="class_animator_object_htm_a8cf0b253b3503774f7a0992225c90a51"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a8cf0b253b3503774f7a0992225c90a51">AnimatorObject::getScreenHeight</a></div><div class="ttdeci">virtual unsigned getScreenHeight()=0</div><div class="ttdoc">Função assíncrona para obter a altura do objeto na tela. </div></div>
+<div class="ttc" id="class_animator_object_htm_a8d164b4019c380fa8fa8c67b5ece1193"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a8d164b4019c380fa8fa8c67b5ece1193">AnimatorObject::getScreenPositionX</a></div><div class="ttdeci">virtual int getScreenPositionX()=0</div><div class="ttdoc">Função assíncrona para obter a coordenada X do objeto na tela. </div></div>
+<div class="ttc" id="class_animator_object_htm_a6be7da8b272fdfff923c1c553ff5bad0"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0">AnimatorObject::getType</a></div><div class="ttdeci">virtual unsigned char getType()=0</div><div class="ttdoc">Retorna o tipo da classe. </div></div>
+<div class="ttc" id="class_animator_object_htm_a9d3b231e4b24399d41daa86077f62608"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a9d3b231e4b24399d41daa86077f62608">AnimatorObject::processTime</a></div><div class="ttdeci">virtual void processTime(irr::u32 time)=0</div><div class="ttdoc">Função para processamento no tempo para a classe. </div></div>
+<div class="ttc" id="class_animator_object_htm_a6a6574dce9c78a13ee641084421aecef"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#a6a6574dce9c78a13ee641084421aecef">AnimatorObject::aSetDisplay</a></div><div class="ttdeci">virtual void aSetDisplay(bool value)=0</div><div class="ttdoc">Função assíncrona para atribuição do display (exibir o objeto) </div></div>
+<div class="ttc" id="class_animator_object_htm_af2f65aa52ad9fb71942af715a038c3f6"><div class="ttname"><a href="../../de/d2f/class_animator_object.htm#af2f65aa52ad9fb71942af715a038c3f6">AnimatorObject::getScreenPositionY</a></div><div class="ttdeci">virtual int getScreenPositionY()=0</div><div class="ttdoc">Função assíncrona para obter a coordenada Y do objeto na tela. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado em Sexta, 16 de Maio de 2014 15:14:03 para CrazyCrush por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="../../doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

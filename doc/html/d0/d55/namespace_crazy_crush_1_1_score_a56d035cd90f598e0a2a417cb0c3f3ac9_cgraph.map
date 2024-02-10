@@ -1,0 +1,19 @@
+<map id="CrazyCrush::Score::initialize" name="CrazyCrush::Score::initialize">
+<area shape="rect" id="node2" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="249,5,353,32"/>
+<area shape="rect" id="node3" href="$d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1" title="Associa uma fonte ao objeto. " alt="" coords="231,56,371,83"/>
+<area shape="rect" id="node4" href="$d0/d94/class_screen_text.htm#ab4a583a1b1a85d6942ef5c227b274568" title="Define a posição do texto na tela. " alt="" coords="199,107,402,133"/>
+<area shape="rect" id="node5" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="227,157,375,184"/>
+<area shape="rect" id="node6" href="$d0/d94/class_screen_text.htm#a2e782926094d317cb916eb219ebc7941" title="Define se o texto será exibido na tela. " alt="" coords="222,208,379,235"/>
+<area shape="rect" id="node7" href="$d0/d94/class_screen_text.htm#a1543ea8cddacb9b5c8036fd8fa9e016f" title="Define a cor do texto. " alt="" coords="229,259,373,285"/>
+<area shape="rect" id="node8" href="$d0/d94/class_screen_text.htm#a59ed25809aa6ea9b4a0976fa39ad64aa" title="Define a orientação horizontal do texto em relação à posição informada. " alt="" coords="209,309,393,336"/>
+<area shape="rect" id="node9" href="$da/db9/class_screen_object.htm#a2af16932e475b836c516329ecb285b09" title="Associa uma textura ao objeto. " alt="" coords="215,360,386,387"/>
+<area shape="rect" id="node11" href="$da/db9/class_screen_object.htm#a7e31c6cdcb5c65008eead1cc24b5b464" title="Define o tamanho que o sprite usa da textura. " alt="" coords="197,411,405,437"/>
+<area shape="rect" id="node12" href="$da/db9/class_screen_object.htm#a8ae2dec91ac5c6d65340cf4dfab17a79" title="Define o tamanho que o sprite ocupará na tela. " alt="" coords="203,461,398,488"/>
+<area shape="rect" id="node13" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="193,512,408,539"/>
+<area shape="rect" id="node14" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="215,563,386,589"/>
+<area shape="rect" id="node15" href="$da/db9/class_screen_object.htm#aa0eca7801f10de1fbda4676410159b0c" title="Define a coordenada (x,y) do topo esquerdo que o sprite usa da textura. " alt="" coords="209,614,392,655"/>
+<area shape="rect" id="node16" href="$da/db9/class_screen_object.htm#af31cd0131c42fcac9a5133b7c2c7759b" title="Define o SpriteAnimator interno do objeto. " alt="" coords="194,680,407,707"/>
+<area shape="rect" id="node17" href="$da/db9/class_screen_object.htm#a4090a3913947fe9eab75f88090ebb673" title="Inicia o SpriteAnimator no tempo informado. " alt="" coords="216,731,385,773"/>
+<area shape="rect" id="node18" href="$df/d47/class_animator_obj_list.htm#a19b5e6f153a270a9c6b03283a57f7d35" title="Adiciona um elemento à lista. " alt="" coords="209,797,392,824"/>
+<area shape="rect" id="node10" href="$da/dac/class_shared_pointer.htm#ab39ff3eeaa60d180b63acf5bb3cebef6" title="Define o valor do ponteiro. " alt="" coords="456,360,587,387"/>
+</map>

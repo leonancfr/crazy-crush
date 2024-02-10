@@ -1,0 +1,19 @@
+<map id="CrazyCrush::Game::Pause::Button::initialize" name="CrazyCrush::Game::Pause::Button::initialize">
+<area shape="rect" id="node2" href="$d6/d58/class_screen_button.htm#a3e1c03b489f6dbe6f6d6ce5cf4aacbcf" title="Define se o botão será exibido ou não. " alt="" coords="254,5,425,32"/>
+<area shape="rect" id="node4" href="$d3/d20/class_screen_button_circle.htm#ad18080fb216525dde5af10d0ea08292e" title="Define o texto que será exibido no botão. " alt="" coords="272,57,407,98"/>
+<area shape="rect" id="node6" href="$d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f" title="Define a posição que o botão ocupará na tela. " alt="" coords="232,123,447,149"/>
+<area shape="rect" id="node8" href="$d6/d58/class_screen_button.htm#a5cd09eac12b9371124bd94ba5c62be61" title="Define o tamanho que o botão ocupará na tela. " alt="" coords="242,173,437,200"/>
+<area shape="rect" id="node10" href="$d3/d20/class_screen_button_circle.htm#a6a9332392d1ebbbc5eb76235303538d5" title="Altera o index dos elementos do botão no ZOrder. " alt="" coords="272,225,407,266"/>
+<area shape="rect" id="node11" href="$d3/d20/class_screen_button_circle.htm#a28e8d14bc621afcf384a14089f034ce2" title="Offset do texto do botão em relação ao centro do botão. " alt="" coords="272,290,407,331"/>
+<area shape="rect" id="node15" href="$d3/d20/class_screen_button_circle.htm#a2c2124f23c8b9879d98f9de502d4dd4f" title="Obtém o ScreenText do texto do botão. " alt="" coords="272,355,407,397"/>
+<area shape="rect" id="node16" href="$d0/d94/class_screen_text.htm#a4f3b90e2b894be7b97201d93899b56d1" title="Associa uma fonte ao objeto. " alt="" coords="269,421,409,448"/>
+<area shape="rect" id="node17" href="$d6/d58/class_screen_button.htm#a64d86cdbacb13a5c03b4a0afc4842c71" title="Associa um Callback que será executado quando o botão for clicado. " alt="" coords="253,472,426,499"/>
+<area shape="rect" id="node3" href="$d6/d58/class_screen_button.htm#a2c65098f1c57adf7e61c25de6cf2cabe" title="Função executada sempre que o display do botão for alterado. " alt="" coords="507,5,716,32"/>
+<area shape="rect" id="node5" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="537,64,685,91"/>
+<area shape="rect" id="node7" href="$d6/d58/class_screen_button.htm#ae78f2725728e1414fd1cdef464b2df3a" title="Função executada sempre que a posição do botão for alterado. " alt="" coords="508,115,715,157"/>
+<area shape="rect" id="node9" href="$d6/d58/class_screen_button.htm#a76c59814cb78fecf7353d5990edf5663" title="Função executada sempre que o tamanho do botão for alterado. " alt="" coords="495,181,728,208"/>
+<area shape="rect" id="node12" href="$d3/d20/class_screen_button_circle.htm#a614785637fac840a3e627caf0e9e2655" title="Função executada sempre que a posição do botão for alterado. " alt="" coords="524,290,699,331"/>
+<area shape="rect" id="node13" href="$da/db9/class_screen_object.htm#a73996917ccd1c5927857eb22f079d535" title="Define a coordenada (x,y) do topo esquerdo do sprite na tela. " alt="" coords="776,272,991,299"/>
+<area shape="rect" id="node14" href="$d0/d94/class_screen_text.htm#ab4a583a1b1a85d6942ef5c227b274568" title="Define a posição do texto na tela. " alt="" coords="782,323,985,349"/>
+<area shape="rect" id="node18" href="$da/dc2/class_screen_hover.htm#a4d1ba74cd36581ea09a4152d51d04242" title="Associa um Callback ao evento OnClick da região. " alt="" coords="520,472,703,499"/>
+</map>

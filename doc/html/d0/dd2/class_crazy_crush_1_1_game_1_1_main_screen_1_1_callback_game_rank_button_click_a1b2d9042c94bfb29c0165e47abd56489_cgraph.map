@@ -1,0 +1,42 @@
+<map id="CrazyCrush::Game::MainScreen::CallbackGameRankButtonClick::aProcess" name="CrazyCrush::Game::MainScreen::CallbackGameRankButtonClick::aProcess">
+<area shape="rect" id="node2" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#a00076df556f060afc544ed41e835d927" title="Dá play num stream de áudio, se não existir, abre o filename. " alt="" coords="278,272,459,313"/>
+<area shape="rect" id="node6" href="$d0/d4c/namespace_crazy_crush_1_1_game_1_1_time_attack_1_1_rank.htm#a0a2a9c66d2e952459714aba356f3e3c6" title="Exibe o menu de rank. " alt="" coords="265,632,472,673"/>
+<area shape="rect" id="node3" href="$d9/d89/namespace_crazy_crush_1_1_audio_manager.htm#aec0260f1c2dda09ad2892bcaf9fc0bf5" title="Lê um arquivo de áudio para a memória. " alt="" coords="537,5,718,47"/>
+<area shape="rect" id="node4" href="$dd/dae/namespace_crazy_crush.htm#a8f9d2e97b9e04292b70d413d289f6aa9" title="Lê um arquivo do .ZIP da engine. " alt="" coords="797,13,975,39"/>
+<area shape="rect" id="node5" href="$de/d7f/class_protected.htm#a9d7dbfb640d9701481c55a107a445354" title="Atribui um valor a variável. " alt="" coords="1037,13,1141,39"/>
+<area shape="rect" id="node7" href="$da/d5e/class_screen_window.htm#a1654872ed8603b6323b7d01110166b1c" title="Exibe a janela e seus conteúdos. " alt="" coords="554,239,701,266"/>
+<area shape="rect" id="node10" href="$da/d5e/class_screen_window.htm#a9cc04de46551d4532c7137553c4c6b6e" title="Define o tipo de janela. " alt="" coords="546,290,709,317"/>
+<area shape="rect" id="node11" href="$da/d5e/class_screen_window.htm#a579926da4f48265a747286b7f9c369bd" title="Define o tamanho da janela. " alt="" coords="547,341,708,367"/>
+<area shape="rect" id="node12" href="$da/d5e/class_screen_window.htm#a0794182cae97db0b89b31eae46a4ad67" title="Define a posição do topo esquerdo da janela na tela. " alt="" coords="536,391,719,418"/>
+<area shape="rect" id="node13" href="$d2/d78/class_screen_button_simple.htm#a09f1a7cf8a3bfa22ce1c43a51ea97c33" title="Obtém o objeto do texto do botão. " alt="" coords="557,443,698,484"/>
+<area shape="rect" id="node14" href="$d0/d94/class_screen_text.htm#a59ed25809aa6ea9b4a0976fa39ad64aa" title="Define a orientação horizontal do texto em relação à posição informada. " alt="" coords="535,509,719,535"/>
+<area shape="rect" id="node15" href="$d0/d94/class_screen_text.htm#a7129e43667e850f9f5fb568848ada511" title="Define a orientação vertical do texto em relação à posição informada. " alt="" coords="531,559,724,586"/>
+<area shape="rect" id="node16" href="$d2/d78/class_screen_button_simple.htm#afc5c7fe7e2488587c83d12997af19526" title="Define o texto do botão. " alt="" coords="557,661,698,703"/>
+<area shape="rect" id="node17" href="$d0/d94/class_screen_text.htm#a557f315ea4d927f96b963406e27f518d" title="Define o texto do objeto. " alt="" coords="812,639,960,666"/>
+<area shape="rect" id="node18" href="$d2/d78/class_screen_button_simple.htm#a85cb7960fe16410f136bcd87c57664c3" title="Define o offset do texto do botão. " alt="" coords="557,727,698,768"/>
+<area shape="rect" id="node19" href="$d2/d78/class_screen_button_simple.htm#a2d12cf84d95212ae1f2d6c2e7d1999b8" title="Altura no sprite para uma cor de botão. " alt="" coords="554,792,701,833"/>
+<area shape="rect" id="node20" href="$d2/d78/class_screen_button_simple.htm#a63b02fc87261db2479a4159f6547aa77" title="Define o offset do texto do botão no modo hover. " alt="" coords="555,857,700,899"/>
+<area shape="rect" id="node21" href="$d2/d78/class_screen_button_simple.htm#ae0e5834f8fc4ae01955e3f4129277f1a" title="Define a cor do botão. " alt="" coords="557,923,698,964"/>
+<area shape="rect" id="node24" href="$d2/d78/class_screen_button_simple.htm#a31f4edbea71b76174314b1107eeb3c1c" title="Define a cor do botão no modo hover. " alt="" coords="553,988,701,1029"/>
+<area shape="rect" id="node25" href="$d2/d78/class_screen_button_simple.htm#aa4ca6ab9d5fa8c8dcbe8c9ad713ade2b" title="Define o tamanho do botão. " alt="" coords="557,1053,698,1095"/>
+<area shape="rect" id="node26" href="$d2/d78/class_screen_button_simple.htm#a96b61114a37b9374b6b5825e3d461aae" title="Largura no sprite para uma cor de botão. " alt="" coords="556,1119,699,1160"/>
+<area shape="rect" id="node27" href="$d2/d78/class_screen_button_simple.htm#a9a5a470418d6d3b6a10f78a231eeaa5e" title="Define o tamanho do botão no modo hover. " alt="" coords="555,1184,699,1225"/>
+<area shape="rect" id="node28" href="$d6/d58/class_screen_button.htm#a5b83db2bcbf5bf8a3874bcd564b54a1f" title="Define a posição que o botão ocupará na tela. " alt="" coords="520,1250,735,1277"/>
+<area shape="rect" id="node30" href="$d6/d58/class_screen_button.htm#a64d86cdbacb13a5c03b4a0afc4842c71" title="Associa um Callback que será executado quando o botão for clicado. " alt="" coords="541,1301,714,1327"/>
+<area shape="rect" id="node32" href="$da/d5e/class_screen_window.htm#a8b1a9f06d248d7ffe49a63376a80c325" title="Anexa um AnimatorObject (Botão, Sprite ou Texto) à janela com um índice relativo. ..." alt="" coords="553,1431,701,1458"/>
+<area shape="rect" id="node38" href="$d0/d94/class_screen_text.htm#a1543ea8cddacb9b5c8036fd8fa9e016f" title="Define a cor do texto. " alt="" coords="555,71,699,98"/>
+<area shape="rect" id="node39" href="$d0/d94/class_screen_text.htm#ab4a583a1b1a85d6942ef5c227b274568" title="Define a posição do texto na tela. " alt="" coords="526,122,729,149"/>
+<area shape="rect" id="node40" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#a022ed721199b2af2e1a7a0c894068281" title="Obtém o record do modo TimeAttack da posição informada. " alt="" coords="540,173,715,215"/>
+<area shape="rect" id="node8" href="$da/db9/class_screen_object.htm#a86ad7d80123873c44e37562189996ab8" title="Define se o objeto será exibido na tela. " alt="" coords="801,298,971,325"/>
+<area shape="rect" id="node9" href="$db/d1a/namespace_crazy_crush_1_1_screen_hover_list.htm#aaf3dfd257f4852cda4bd82bc4b7aa042" title="Executa a função suspend() de todos os ScreenHover da lista. " alt="" coords="790,232,982,273"/>
+<area shape="rect" id="node22" href="$d2/d78/class_screen_button_simple.htm#ab3e542ce6d676b48a3a36aace2a4f726" title="Offset X no sprite para uma cor de botão. " alt="" coords="815,988,957,1029"/>
+<area shape="rect" id="node23" href="$d2/d78/class_screen_button_simple.htm#a2e80dd7953e0da67c3edb56640a74cf6" title="Offset Y no sprite para uma cor de botão. " alt="" coords="815,923,957,964"/>
+<area shape="rect" id="node29" href="$d6/d58/class_screen_button.htm#ae78f2725728e1414fd1cdef464b2df3a" title="Função executada sempre que a posição do botão for alterado. " alt="" coords="783,1235,989,1276"/>
+<area shape="rect" id="node31" href="$da/dc2/class_screen_hover.htm#a4d1ba74cd36581ea09a4152d51d04242" title="Associa um Callback ao evento OnClick da região. " alt="" coords="795,1301,977,1327"/>
+<area shape="rect" id="node33" href="$de/d2f/class_animator_object.htm#a6a6574dce9c78a13ee641084421aecef" title="Função assíncrona para atribuição do display (exibir o objeto) " alt="" coords="791,1402,981,1429"/>
+<area shape="rect" id="node34" href="$de/d2f/class_animator_object.htm#a9fdb6fe9967a76c776d12682694c60fc" title="Função assíncrona para atribuição da posição do objeto na tela. " alt="" coords="792,1453,980,1495"/>
+<area shape="rect" id="node35" href="$de/d2f/class_animator_object.htm#a8d164b4019c380fa8fa8c67b5ece1193" title="Função assíncrona para obter a coordenada X do objeto na tela. " alt="" coords="797,1519,975,1560"/>
+<area shape="rect" id="node36" href="$de/d2f/class_animator_object.htm#af2f65aa52ad9fb71942af715a038c3f6" title="Função assíncrona para obter a coordenada Y do objeto na tela. " alt="" coords="797,1584,975,1625"/>
+<area shape="rect" id="node37" href="$de/d2f/class_animator_object.htm#a6be7da8b272fdfff923c1c553ff5bad0" title="Retorna o tipo da classe. " alt="" coords="803,1351,969,1378"/>
+<area shape="rect" id="node41" href="$da/d48/namespace_crazy_crush_1_1_game_1_1_save.htm#a3f5bf8f295f90faa07d331371a2e0d79" title="Inicializa as dependências internas do espaço. " alt="" coords="801,167,971,208"/>
+</map>
